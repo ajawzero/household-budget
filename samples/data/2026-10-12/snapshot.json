@@ -1,0 +1,2379 @@
+{
+  "accounts": [
+    {
+      "active": true,
+      "custodian": "Granite Trust Bank",
+      "display_name": "Alex 401k (Lakeview)",
+      "display_order": 40,
+      "group": "retirement",
+      "include_in_net_worth": true,
+      "institution": "Lakeview Investments",
+      "is_asset": true,
+      "key": "alex-401k",
+      "notes": "New pre-tax and Roth money goes to the target date fund.",
+      "nw_group": "alex-retirement",
+      "nw_group_label": "Alex retirement",
+      "opened_on": "2018-04-02",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "quarterly",
+      "type": "retirement"
+    },
+    {
+      "active": true,
+      "autopay": "minimum",
+      "display_name": "Bramble store card",
+      "display_order": 15,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": false,
+      "institution": "Cobalt Card",
+      "is_asset": false,
+      "key": "bramble-store-card",
+      "last4": "4471",
+      "opened_on": "2023-04-10",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "none",
+      "tracked_by": "payments",
+      "type": "store_card"
+    },
+    {
+      "active": true,
+      "display_name": "Camper van",
+      "display_order": 71,
+      "group": "vehicles",
+      "include_in_net_worth": true,
+      "institution": "Valuation",
+      "is_asset": true,
+      "key": "camper-van",
+      "nw_group": "vehicle-equity",
+      "nw_group_label": "Vehicle equity",
+      "opened_on": "2026-08-01",
+      "owner": "joint",
+      "ownership": "joint",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "vehicle"
+    },
+    {
+      "active": true,
+      "apr": "21.99",
+      "autopay": "minimum",
+      "credit_limit": "5000.00",
+      "cycle_close_day": 22,
+      "display_name": "Cobalt card",
+      "display_order": 11,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Cobalt Card",
+      "is_asset": false,
+      "key": "cobalt-card",
+      "last4": "3318",
+      "notes": "0% promo on the mattress until March 2027",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2026-05-01",
+      "owner": "sam",
+      "ownership": "individual",
+      "priority": 1,
+      "rate_type": "promo",
+      "statement_cadence": "monthly",
+      "type": "credit_card"
+    },
+    {
+      "active": true,
+      "display_name": "Family car",
+      "display_order": 70,
+      "group": "vehicles",
+      "include_in_net_worth": true,
+      "institution": "Valuation",
+      "is_asset": true,
+      "key": "family-car",
+      "nw_group": "vehicle-equity",
+      "nw_group_label": "Vehicle equity",
+      "owner": "joint",
+      "ownership": "joint",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "vehicle"
+    },
+    {
+      "active": true,
+      "display_name": "Family home",
+      "display_order": 60,
+      "group": "real_estate",
+      "include_in_net_worth": true,
+      "institution": "Valuation",
+      "is_asset": true,
+      "key": "family-home",
+      "nw_group": "home-equity",
+      "nw_group_label": "Home equity",
+      "owner": "joint",
+      "ownership": "joint",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "property"
+    },
+    {
+      "active": true,
+      "display_name": "Sam checking (Harbor)",
+      "display_order": 2,
+      "group": "cash",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Harbor Credit Union",
+      "is_asset": true,
+      "key": "harbor-checking",
+      "last4": "7702",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2015-08-14",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "checking"
+    },
+    {
+      "active": true,
+      "apr": "4.1",
+      "display_name": "Sam savings (Harbor)",
+      "display_order": 3,
+      "group": "cash",
+      "in_cashflow": false,
+      "include_in_net_worth": true,
+      "institution": "Harbor Credit Union",
+      "is_asset": true,
+      "key": "harbor-savings",
+      "last4": "7719",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2015-08-14",
+      "owner": "sam",
+      "ownership": "individual",
+      "rate_type": "variable",
+      "statement_cadence": "quarterly",
+      "type": "savings"
+    },
+    {
+      "active": true,
+      "display_name": "Kids 529 (Bluestem)",
+      "display_order": 35,
+      "group": "investments",
+      "include_in_net_worth": true,
+      "institution": "Bluestem College Savings",
+      "is_asset": true,
+      "key": "kids-529",
+      "nw_group": "college-savings",
+      "nw_group_label": "College savings",
+      "opened_on": "2021-05-03",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "quarterly",
+      "type": "529"
+    },
+    {
+      "active": true,
+      "advisor": "Birch Lane Advisors",
+      "custodian": "Lakeview Investments",
+      "display_name": "Alex brokerage (Lakeview)",
+      "display_order": 30,
+      "group": "investments",
+      "include_in_net_worth": true,
+      "institution": "Lakeview Investments",
+      "is_asset": true,
+      "key": "lakeview-brokerage",
+      "notes": "Most of it sits in one fund. A diversification plan is needed.",
+      "nw_group": "alex-brokerage",
+      "nw_group_label": "Alex brokerage",
+      "opened_on": "2019-02-11",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "brokerage"
+    },
+    {
+      "active": true,
+      "display_name": "Joint checking (Maple)",
+      "display_order": 1,
+      "group": "cash",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Maple Bank",
+      "is_asset": true,
+      "key": "maple-joint-checking",
+      "last4": "5521",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2012-06-01",
+      "owner": "joint",
+      "ownership": "joint",
+      "statement_cadence": "monthly",
+      "type": "checking"
+    },
+    {
+      "active": false,
+      "autopay": "none",
+      "closed_on": "2026-07-20",
+      "cycle_close_day": 15,
+      "display_name": "Towne store card",
+      "display_order": 14,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Towne Outfitters",
+      "is_asset": false,
+      "key": "old-store-card",
+      "last4": "9031",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2021-11-20",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "store_card"
+    },
+    {
+      "active": true,
+      "apr": "19.24",
+      "autopay": "statement",
+      "credit_limit": "6000.00",
+      "cycle_close_day": 31,
+      "display_name": "Orchard card",
+      "display_order": 12,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Orchard Card",
+      "is_asset": false,
+      "key": "orchard-card",
+      "last4": "2290",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2020-03-09",
+      "owner": "alex",
+      "ownership": "individual",
+      "rate_changes": [
+        {
+          "apr": "19.99",
+          "effective_on": "2026-11-01"
+        }
+      ],
+      "rate_type": "variable",
+      "statement_cadence": "monthly",
+      "type": "credit_card"
+    },
+    {
+      "active": true,
+      "apr": "4.5",
+      "autopay": "full",
+      "display_name": "Mortgage (Pinecrest)",
+      "display_order": 50,
+      "group": "loans",
+      "include_in_net_worth": true,
+      "institution": "Pinecrest Mortgage",
+      "is_asset": false,
+      "key": "pinecrest-mortgage",
+      "last4": "0618",
+      "min_payment": "1500.00",
+      "notes": "Fixed rate for the full term. Extra cash goes to savings first.",
+      "nw_group": "mortgage",
+      "nw_group_label": "Mortgage",
+      "opened_on": "2019-06-01",
+      "original": "300000.00",
+      "owner": "joint",
+      "ownership": "joint",
+      "payoff_date": "2049-06-01",
+      "policy_note": "Do not prepay",
+      "rate_type": "fixed",
+      "secured_by": "family-home",
+      "servicer": "Pinecrest Mortgage",
+      "statement_cadence": "monthly",
+      "type": "mortgage"
+    },
+    {
+      "active": true,
+      "annual_fee": "250.00",
+      "apr": "24.99",
+      "autopay": "full",
+      "credit_limit": "15000.00",
+      "cycle_close_day": 10,
+      "display_name": "Summit card",
+      "display_order": 10,
+      "fee_renews_on": "2027-03-01",
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Summit Card Services",
+      "is_asset": false,
+      "key": "summit-card",
+      "last4": "8812",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2017-09-15",
+      "owner": "joint",
+      "ownership": "joint",
+      "rate_type": "variable",
+      "statement_cadence": "monthly",
+      "type": "credit_card"
+    },
+    {
+      "active": true,
+      "apr": "6.49",
+      "autopay": "full",
+      "display_name": "Van loan (Prairie)",
+      "display_order": 52,
+      "group": "loans",
+      "include_in_net_worth": true,
+      "institution": "Prairie Lending",
+      "is_asset": false,
+      "key": "van-loan",
+      "min_payment": "650.00",
+      "nw_group": "vehicle-loans",
+      "nw_group_label": "Vehicle loans",
+      "opened_on": "2026-08-01",
+      "original": "42000.00",
+      "owner": "joint",
+      "ownership": "joint",
+      "rate_type": "fixed",
+      "secured_by": "camper-van",
+      "servicer": "Meadow Loan Servicing",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "loan"
+    }
+  ],
+  "balances": [
+    {
+      "account_key": "alex-401k",
+      "as_of": "2026-09-30",
+      "balance": "91834.13",
+      "source": "statement"
+    },
+    {
+      "account_key": "camper-van",
+      "as_of": "2026-09-30",
+      "balance": "53900.00",
+      "method": "kbb",
+      "source": "valuation",
+      "source_note": "KBB value"
+    },
+    {
+      "account_key": "cobalt-card",
+      "as_of": "2026-09-22",
+      "balance": "-935.76",
+      "source": "statement"
+    },
+    {
+      "account_key": "family-car",
+      "as_of": "2026-06-30",
+      "deleted": true,
+      "source": "valuation"
+    },
+    {
+      "account_key": "family-car",
+      "as_of": "2026-09-30",
+      "balance": "22385.90",
+      "method": "kbb",
+      "source": "valuation",
+      "source_note": "Private party value"
+    },
+    {
+      "account_key": "family-home",
+      "as_of": "2026-09-30",
+      "balance": "524613.78",
+      "method": "comps",
+      "source": "valuation",
+      "source_note": "Three nearby sales"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-09-30",
+      "balance": "36672.04",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-savings",
+      "as_of": "2026-09-30",
+      "balance": "13845.84",
+      "source": "statement"
+    },
+    {
+      "account_key": "kids-529",
+      "as_of": "2026-09-30",
+      "balance": "21890.48",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-09-30",
+      "balance": "56591.28",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-09-30",
+      "balance": "37398.00",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-09-30",
+      "balance": "-616.18",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-09-15",
+      "balance": "-244860.86",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-09-10",
+      "balance": "-632.41",
+      "source": "statement"
+    },
+    {
+      "account_key": "van-loan",
+      "as_of": "2026-09-30",
+      "balance": "-40794.40",
+      "source": "estimate",
+      "source_note": "Amortized from the loan papers"
+    }
+  ],
+  "budgets": [
+    {
+      "category_key": "dining",
+      "key": "dining",
+      "label": "Dining",
+      "month": "2026-10",
+      "period_basis": "calendar",
+      "plan": "400.00",
+      "target": "400.00"
+    },
+    {
+      "actual_source": "statement",
+      "cycle_note": "Cycle closes on the 22nd",
+      "key": "sams-cards",
+      "label": "Sam's cards",
+      "month": "2026-10",
+      "period_basis": "card_cycle",
+      "reported_actual": "212.50",
+      "scope": {
+        "cards": [
+          "cobalt-card"
+        ],
+        "owner": "sam"
+      },
+      "statements_needed": [
+        "cobalt-card"
+      ],
+      "target": "300.00"
+    }
+  ],
+  "cashflow_actual": [
+    {
+      "by_group": [
+        {
+          "amount": "134.73",
+          "key": "discretionary"
+        },
+        {
+          "amount": "5.00",
+          "key": "fees"
+        },
+        {
+          "amount": "1762.76",
+          "key": "housing"
+        },
+        {
+          "amount": "120.00",
+          "key": "kids"
+        },
+        {
+          "amount": "814.90",
+          "key": "lifestyle"
+        },
+        {
+          "amount": "110.00",
+          "key": "services"
+        }
+      ],
+      "income": "10362.66",
+      "month": "2026-08",
+      "saved_invested": "700.00",
+      "spending": "2947.39"
+    },
+    {
+      "by_group": [
+        {
+          "amount": "1650.00",
+          "key": "debt"
+        },
+        {
+          "amount": "114.85",
+          "key": "discretionary"
+        },
+        {
+          "amount": "5.00",
+          "key": "fees"
+        },
+        {
+          "amount": "1820.95",
+          "key": "housing"
+        },
+        {
+          "amount": "739.82",
+          "key": "lifestyle"
+        },
+        {
+          "amount": "110.00",
+          "key": "services"
+        },
+        {
+          "amount": "24.50",
+          "key": "transportation"
+        }
+      ],
+      "income": "10362.69",
+      "month": "2026-09",
+      "saved_invested": "700.00",
+      "spending": "4465.12"
+    }
+  ],
+  "cashflow_events": [
+    {
+      "delta": "75.00",
+      "effective_month": "2027-02",
+      "key": "device-plan-ends",
+      "label": "Device installments end",
+      "linked_key": "device-plan",
+      "linked_kind": "plan",
+      "status": "expected"
+    },
+    {
+      "delta": "105.00",
+      "effective_month": "2026-12",
+      "key": "plan-sofa-ends",
+      "label": "Sofa plan ends",
+      "linked_key": "plan-sofa",
+      "linked_kind": "plan",
+      "reason": "Last Plan It installment in November",
+      "status": "confirmed"
+    },
+    {
+      "delta": "20.00",
+      "effective_month": "2027-05",
+      "key": "switch-phone-plan",
+      "label": "Move to a cheaper phone plan",
+      "reason": "An idea from the review, not decided",
+      "status": "suggested"
+    },
+    {
+      "delta": "50.00",
+      "effective_month": "2027-03",
+      "key": "trim-dining",
+      "label": "Dining back to the budget",
+      "status": "target"
+    }
+  ],
+  "cashflow_phases": [
+    {
+      "end_month": "2026-12",
+      "key": "base",
+      "label": "Base",
+      "reason": "Plans still running",
+      "start_month": "2026-10",
+      "surplus": "400.00"
+    },
+    {
+      "key": "plans-done",
+      "label": "Plans done",
+      "start_month": "2027-01",
+      "surplus": "580.00"
+    }
+  ],
+  "cashflow_plan": [
+    {
+      "by_group": [
+        {
+          "amount": "3600.00",
+          "key": "housing"
+        },
+        {
+          "amount": "3650.00",
+          "key": "lifestyle"
+        },
+        {
+          "amount": "180.00",
+          "key": "plan-installments"
+        },
+        {
+          "amount": "700.00",
+          "key": "saved-invested"
+        },
+        {
+          "amount": "250.00",
+          "key": "services"
+        },
+        {
+          "amount": "220.00",
+          "key": "transportation"
+        }
+      ],
+      "month": "2026-10",
+      "note": "Sample plan for October",
+      "planned_income": "11000.00",
+      "planned_spending": "8600.00"
+    }
+  ],
+  "contributions": [
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-09-04",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-09-18",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-09-04",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-09-18",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-09-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    }
+  ],
+  "flags": [
+    {
+      "action": "act",
+      "body": "Deferred interest applies to the whole purchase if any balance is left.",
+      "created_on": "2026-09-12",
+      "due_date": "2026-11-20",
+      "key": "bramble-promo-ends",
+      "kind": "debt",
+      "related_key": "bramble-deferred",
+      "related_kind": "plan",
+      "severity": "high",
+      "status": "open",
+      "title": "Pay off the Bramble promo before it ends",
+      "updates": [
+        {
+          "on": "2026-09-20",
+          "text": "Checked the promo end date on the statement"
+        },
+        {
+          "on": "2026-10-10",
+          "text": "Three payments left before the deadline"
+        }
+      ]
+    },
+    {
+      "created_on": "2026-08-10",
+      "key": "cloudtunes-credit",
+      "kind": "subscription",
+      "related_key": "cloudtunes",
+      "related_kind": "recurring",
+      "severity": "low",
+      "status": "watching",
+      "title": "Check that the streaming credit posts each month"
+    },
+    {
+      "action": "ask",
+      "created_on": "2026-10-05",
+      "key": "fibernet-rate",
+      "kind": "cost_cutting",
+      "related_key": "fibernet-internet",
+      "related_kind": "recurring",
+      "severity": "low",
+      "status": "open",
+      "title": "Ask Fibernet for a lower rate"
+    },
+    {
+      "created_on": "2026-10-01",
+      "key": "gym-ending",
+      "kind": "cost_cutting",
+      "related_key": "gym",
+      "related_kind": "recurring",
+      "severity": "medium",
+      "status": "open",
+      "title": "Gym membership ends in December"
+    },
+    {
+      "action": "reimburse",
+      "created_on": "2026-09-22",
+      "due_date": "2026-11-30",
+      "key": "health-claim",
+      "kind": "medical",
+      "severity": "low",
+      "status": "open",
+      "title": "Claim the dentist bill from the health account"
+    },
+    {
+      "action": "ask",
+      "created_on": "2026-10-02",
+      "due_date": "2026-12-15",
+      "key": "home-insurance-renewal",
+      "kind": "insurance",
+      "severity": "medium",
+      "status": "open",
+      "title": "Ask for a new home insurance quote before it renews"
+    },
+    {
+      "action": "reimburse",
+      "archived": true,
+      "created_on": "2026-04-10",
+      "key": "hsa-claim-paid",
+      "kind": "tax",
+      "related_key": "maple-joint-checking",
+      "related_kind": "account",
+      "resolved_on": "2026-05-03",
+      "severity": "low",
+      "status": "resolved",
+      "title": "Clinic visit paid back from the HSA"
+    },
+    {
+      "action": "info",
+      "created_on": "2026-09-08",
+      "due_date": "2026-10-01",
+      "key": "kids-college-gift",
+      "kind": "investment",
+      "severity": "low",
+      "status": "open",
+      "title": "A family gift went into the college fund"
+    },
+    {
+      "action": "info",
+      "created_on": "2026-07-05",
+      "key": "lake-weekend-costs",
+      "kind": "travel",
+      "related_key": "lake-weekend",
+      "related_kind": "trip",
+      "resolved_on": "2026-07-12",
+      "severity": "low",
+      "status": "resolved",
+      "title": "Lake weekend costs are all posted"
+    },
+    {
+      "action": "info",
+      "created_on": "2026-09-02",
+      "key": "library-fees",
+      "kind": "other",
+      "resolved_on": "2026-09-10",
+      "severity": "low",
+      "status": "resolved",
+      "title": "The library fees are paid"
+    },
+    {
+      "action": "act",
+      "body": "The forms are in. The check goes to the new account.",
+      "created_on": "2026-08-20",
+      "key": "old-plan-rollover",
+      "kind": "retirement",
+      "severity": "medium",
+      "status": "open",
+      "title": "Roll the old workplace plan into an IRA",
+      "updates": [
+        {
+          "on": "2026-08-25",
+          "text": "Called the old plan about a rollover"
+        },
+        {
+          "on": "2026-09-01",
+          "text": "Opened the IRA at the new broker"
+        },
+        {
+          "on": "2026-09-15",
+          "text": "Asked for the rollover forms"
+        },
+        {
+          "on": "2026-10-10",
+          "text": "Forms sent, waiting on the check"
+        }
+      ]
+    },
+    {
+      "action": "act",
+      "created_on": "2026-05-12",
+      "due_date": "2027-03-31",
+      "key": "promo-mattress-ends",
+      "kind": "debt",
+      "related_key": "promo-mattress",
+      "related_kind": "plan",
+      "severity": "medium",
+      "status": "open",
+      "title": "The mattress promo ends in March"
+    },
+    {
+      "action": "act",
+      "created_on": "2026-09-01",
+      "key": "roof-repair",
+      "kind": "home",
+      "severity": "medium",
+      "status": "watching",
+      "title": "Get two quotes for the roof repair"
+    },
+    {
+      "action": "info",
+      "created_on": "2026-09-30",
+      "key": "savings-milestone",
+      "kind": "milestone",
+      "related_key": "harbor-savings",
+      "related_kind": "account",
+      "severity": "low",
+      "status": "open",
+      "title": "Savings passed three months of bills"
+    },
+    {
+      "action": "act",
+      "created_on": "2026-09-30",
+      "due_date": "2027-02-01",
+      "key": "summit-fee-review",
+      "kind": "rewards",
+      "related_key": "summit-card",
+      "related_kind": "account",
+      "severity": "medium",
+      "status": "open",
+      "title": "Decide on the Summit card before the fee renews"
+    },
+    {
+      "action": "act",
+      "created_on": "2026-07-30",
+      "key": "unknown-vendor",
+      "kind": "fraud",
+      "related_key": "uncategorized",
+      "related_kind": "category",
+      "severity": "high",
+      "status": "watching",
+      "title": "Review the charge from an unknown vendor",
+      "updates": [
+        {
+          "on": "2026-08-02",
+          "text": "Asked the card issuer about the charge"
+        },
+        {
+          "on": "2026-08-02",
+          "text": "The issuer opened a review"
+        }
+      ]
+    },
+    {
+      "action": "act",
+      "created_on": "2026-10-05",
+      "key": "withholding-check",
+      "kind": "payroll",
+      "severity": "low",
+      "status": "open",
+      "title": "Check the tax withholding after the raise"
+    }
+  ],
+  "goals": [
+    {
+      "accounts": [
+        "kids-529"
+      ],
+      "key": "college-jamie",
+      "kind": "college",
+      "name": "College, older child",
+      "person": "jamie",
+      "start_year": 2034,
+      "target": "120000.00"
+    },
+    {
+      "accounts": [
+        "harbor-savings"
+      ],
+      "key": "emergency-fund",
+      "kind": "save_up",
+      "name": "Emergency fund",
+      "note": "Six months of bills",
+      "target": "30000.00",
+      "target_date": "2027-12-31"
+    }
+  ],
+  "holdings": [
+    {
+      "account_key": "alex-401k",
+      "asset_class": "target-date",
+      "key": "target-date-trust",
+      "name": "Target Date 2050 Trust",
+      "period_end": "2026-09-30",
+      "value": "91834.13"
+    },
+    {
+      "account_key": "kids-529",
+      "asset_class": "target-date",
+      "cost_basis": "17550.00",
+      "key": "age-based-portfolio",
+      "name": "Age-Based Portfolio",
+      "period_end": "2026-09-30",
+      "value": "21890.48"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "34674.34",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-09-30",
+      "price": "256.489367",
+      "quantity": "138.288048",
+      "symbol": "BRDMKT",
+      "value": "35469.41"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-09-30",
+      "value": "21121.87"
+    }
+  ],
+  "income": {
+    "income_streams": [
+      {
+        "expected_net": "2931.20",
+        "key": "alex-pay",
+        "kind": "paycheck",
+        "label": "Alex pay",
+        "person": "alex",
+        "schedule": "Every other Friday",
+        "start_month": "2026-01"
+      },
+      {
+        "expected_net": "2250.00",
+        "key": "sam-pay",
+        "kind": "paycheck",
+        "label": "Sam pay",
+        "person": "sam",
+        "schedule": "15th and last day",
+        "start_month": "2026-01"
+      }
+    ],
+    "paychecks": [
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-09-04",
+        "period_end": "2026-08-28",
+        "period_start": "2026-08-15",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "900.00",
+        "ytd_hsa_employer": "450.00",
+        "ytd_k401": "4836.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-09-18",
+        "period_end": "2026-09-11",
+        "period_start": "2026-08-29",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "950.00",
+        "ytd_hsa_employer": "475.00",
+        "ytd_k401": "5088.00"
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-09-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-09-30",
+        "person": "sam",
+        "seq": 1
+      }
+    ]
+  },
+  "installment_plans": [
+    {
+      "account_key": "bramble-store-card",
+      "components": [
+        {
+          "amount": "300.00",
+          "merchant": "Bramble Outfitters"
+        },
+        {
+          "amount": "180.00",
+          "merchant": "Bramble Outfitters",
+          "trip_key": "ski-weekend"
+        }
+      ],
+      "created_on": "2025-11-28",
+      "end_month": "2026-11",
+      "included_in_spending_plan": false,
+      "key": "bramble-deferred",
+      "kind": "deferred_interest",
+      "monthly_payment": "40.00",
+      "name": "Bramble winter gear",
+      "original": "480.00",
+      "pay_before": "2026-11-28",
+      "remaining": "120.00",
+      "status": "active"
+    },
+    {
+      "account_key": "orchard-card",
+      "created_on": "2026-02-14",
+      "end_month": "2027-01",
+      "included_in_spending_plan": true,
+      "key": "device-plan",
+      "kind": "apple_installment",
+      "monthly_payment": "75.00",
+      "name": "Orchard Store device",
+      "original": "900.00",
+      "payments_left": 4,
+      "payments_total": 12,
+      "remaining": "300.00",
+      "status": "active"
+    },
+    {
+      "account_key": "summit-card",
+      "components": [
+        {
+          "amount": "600.00",
+          "merchant": "Oak and Pine Furniture"
+        }
+      ],
+      "created_on": "2026-04-22",
+      "end_month": "2026-11",
+      "included_in_spending_plan": true,
+      "key": "plan-sofa",
+      "kind": "plan_it",
+      "monthly_fee": "5.00",
+      "monthly_payment": "100.00",
+      "name": "Oak and Pine sofa",
+      "original": "600.00",
+      "payments_left": 2,
+      "payments_total": 6,
+      "remaining": "200.00",
+      "status": "active",
+      "total_fees": "30.00"
+    },
+    {
+      "account_key": "cobalt-card",
+      "created_on": "2026-05-10",
+      "end_month": "2027-03",
+      "included_in_spending_plan": false,
+      "key": "promo-mattress",
+      "kind": "promo_0pct",
+      "monthly_payment": "150.00",
+      "name": "Lakeside mattress",
+      "note": "Pay it off before the promo ends",
+      "original": "1200.00",
+      "promo_expiry": "2027-03-31",
+      "status": "active"
+    },
+    {
+      "account_key": "old-store-card",
+      "created_on": "2025-12-20",
+      "end_month": "2026-06",
+      "included_in_spending_plan": false,
+      "key": "towne-coats",
+      "kind": "deferred_interest",
+      "monthly_payment": "40.00",
+      "name": "Towne winter coats",
+      "note": "Paid off a month early",
+      "original": "240.00",
+      "paid_off_on": "2026-05-18",
+      "pay_before": "2026-06-20",
+      "remaining": "0.00",
+      "status": "paid_off"
+    }
+  ],
+  "meta": {
+    "complete_as_of": "2026-09-30",
+    "location_label": "Sample Town",
+    "this_month": "2026-10",
+    "updated": "2026-10-12"
+  },
+  "mode": "monthly",
+  "net_worth": {
+    "as_of": "2026-09-30",
+    "assets": "859131.45",
+    "liabilities": "287839.61",
+    "parts": [
+      {
+        "amount": "56591.28",
+        "key": "alex-brokerage"
+      },
+      {
+        "amount": "91834.13",
+        "key": "alex-retirement"
+      },
+      {
+        "amount": "87915.88",
+        "key": "cash-and-misc"
+      },
+      {
+        "amount": "21890.48",
+        "key": "college-savings"
+      },
+      {
+        "amount": "-2184.35",
+        "key": "credit-cards"
+      },
+      {
+        "amount": "279752.92",
+        "key": "home-equity"
+      },
+      {
+        "amount": "35491.50",
+        "key": "vehicle-equity"
+      }
+    ],
+    "value": "571291.84"
+  },
+  "payoff_sequence": [
+    {
+      "action": "Pay off the 0% promo before it ends",
+      "key": "promo-mattress",
+      "month": "2027-03",
+      "when_label": "By March 2027"
+    }
+  ],
+  "pending": [
+    {
+      "added_on": "2026-10-01",
+      "detail": "Waiting for the last charge to post.",
+      "key": "apply-gym-cancel",
+      "kind": "apply",
+      "status": "waiting",
+      "subject": "Take the gym out of the plan after December",
+      "updated_on": "2026-10-12"
+    },
+    {
+      "added_on": "2026-08-15",
+      "key": "apply-water-budget",
+      "kind": "apply",
+      "status": "done",
+      "subject": "Raise the water budget for the summer months",
+      "updated_on": "2026-09-20"
+    },
+    {
+      "added_on": "2026-10-12",
+      "detail": "Autopay is set to the minimum.",
+      "key": "confirm-bramble-payment",
+      "kind": "confirm",
+      "status": "open",
+      "subject": "Confirm the Bramble payment for October"
+    }
+  ],
+  "people": [
+    {
+      "display_name": "Alex",
+      "key": "alex",
+      "role": "adult"
+    },
+    {
+      "aliases": [
+        "James"
+      ],
+      "display_name": "Jamie",
+      "key": "jamie",
+      "role": "child"
+    },
+    {
+      "display_name": "Joint",
+      "key": "joint",
+      "role": "joint"
+    },
+    {
+      "display_name": "Riley",
+      "key": "riley",
+      "role": "child"
+    },
+    {
+      "display_name": "Sam",
+      "key": "sam",
+      "role": "adult"
+    }
+  ],
+  "recurring": [
+    {
+      "account_key": "maple-joint-checking",
+      "amount": "150.00",
+      "cadence": "monthly",
+      "category_key": "gas-and-electric",
+      "key": "city-power",
+      "name": "City Power and Gas",
+      "next_date": "2026-10-18",
+      "owner": "joint",
+      "payment_rail": "ach",
+      "status": "active",
+      "variable": true
+    },
+    {
+      "account_key": "orchard-card",
+      "amount": "10.99",
+      "cadence": "monthly",
+      "category_key": "subscriptions",
+      "credit_note": "A separate Cloudtunes promotion pays it back",
+      "credit_offset": "10.99",
+      "key": "cloudtunes",
+      "name": "Cloudtunes",
+      "next_date": "2026-10-07",
+      "owner": "alex",
+      "payment_rail": "card",
+      "status": "active",
+      "tag": "streaming"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "amount": "79.99",
+      "cadence": "monthly",
+      "category_key": "internet",
+      "key": "fibernet-internet",
+      "name": "Fibernet",
+      "next_date": "2026-10-14",
+      "owner": "joint",
+      "payment_rail": "ach",
+      "status": "active"
+    },
+    {
+      "account_key": "harbor-checking",
+      "active_through": "2026-12-31",
+      "amount": "45.00",
+      "cadence": "monthly",
+      "category_key": "fitness",
+      "key": "gym",
+      "name": "Ironworks Gym",
+      "next_date": "2026-11-02",
+      "notes": "Cancel notice sent. December is the last month.",
+      "owner": "sam",
+      "payment_rail": "ach",
+      "review_by": "2026-11-15",
+      "status": "ending",
+      "tag": "hobbies"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "amount": "140.00",
+      "cadence": "every_n_weeks",
+      "category_key": "cleaning",
+      "interval_n": 3,
+      "key": "house-cleaning",
+      "name": "Sparkle Home Cleaning",
+      "notes": "Paused for the fall",
+      "owner": "joint",
+      "payment_rail": "check",
+      "start_date": "2025-06-03",
+      "status": "paused"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "amount": "10.00",
+      "cadence": "weekly",
+      "category_key": "allowances",
+      "key": "kids-allowance",
+      "name": "Kids allowance",
+      "next_date": "2026-10-16",
+      "owner": "joint",
+      "payment_rail": "ach",
+      "status": "active"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "active_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "amount": "85.00",
+      "cadence": "monthly",
+      "category_key": "home-upkeep",
+      "key": "lawn-care",
+      "name": "Green Thumb Lawn Care",
+      "next_date": "2026-10-15",
+      "notes": "Season runs April to October",
+      "owner": "joint",
+      "payment_rail": "bill_pay",
+      "status": "active"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "amount": "1500.00",
+      "cadence": "monthly",
+      "category_key": "mortgage",
+      "end_date": "2049-06-01",
+      "key": "mortgage",
+      "name": "Pinecrest Mortgage",
+      "next_date": "2026-11-01",
+      "owner": "joint",
+      "payment_rail": "ach",
+      "status": "active"
+    },
+    {
+      "account_key": "harbor-checking",
+      "active_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        10,
+        11,
+        12
+      ],
+      "amount": "80.00",
+      "cadence": "monthly",
+      "category_key": "kids-activities",
+      "keep": true,
+      "key": "music-lessons",
+      "name": "Riverside Music Lessons",
+      "next_date": "2026-10-30",
+      "notes": "School year only, September to May",
+      "owner": "riley",
+      "payment_rail": "ach",
+      "start_date": "2026-10-30",
+      "status": "active",
+      "tag": "hobbies"
+    },
+    {
+      "account_key": "cobalt-card",
+      "amount": "14.99",
+      "cadence": "monthly",
+      "category_key": "subscriptions",
+      "key": "personal-subscription",
+      "name": "Personal subscription",
+      "next_date": "2026-10-03",
+      "owner": "sam",
+      "payment_rail": "card",
+      "status": "active"
+    },
+    {
+      "account_key": "summit-card",
+      "amount": "120.00",
+      "cadence": "quarterly",
+      "category_key": "pest-control",
+      "key": "pest-control",
+      "name": "Shield Pest Control",
+      "next_date": "2026-11-05",
+      "owner": "joint",
+      "payment_rail": "card",
+      "start_date": "2025-02-05",
+      "status": "active"
+    },
+    {
+      "account_key": "orchard-card",
+      "amount": "15.49",
+      "cadence": "monthly",
+      "category_key": "subscriptions",
+      "end_date": "2026-09-12",
+      "key": "reelhouse",
+      "name": "Reelhouse Streaming",
+      "notes": "Cancelled in September",
+      "owner": "alex",
+      "payment_rail": "card",
+      "status": "ended",
+      "tag": "streaming"
+    },
+    {
+      "account_key": "harbor-checking",
+      "amount": "200.00",
+      "cadence": "monthly",
+      "category_key": "transfer",
+      "key": "savings-transfer",
+      "name": "Transfer to Harbor Savings",
+      "next_date": "2026-10-28",
+      "owner": "sam",
+      "payment_rail": "ach",
+      "status": "active"
+    },
+    {
+      "account_key": "summit-card",
+      "amount": "250.00",
+      "cadence": "annual",
+      "category_key": "annual-fees",
+      "credit_note": "The yearly travel credit offsets part of it",
+      "credit_offset": "100.00",
+      "keep": true,
+      "key": "summit-annual-fee",
+      "name": "Summit card annual fee",
+      "next_date": "2027-03-01",
+      "owner": "joint",
+      "payment_rail": "card",
+      "renewal_date": "2027-03-01",
+      "review_by": "2027-02-01",
+      "status": "active"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "amount": "60.00",
+      "cadence": "monthly",
+      "category_key": "water-and-sewer",
+      "key": "town-water",
+      "name": "Town Water",
+      "next_date": "2026-10-22",
+      "owner": "joint",
+      "payment_rail": "ach",
+      "status": "active",
+      "variable": true
+    },
+    {
+      "account_key": "harbor-checking",
+      "amount": "65.00",
+      "cadence": "monthly",
+      "category_key": "phone",
+      "key": "wave-mobile",
+      "name": "Wave Mobile",
+      "next_date": "2026-10-12",
+      "notes": "Paying with the Summit card adds phone protection",
+      "owner": "sam",
+      "payment_rail": "ach",
+      "preferred_account_key": "summit-card",
+      "status": "active"
+    },
+    {
+      "account_key": "harbor-checking",
+      "active_months": [
+        3,
+        8
+      ],
+      "amount": "120.00",
+      "cadence": "semester",
+      "category_key": "kids-activities",
+      "key": "youth-soccer",
+      "name": "Youth Soccer Club",
+      "next_date": "2027-03-03",
+      "owner": "sam",
+      "payment_rail": "card",
+      "status": "active"
+    }
+  ],
+  "review": {
+    "anomalies": [
+      "Two identical grocery charges on one day in July."
+    ],
+    "changes": [
+      "The store card is closed and paid off."
+    ],
+    "key_numbers": [
+      {
+        "label": "Net worth",
+        "value": "571291.84"
+      }
+    ],
+    "summary": "A steady month. Spending was close to plan.",
+    "top_three": [
+      "Keep paying down the 0% promo.",
+      "Check the car value.",
+      "Review the uncategorized charge."
+    ]
+  },
+  "rewards": {
+    "benefits": [
+      {
+        "account_key": "summit-card",
+        "amount": "50.00",
+        "cadence": "semi_annual",
+        "cycles": [
+          {
+            "end": "2026-06-30",
+            "start": "2026-01-01",
+            "used": "50.00",
+            "used_on": "2026-03-14"
+          },
+          {
+            "end": "2026-12-31",
+            "start": "2026-07-01"
+          }
+        ],
+        "ends_on": "2026-12-31",
+        "how_to_use": "Pay seat or bag fees with this card",
+        "key": "airline-fee-credit",
+        "kind": "credit",
+        "name": "Airline fee credit",
+        "note": "This credit goes away after this year"
+      },
+      {
+        "account_key": "summit-card",
+        "ends_on": "2027-03-31",
+        "how_to_use": "Book a standard room on points",
+        "key": "anniversary-night",
+        "kind": "free_night",
+        "name": "Anniversary free night",
+        "program_key": "lantern-hotels"
+      },
+      {
+        "account_key": "summit-card",
+        "amount": "10.00",
+        "cadence": "monthly",
+        "counted_value": "100.00",
+        "cycles": [
+          {
+            "end": "2026-01-31",
+            "start": "2026-01-01",
+            "used": "10.00",
+            "used_on": "2026-01-12"
+          },
+          {
+            "end": "2026-02-28",
+            "start": "2026-02-01",
+            "used": "10.00",
+            "used_on": "2026-02-12"
+          },
+          {
+            "end": "2026-03-31",
+            "start": "2026-03-01",
+            "used": "10.00",
+            "used_on": "2026-03-12"
+          },
+          {
+            "end": "2026-04-30",
+            "start": "2026-04-01",
+            "used": "10.00",
+            "used_on": "2026-04-12"
+          },
+          {
+            "end": "2026-05-31",
+            "start": "2026-05-01",
+            "used": "10.00",
+            "used_on": "2026-05-12"
+          },
+          {
+            "end": "2026-06-30",
+            "start": "2026-06-01",
+            "used": "10.00",
+            "used_on": "2026-06-12"
+          },
+          {
+            "end": "2026-07-31",
+            "start": "2026-07-01",
+            "used": "10.00",
+            "used_on": "2026-07-12"
+          },
+          {
+            "end": "2026-08-31",
+            "start": "2026-08-01",
+            "used": "10.00",
+            "used_on": "2026-08-12"
+          },
+          {
+            "end": "2026-09-30",
+            "start": "2026-09-01",
+            "used": "6.00",
+            "used_on": "2026-09-14"
+          },
+          {
+            "end": "2026-10-31",
+            "start": "2026-10-01"
+          },
+          {
+            "end": "2026-11-30",
+            "start": "2026-11-01"
+          },
+          {
+            "amount": "20.00",
+            "end": "2026-12-31",
+            "start": "2026-12-01"
+          }
+        ],
+        "how_to_use": "Order from the partner delivery app",
+        "key": "dining-credit",
+        "kind": "credit",
+        "name": "Dining credit"
+      },
+      {
+        "account_key": "cobalt-card",
+        "as_of": "2026-09-30",
+        "cap": "6000.00",
+        "category_keys": [
+          "fuel"
+        ],
+        "earn_after": "1x",
+        "earn_before": "3x",
+        "key": "fuel-bonus",
+        "kind": "earning_cap",
+        "name": "Fuel bonus",
+        "reported_spent": "1820.40"
+      },
+      {
+        "account_key": "summit-card",
+        "key": "hotel-status",
+        "kind": "status_perk",
+        "name": "Hotel status",
+        "program_key": "lantern-hotels",
+        "status_tier": "Gold"
+      },
+      {
+        "account_key": "cobalt-card",
+        "amount": "15.00",
+        "cadence": "quarterly",
+        "cycles": [
+          {
+            "end": "2026-03-31",
+            "start": "2026-01-01",
+            "used": "15.00",
+            "used_on": "2026-02-03"
+          },
+          {
+            "end": "2026-06-30",
+            "start": "2026-04-01",
+            "used": "15.00",
+            "used_on": "2026-05-04"
+          },
+          {
+            "end": "2026-09-30",
+            "start": "2026-07-01",
+            "used": "15.00",
+            "used_on": "2026-08-03"
+          },
+          {
+            "end": "2026-12-31",
+            "start": "2026-10-01"
+          }
+        ],
+        "key": "streaming-credit",
+        "kind": "credit",
+        "name": "Streaming credit"
+      },
+      {
+        "account_key": "summit-card",
+        "amount": "100.00",
+        "cadence": "annual",
+        "cycles": [
+          {
+            "end": "2026-12-31",
+            "start": "2026-01-01"
+          }
+        ],
+        "enroll_by": "2026-10-31",
+        "enrolled": false,
+        "how_to_use": "Enroll on the card's benefits page first",
+        "key": "travel-credit",
+        "kind": "credit",
+        "name": "Yearly travel credit"
+      },
+      {
+        "account_key": "orchard-card",
+        "amount": "5.00",
+        "auto": true,
+        "cadence": "monthly",
+        "cycles": [
+          {
+            "end": "2026-01-31",
+            "start": "2026-01-01",
+            "used": "5.00",
+            "used_on": "2026-01-05"
+          },
+          {
+            "end": "2026-02-28",
+            "start": "2026-02-01",
+            "used": "5.00",
+            "used_on": "2026-02-05"
+          },
+          {
+            "end": "2026-03-31",
+            "start": "2026-03-01",
+            "used": "5.00",
+            "used_on": "2026-03-05"
+          },
+          {
+            "end": "2026-04-30",
+            "start": "2026-04-01",
+            "used": "5.00",
+            "used_on": "2026-04-05"
+          },
+          {
+            "end": "2026-05-31",
+            "start": "2026-05-01",
+            "used": "5.00",
+            "used_on": "2026-05-05"
+          },
+          {
+            "end": "2026-06-30",
+            "start": "2026-06-01",
+            "used": "5.00",
+            "used_on": "2026-06-05"
+          },
+          {
+            "end": "2026-07-31",
+            "start": "2026-07-01",
+            "used": "5.00",
+            "used_on": "2026-07-05"
+          },
+          {
+            "end": "2026-08-31",
+            "start": "2026-08-01",
+            "used": "5.00",
+            "used_on": "2026-08-05"
+          },
+          {
+            "end": "2026-09-30",
+            "start": "2026-09-01",
+            "used": "5.00",
+            "used_on": "2026-09-05"
+          },
+          {
+            "end": "2026-10-31",
+            "start": "2026-10-01"
+          },
+          {
+            "end": "2026-11-30",
+            "start": "2026-11-01"
+          },
+          {
+            "end": "2026-12-31",
+            "start": "2026-12-01"
+          }
+        ],
+        "key": "wireless-credit",
+        "kind": "credit",
+        "name": "Wireless credit"
+      }
+    ],
+    "highlights": [
+      "The dining credit resets on the first of each month",
+      "Summit Points go furthest as airline transfers"
+    ],
+    "milestones": [
+      {
+        "account_key": "cobalt-card",
+        "key": "cobalt-spend",
+        "met_on": "2026-08-14",
+        "reward": "Bonus miles",
+        "status": "met",
+        "threshold": "4000.00",
+        "year": 2026
+      },
+      {
+        "account_key": "summit-card",
+        "as_of": "2026-09-30",
+        "key": "summit-spend",
+        "note": "Behind pace",
+        "plan": "Put dining and groceries on this card through December",
+        "reported_spent": "14650.00",
+        "reward": "A companion pass",
+        "status": "open",
+        "threshold": "30000.00",
+        "year": 2026
+      }
+    ],
+    "programs": [
+      {
+        "as_of": "2026-10-01",
+        "avoid": [
+          "Seat upgrades"
+        ],
+        "balance": "42000",
+        "best_uses": [
+          "Award flights booked early"
+        ],
+        "cpp_high": "1.4",
+        "cpp_low": "1.0",
+        "earned_on": [
+          "cobalt-card"
+        ],
+        "group": "primary",
+        "key": "harbor-miles",
+        "kind": "miles",
+        "name": "Harbor Miles",
+        "owner": "sam",
+        "source": "manual",
+        "status_tier": "Silver",
+        "status_via": "cobalt-card"
+      },
+      {
+        "as_of": "2026-06-30",
+        "avoid": [
+          "Points plus cash stays"
+        ],
+        "balance": "12000",
+        "best_uses": [
+          "Free nights in the off season"
+        ],
+        "cpp_high": "0.7",
+        "cpp_low": "0.5",
+        "expires_on": "2027-09-30",
+        "group": "secondary",
+        "key": "lantern-hotels",
+        "kind": "points",
+        "name": "Lantern Hotels",
+        "owner": "alex",
+        "source": "manual",
+        "status_tier": "Gold",
+        "status_via": "summit-card"
+      },
+      {
+        "as_of": "2026-09-30",
+        "balance": "37.42",
+        "earned_on": [
+          "orchard-card"
+        ],
+        "group": "secondary",
+        "key": "pine-cash-back",
+        "kind": "cash_back",
+        "name": "Pine Cash Back",
+        "owner": "alex",
+        "source": "statement"
+      },
+      {
+        "allocations": [
+          {
+            "allocated": "1000",
+            "book_by": "2026-11-30",
+            "expires_on": "2026-12-31",
+            "used": "800",
+            "year": 2026
+          },
+          {
+            "allocated": "1000",
+            "book_by": "2027-11-30",
+            "expires_on": "2027-12-31",
+            "pulled_forward": "200",
+            "used": "0",
+            "year": 2027
+          }
+        ],
+        "group": "secondary",
+        "key": "shared-vacation-club",
+        "kind": "timeshare",
+        "name": "Shared Vacation Club",
+        "note": "Book the summer week before the deadline"
+      },
+      {
+        "as_of": "2026-09-30",
+        "avoid": [
+          "Gift cards",
+          "Shopping with points"
+        ],
+        "balance": "84250",
+        "best_uses": [
+          "Transfer to airline partners",
+          "Hotel stays at peak times"
+        ],
+        "cpp_high": "1.8",
+        "cpp_low": "1.2",
+        "earned_on": [
+          "summit-card"
+        ],
+        "group": "primary",
+        "key": "summit-points",
+        "kind": "points",
+        "name": "Summit Points",
+        "source": "statement"
+      }
+    ],
+    "redemptions": [
+      {
+        "key": "beach-hotel",
+        "points_needed": "60000",
+        "program_key": "summit-points",
+        "status": "consider",
+        "title": "Hotel for the beach week",
+        "trip_key": "beach-week"
+      },
+      {
+        "key": "ski-flights",
+        "points_needed": "50000",
+        "program_key": "harbor-miles",
+        "status": "ready",
+        "title": "Flights for the ski weekend",
+        "trip_key": "ski-weekend"
+      },
+      {
+        "done_on": "2026-04-18",
+        "key": "spring-stay",
+        "points_needed": "20000",
+        "program_key": "lantern-hotels",
+        "status": "done",
+        "title": "Spring weekend stay"
+      }
+    ],
+    "routing": [
+      {
+        "account_key": "summit-card",
+        "display_order": 1,
+        "earn": "4x",
+        "key": "dining",
+        "spend": "Dining and groceries"
+      },
+      {
+        "account_key": "orchard-card",
+        "display_order": 6,
+        "earn": "1.5%",
+        "key": "everything-else",
+        "spend": "Everything else"
+      },
+      {
+        "account_key": "cobalt-card",
+        "display_order": 2,
+        "earn": "3x",
+        "key": "fuel",
+        "spend": "Fuel"
+      },
+      {
+        "account_key": "bramble-store-card",
+        "display_order": 5,
+        "earn": "5%",
+        "key": "store",
+        "note": "Pay in full",
+        "spend": "Bramble store purchases"
+      },
+      {
+        "account_key": "cobalt-card",
+        "display_order": 4,
+        "earn": "2x",
+        "key": "streaming",
+        "spend": "Streaming"
+      },
+      {
+        "account_key": "summit-card",
+        "display_order": 3,
+        "earn": "3x",
+        "key": "travel",
+        "spend": "Flights and hotels"
+      }
+    ]
+  },
+  "run_id": "2026-10-12",
+  "schema_version": "1.4",
+  "statements": [
+    {
+      "account_key": "alex-401k",
+      "closing": "91834.13",
+      "fees": "-22.95",
+      "has_holdings": true,
+      "market_change": "2693.06",
+      "net_flows": "2268.00",
+      "opening": "86873.07",
+      "period_end": "2026-09-30",
+      "period_start": "2026-07-01",
+      "reconciled": true,
+      "statement_date": "2026-09-30",
+      "txn_count": 0
+    },
+    {
+      "account_key": "bramble-store-card",
+      "closing": "-54.49",
+      "credits": "44.15",
+      "debits": "-54.49",
+      "due_date": "2026-10-10",
+      "opening": "-44.15",
+      "period_end": "2026-09-15",
+      "period_start": "2026-08-16",
+      "reconciled": true,
+      "statement_date": "2026-09-15",
+      "txn_count": 3,
+      "txn_sum": "-10.34"
+    },
+    {
+      "account_key": "cobalt-card",
+      "closing": "-935.76",
+      "credit_limit": "5000.00",
+      "credits": "250.00",
+      "debits": "-142.22",
+      "due_date": "2026-10-17",
+      "min_due": "35.00",
+      "opening": "-1043.54",
+      "period_end": "2026-09-22",
+      "period_start": "2026-08-23",
+      "reconciled": true,
+      "statement_date": "2026-09-22",
+      "txn_count": 7,
+      "txn_sum": "107.78"
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "36672.04",
+      "credits": "4500.00",
+      "debits": "-2279.34",
+      "opening": "34451.38",
+      "period_end": "2026-09-30",
+      "period_start": "2026-09-01",
+      "reconciled": true,
+      "source_sha256": "e3fb6b1b25f3ef778a736af77b2bb8880fdc3fbd68dd3cf592eb2c449b015486",
+      "statement_date": "2026-09-30",
+      "txn_count": 10,
+      "txn_sum": "2220.66"
+    },
+    {
+      "account_key": "harbor-savings",
+      "closing": "13845.84",
+      "credits": "614.18",
+      "debits": "0.00",
+      "interest": "14.18",
+      "opening": "13231.66",
+      "period_end": "2026-09-30",
+      "period_start": "2026-07-01",
+      "reconciled": true,
+      "source_sha256": "e3fb6b1b25f3ef778a736af77b2bb8880fdc3fbd68dd3cf592eb2c449b015486",
+      "statement_date": "2026-09-30",
+      "txn_count": 0
+    },
+    {
+      "account_key": "kids-529",
+      "closing": "21890.48",
+      "has_holdings": true,
+      "market_change": "691.85",
+      "net_flows": "850.00",
+      "opening": "20348.63",
+      "period_end": "2026-09-30",
+      "period_start": "2026-07-01",
+      "reconciled": true,
+      "statement_date": "2026-09-30",
+      "txn_count": 0
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "56591.28",
+      "has_holdings": true,
+      "market_change": "624.90",
+      "net_flows": "500.00",
+      "opening": "55466.38",
+      "period_end": "2026-09-30",
+      "period_start": "2026-09-01",
+      "reconciled": true,
+      "statement_date": "2026-09-30",
+      "txn_count": 4
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "37398.00",
+      "credits": "5862.69",
+      "debits": "-2901.87",
+      "opening": "34437.18",
+      "period_end": "2026-09-30",
+      "period_start": "2026-09-01",
+      "reconciled": true,
+      "statement_date": "2026-09-30",
+      "txn_count": 13,
+      "txn_sum": "2960.82"
+    },
+    {
+      "account_key": "orchard-card",
+      "balance": "-616.18",
+      "closing": "-316.18",
+      "credit_limit": "6000.00",
+      "credits": "226.32",
+      "debits": "-321.18",
+      "due_date": "2026-10-25",
+      "min_due": "35.00",
+      "opening": "-221.32",
+      "period_end": "2026-09-30",
+      "period_start": "2026-09-01",
+      "reconciled": true,
+      "statement_date": "2026-09-30",
+      "txn_count": 9,
+      "txn_sum": "-94.86"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-244860.86",
+      "credits": "1500.00",
+      "debits": "-920.40",
+      "due_date": "2026-10-02",
+      "interest": "-920.40",
+      "min_due": "1500.00",
+      "opening": "-245440.46",
+      "period_end": "2026-09-15",
+      "period_start": "2026-08-16",
+      "reconciled": true,
+      "statement_date": "2026-09-15",
+      "txn_count": 2,
+      "txn_sum": "579.60"
+    },
+    {
+      "account_key": "summit-card",
+      "balance": "-632.41",
+      "closing": "-432.41",
+      "credit_limit": "15000.00",
+      "credits": "895.45",
+      "debits": "-467.41",
+      "due_date": "2026-10-05",
+      "min_due": "35.00",
+      "opening": "-860.45",
+      "period_end": "2026-09-10",
+      "period_start": "2026-08-11",
+      "reconciled": true,
+      "statement_date": "2026-09-10",
+      "txn_count": 17,
+      "txn_sum": "428.04"
+    }
+  ],
+  "todos": [
+    {
+      "due_date": "2026-10-31",
+      "key": "check-car-value",
+      "status": "open",
+      "subtitle": "Quarterly valuation",
+      "title": "Check the car value"
+    },
+    {
+      "key": "file-clinic-claim",
+      "status": "done",
+      "title": "File the clinic claim"
+    }
+  ],
+  "trips": [
+    {
+      "estimate_high": "3600.00",
+      "estimate_low": "2400.00",
+      "items": [
+        {
+          "estimate_high": "1300.00",
+          "estimate_low": "900.00",
+          "key": "flights",
+          "kind": "flight",
+          "label": "Flights",
+          "status": "estimate",
+          "tender": "cash"
+        },
+        {
+          "estimate_high": "1800.00",
+          "estimate_low": "1200.00",
+          "key": "rental",
+          "kind": "lodging",
+          "label": "Beach rental",
+          "status": "estimate",
+          "tender": "cash"
+        },
+        {
+          "estimate_high": "250.00",
+          "estimate_low": "150.00",
+          "key": "snorkel-tour",
+          "kind": "activities",
+          "label": "Snorkel tour",
+          "maybe": true,
+          "status": "estimate",
+          "tender": "cash"
+        }
+      ],
+      "key": "beach-week",
+      "month": "2027-06",
+      "name": "Beach week",
+      "people": [
+        "alex",
+        "jamie",
+        "riley",
+        "sam"
+      ],
+      "status": "planning"
+    },
+    {
+      "deleted": true,
+      "key": "city-break"
+    },
+    {
+      "end_date": "2027-01-18",
+      "estimate_high": "1600.00",
+      "estimate_low": "1100.00",
+      "ious": [
+        {
+          "amount": "150.00",
+          "counterparty": "friend couple",
+          "direction": "owed_to_us",
+          "item_key": "rental-car",
+          "key": "car-share",
+          "note": "Their half of the rental car",
+          "status": "open"
+        }
+      ],
+      "items": [
+        {
+          "account_key": "cobalt-card",
+          "amount": "11.20",
+          "key": "flights",
+          "kind": "flight",
+          "label": "Flights",
+          "person": "sam",
+          "points": "50000",
+          "program_key": "harbor-miles",
+          "status": "booked",
+          "tender": "points"
+        },
+        {
+          "account_key": "bramble-store-card",
+          "amount": "180.00",
+          "key": "gear",
+          "kind": "shopping",
+          "label": "Winter gear on the store plan",
+          "person": "sam",
+          "status": "booked",
+          "tender": "cash"
+        },
+        {
+          "amount": "0.00",
+          "key": "hotel",
+          "kind": "lodging",
+          "label": "Mountain inn",
+          "program_key": "lantern-hotels",
+          "status": "booked",
+          "tender": "free_night"
+        },
+        {
+          "estimate_high": "420.00",
+          "estimate_low": "300.00",
+          "key": "lift-tickets",
+          "kind": "tickets",
+          "label": "Lift tickets",
+          "status": "estimate",
+          "tender": "cash"
+        },
+        {
+          "key": "parking",
+          "kind": "parking",
+          "label": "Resort parking",
+          "status": "tbd",
+          "tender": "cash"
+        },
+        {
+          "amount": "40.00",
+          "key": "points-credit",
+          "kind": "other",
+          "label": "Points toward the inn fees",
+          "program_key": "summit-points",
+          "status": "posted",
+          "tender": "points_credit"
+        },
+        {
+          "account_key": "summit-card",
+          "amount": "300.00",
+          "due_on": "2026-11-10",
+          "key": "rental-car",
+          "kind": "rental_car",
+          "label": "Rental car",
+          "person": "alex",
+          "status": "booked",
+          "tender": "cash"
+        }
+      ],
+      "key": "ski-weekend",
+      "name": "Ski weekend",
+      "note": "Book the lift tickets in December",
+      "people": [
+        "alex",
+        "sam"
+      ],
+      "start_date": "2027-01-15",
+      "status": "booked"
+    }
+  ],
+  "utility_bills": [
+    {
+      "bill_date": "2026-09-06",
+      "credits": [
+        {
+          "amount": "-5.00",
+          "label": "Energy savings credit"
+        },
+        {
+          "amount": "-2.19",
+          "label": "Smart thermostat credit"
+        }
+      ],
+      "days": 30,
+      "due_date": "2026-09-26",
+      "heating_degree_days": 0,
+      "lines": [
+        {
+          "charges": "148.79",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "719"
+        },
+        {
+          "charges": "32.65",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "19"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-09-03",
+      "period_start": "2026-08-04",
+      "provider": "City Power & Gas",
+      "total": "174.25",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-09-06",
+      "days": 92,
+      "due_date": "2026-10-01",
+      "lines": [
+        {
+          "charges": "27.32",
+          "fixed_charges": "7.00",
+          "service": "sewer",
+          "unit": "gallons",
+          "usage": "5642"
+        },
+        {
+          "charges": "6.00",
+          "fixed_charges": "6.00",
+          "service": "stormwater",
+          "unit": "none",
+          "usage": "0"
+        },
+        {
+          "charges": "33.39",
+          "fixed_charges": "8.00",
+          "service": "water",
+          "unit": "gallons",
+          "usage": "5642"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-09-01",
+      "period_start": "2026-06-01",
+      "provider": "Town Water",
+      "total": "66.71",
+      "utility_key": "town-water"
+    }
+  ]
+}

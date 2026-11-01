@@ -1,0 +1,109 @@
+{
+  "about": "detect_sensitive patterns for import format v1. Loaded by backend/app/importer/sanitize.py and schema/check_run.py. Text is normalized first (see normalize). Rules then run in this order on every scanned text field and key. Rules with masked=true run on the normalized text after the masks below are replaced by an underscore. A rule with sections runs only on text in those snapshot sections, never on other sections, CSV rows or other callers. booking-code covers rewards and trips (from 1.3) and flags, installment_plans and goals (from 1.4, redaction.json version 4; the app checks these sections in runs of every version).",
+  "masks": [
+    {
+      "name": "iso-date",
+      "pattern": "(?<![0-9])[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])(?![0-9])"
+    },
+    {
+      "name": "year-range",
+      "pattern": "(?<![0-9])(?:19|20)[0-9]{2}-(?:(?:19|20)[0-9]{2}|[0-9]{2})(?![0-9])"
+    },
+    {
+      "name": "money",
+      "pattern": "(?<![0-9])(?<![0-9][.,])[0-9]{1,3}(?:,[0-9]{3})*\\.[0-9]{2}(?![0-9])(?![.,][0-9])"
+    }
+  ],
+  "normalize": {
+    "about": "Before any rule or private-list match: Unicode NFKC, then every non-ASCII decimal digit becomes its ASCII digit, every dash (category Pd and U+2212) becomes '-', every other space character becomes ' ', and format characters (category Cf, such as zero-width spaces) are removed. So full-width digits, no-break spaces and en dashes cannot hide a number.",
+    "form": "NFKC"
+  },
+  "private": {
+    "about": "Private lists (personal subscription names, employer terms) match case-insensitively as substrings. Both sides are lowercased and every run of characters other than a-z and 0-9 becomes one space. A term also matches when its letters and digits alone (all else removed) appear in the text's letters and digits alone, if that form has at least min_squashed characters.",
+    "min_squashed": 5,
+    "rule_ids": {
+      "employer_terms": "private-employer",
+      "personal_subscriptions": "private-subscription"
+    }
+  },
+  "rules": [
+    {
+      "id": "digits-run",
+      "kind": "regex",
+      "masked": false,
+      "pattern": "[0-9]{5,}"
+    },
+    {
+      "about": "Digit groups of 2 or more joined by spaces (any number), or by one dot or dash with optional spaces around it.",
+      "id": "digits-split",
+      "kind": "digit_groups",
+      "masked": true,
+      "min_digits": 8,
+      "pattern": "(?<![0-9])[0-9]{2,}(?:(?:\\s*[.-]\\s*|\\s+)[0-9]{2,})+(?![0-9])"
+    },
+    {
+      "about": "Digit groups joined by gaps of 1 to 3 characters that are not letters or digits. Any window of consecutive groups with min_digits to max_digits digits that passes the Luhn check is a hit. A gap that is not one tight_gap character only joins groups of at least loose_min_group digits.",
+      "gap": "[^0-9A-Za-z]{1,3}",
+      "id": "luhn",
+      "kind": "luhn",
+      "loose_min_group": 3,
+      "masked": true,
+      "max_digits": 19,
+      "min_digits": 13,
+      "tight_gap": "[ .-]"
+    },
+    {
+      "id": "phone",
+      "kind": "regex",
+      "masked": false,
+      "pattern": "\\([0-9]{3}\\)\\s*[0-9]{3}\\s*[ ./-]?\\s*[0-9]{4}|(?<![0-9])[0-9]{3}\\s*[ ./-]\\s*[0-9]{3}\\s*[ ./-]\\s*[0-9]{4}"
+    },
+    {
+      "id": "split-account",
+      "kind": "regex",
+      "masked": false,
+      "pattern": "\\b[0-9]{4}-[0-9]{4}\\b"
+    },
+    {
+      "id": "masked-number",
+      "ignore_case": true,
+      "kind": "regex",
+      "masked": false,
+      "pattern": "[x*•#]{4,}|#-#|(?<![a-z])[x*•]{2,}[0-9]{2,4}(?![0-9])|(?<![a-z0-9])(?:x+-|x{2,} |[*•]{2,}[ -])[0-9]{4}(?![0-9])|(?:[*•x] ){3,}[0-9]{4}(?![0-9])"
+    },
+    {
+      "id": "email",
+      "kind": "regex",
+      "masked": false,
+      "pattern": "[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\\.[A-Za-z0-9-]+)*\\.[A-Za-z]{2,}"
+    },
+    {
+      "id": "street-address",
+      "ignore_case": true,
+      "kind": "regex",
+      "masked": false,
+      "pattern": "\\b[0-9]{1,6}\\s+(?:(?:[0-9]+(?:st|nd|rd|th)|[a-z]+)\\.?\\s+){1,3}(?:st|street|ave|avenue|rd|road|blvd|boulevard|dr|drive|ln|lane|ct|court|way|pl|place|pkwy|parkway|hwy|highway|cir|circle|ter|terrace|trl|trail)\\b|\\bp\\.?\\s?o\\.?\\s+box\\b"
+    },
+    {
+      "about": "Rewards and trips (from 1.3) and flags, installment_plans and goals (from 1.4; the app checks these sections in runs of every version), plan component merchants included. A case-sensitive token of 6 to 8 capital letters and digits, with at least 2 of each: record locators, confirmation codes, claim and order numbers, and flight numbers like two letters and four digits. Codes made only of letters are not caught.",
+      "id": "booking-code",
+      "kind": "regex",
+      "masked": false,
+      "pattern": "(?<![A-Za-z0-9])(?=(?:[A-Z]*[0-9]){2})(?=(?:[0-9]*[A-Z]){2})[A-Z0-9]{6,8}(?![A-Za-z0-9])",
+      "sections": [
+        "flags",
+        "goals",
+        "installment_plans",
+        "rewards",
+        "trips"
+      ]
+    }
+  ],
+  "stock_plan": {
+    "about": "Applies to holding names. A match rejects the run.",
+    "id": "stock-plan",
+    "ignore_case": true,
+    "pattern": "\\b(?:stock\\s+plan|espp|rsus?|unvested)\\b"
+  },
+  "version": 4
+}

@@ -1,0 +1,14 @@
+txn_date,post_date,amount,description,merchant,category_key,cardholder,txn_type,is_transfer,counterparty_account_key,is_reimbursable,exclude_from_budget,plan_key,recurring_key,trip_key,hsa_eligible,needs_review,confidence,notes
+2026-09-01,,-1500.00,PINECREST MORTGAGE PAYMENT,,mortgage,,payment,true,pinecrest-mortgage,,,,mortgage,,,false,1.00,
+2026-09-04,,2931.20,PAYROLL DEPOSIT,,paycheck,,deposit,false,,,,,alex-pay,,,false,1.00,
+2026-09-05,,-500.00,TRANSFER TO LAKEVIEW BROKERAGE,,transfer,,transfer,true,lakeview-brokerage,,,,,,,false,1.00,
+2026-09-05,,-92.58,GREEN LEAF MARKET,Green Leaf Market,groceries,,purchase,false,,,,,,,,false,0.95,
+2026-09-09,,-100.00,ATM WITHDRAWAL,,cash-withdrawal,,withdrawal,false,,,,,,,,false,0.95,
+2026-09-12,,-102.82,GREEN LEAF MARKET,Green Leaf Market,groceries,,purchase,false,,,,,,,,false,0.95,
+2026-09-14,,-79.99,FIBERNET INTERNET,Fibernet,internet,,purchase,false,,,,,fibernet-internet,,,false,0.95,
+2026-09-16,,-64.20,GREEN LEAF MARKET,Green Leaf Market,groceries,,purchase,false,,,,,,,,false,0.95,Weekly shop
+2026-09-18,,-174.25,CITY POWER AND GAS,City Power and Gas,gas-and-electric,,purchase,false,,,,,city-power,,,false,0.95,
+2026-09-18,,2931.20,PAYROLL DEPOSIT,,paycheck,,deposit,false,,,,,alex-pay,,,false,1.00,
+2026-09-20,,-221.32,ORCHARD CARD PAYMENT,,transfer,,payment,true,orchard-card,,,,,,,false,1.00,
+2026-09-22,,-66.71,TOWN WATER UTILITY,Town Water,water-and-sewer,,purchase,false,,,,,town-water,,,false,0.95,
+2026-09-30,,0.29,INTEREST PAID,,interest-income,,interest,false,,,,,,,,false,1.00,

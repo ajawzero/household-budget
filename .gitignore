@@ -1,0 +1,41 @@
+# Real data never goes in git. Anchored so samples/data stays tracked.
+/var/
+/data/
+/config/
+/releases/
+import/
+backups/
+*.db*
+*.sqlite*
+*.tar.gz
+
+# Secrets
+*.env*
+.env*
+!.env.example
+!/docs/budget.env.example
+private_rules*.json
+!samples/private_rules.example.json
+config/secrets*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Build and tooling
+node_modules/
+dist/
+build/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Handoffs from the Finances chat can hold real amounts
+/docs/handoffs/
+*.tsbuildinfo
+
+# Claude Code agent worktrees
+/.claude/worktrees/

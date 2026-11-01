@@ -1,0 +1,85 @@
+{
+  "about": "Shared payoff cases: backend/tests/test_debt_payoff.py and projection.test.ts both run them, so the server and Try a payment agree. Amounts are strings with _ between thousands (the privacy scan blocks long digit runs); drop the _ to read them. A case's terms may carry rate_changes (oldest first, {effective_on, apr_milli_pct}); none when left out.",
+  "cases": [
+    {
+      "name": "no interest",
+      "terms": { "owed_cents": "100_000", "apr_milli_pct": "0", "promo": false, "promo_month": null, "from_month": "2026-09" },
+      "monthly_cents": "25_000",
+      "run": { "months": 4, "interest_cents": "0", "last_payment_cents": "25_000", "early_cents": "50_000" },
+      "by_month": "2026-12",
+      "monthly_to_finish": "33_334"
+    },
+    {
+      "name": "6% loan",
+      "terms": { "owed_cents": "1_000_000", "apr_milli_pct": "6_000", "promo": false, "promo_month": null, "from_month": "2026-09" },
+      "monthly_cents": "100_000",
+      "run": { "months": 11, "interest_cents": "28_481", "last_payment_cents": "28_481", "early_cents": "128_339" },
+      "by_month": "2027-06",
+      "monthly_to_finish": "113_908"
+    },
+    {
+      "name": "promo then rate",
+      "terms": { "owed_cents": "120_000", "apr_milli_pct": "24_000", "promo": true, "promo_month": "2027-03", "from_month": "2026-09" },
+      "monthly_cents": "15_000",
+      "run": { "months": 9, "interest_cents": "930", "last_payment_cents": "930", "early_cents": "15_912" },
+      "by_month": "2027-03",
+      "monthly_to_finish": "20_000"
+    },
+    {
+      "name": "promo with no end",
+      "terms": { "owed_cents": "120_000", "apr_milli_pct": "24_000", "promo": true, "promo_month": null, "from_month": "2026-09" },
+      "monthly_cents": "15_000",
+      "run": { "months": 8, "interest_cents": "0", "last_payment_cents": "15_000", "early_cents": "30_000" },
+      "by_month": "2027-03",
+      "monthly_to_finish": "20_000"
+    },
+    {
+      "name": "interest eats the payment",
+      "terms": { "owed_cents": "1_000_000", "apr_milli_pct": "24_000", "promo": false, "promo_month": null, "from_month": "2026-09" },
+      "monthly_cents": "20_000",
+      "run": { "months": null, "interest_cents": null, "last_payment_cents": null, "early_cents": null },
+      "by_month": "2028-09",
+      "monthly_to_finish": "52_872"
+    },
+    {
+      "name": "rate not known",
+      "terms": { "owed_cents": "50_000", "apr_milli_pct": null, "promo": false, "promo_month": null, "from_month": "2026-09" },
+      "monthly_cents": "20_000",
+      "run": { "months": 3, "interest_cents": "0", "last_payment_cents": "10_000", "early_cents": "30_000" },
+      "by_month": "2026-10",
+      "monthly_to_finish": "50_000"
+    },
+    {
+      "name": "long loan",
+      "terms": { "owed_cents": "5_000_000", "apr_milli_pct": "4_500", "promo": false, "promo_month": null, "from_month": "2026-09" },
+      "monthly_cents": "40_000",
+      "run": { "months": 169, "interest_cents": "1_759_553", "last_payment_cents": "39_553", "early_cents": "79_405" },
+      "by_month": "2036-09",
+      "monthly_to_finish": "51_820"
+    },
+    {
+      "name": "rate rise",
+      "terms": { "owed_cents": "300_000", "apr_milli_pct": "19_240", "promo": false, "promo_month": null, "from_month": "2026-09", "rate_changes": [{ "effective_on": "2026-11-01", "apr_milli_pct": "24_990" }] },
+      "monthly_cents": "20_000",
+      "run": { "months": 19, "interest_cents": "61_353", "last_payment_cents": "1_353", "early_cents": "21_325" },
+      "by_month": "2027-06",
+      "monthly_to_finish": "36_727"
+    },
+    {
+      "name": "rate fall mid-month",
+      "terms": { "owed_cents": "1_000_000", "apr_milli_pct": "7_500", "promo": false, "promo_month": null, "from_month": "2026-09", "rate_changes": [{ "effective_on": "2027-01-15", "apr_milli_pct": "6_250" }] },
+      "monthly_cents": "100_000",
+      "run": { "months": 11, "interest_cents": "33_451", "last_payment_cents": "33_451", "early_cents": "133_278" },
+      "by_month": "2027-06",
+      "monthly_to_finish": "114_418"
+    },
+    {
+      "name": "rate change already started",
+      "terms": { "owed_cents": "300_000", "apr_milli_pct": "19_240", "promo": false, "promo_month": null, "from_month": "2026-09", "rate_changes": [{ "effective_on": "2026-09-01", "apr_milli_pct": "29_990" }] },
+      "monthly_cents": "20_000",
+      "run": { "months": 20, "interest_cents": "80_655", "last_payment_cents": "655", "early_cents": "20_639" },
+      "by_month": "2027-06",
+      "monthly_to_finish": "37_636"
+    }
+  ]
+}

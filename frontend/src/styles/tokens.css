@@ -1,0 +1,214 @@
+/*
+ * Design tokens (PLAN 8.3, docs/DESIGN.md). The only place hex values live.
+ * Neutrals: Radix Colors sand. Accent: Radix teal. Status text: amber 11 and
+ * our own good and bad values. Chart slots: the validated dataviz palette.
+ *
+ * Themes: light by default, dark with [data-theme=dark], and Auto (no
+ * attribute) follows the device through prefers-color-scheme.
+ */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg-page: #efeeec; /* warm gray between sand 3 and 4, so white cards stand out */
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f0ef; /* sand 3: gray bands inside cards */
+  --bg-hover: #f9f9f8; /* sand 2: row hover on cards */
+  --bg-active: #e2e1de; /* sand 5: active nav pill on the page */
+  --border: #dad9d6; /* sand 6 */
+  --border-strong: #bcbbb5; /* sand 8 */
+  --overlay: rgb(33 32 28 / 0.4);
+
+  /* Text */
+  --text: #21201c; /* sand 12 */
+  --text-secondary: #63635e; /* sand 11: 6.0:1 on card, 5.2:1 on page */
+  --text-faint: #82827c; /* sand 10: placeholders and disabled only (3.9:1) */
+
+  /* Primary buttons are ink, never orange (orange means spending). */
+  --primary: #21201c;
+  --primary-hover: #3b3a37;
+  --text-on-primary: #ffffff;
+
+  /* Accent: lines, focus ring, active tab underline */
+  --accent: #12a594; /* teal 9 */
+  --accent-text: #007a69; /* teal 11 darkened a step: 4.5:1 on the page too */
+  --accent-tint: #e0f8f3; /* teal 3 */
+
+  /* Status text (AA on cards) */
+  --text-good: #187955; /* 4.6:1 on the page, 5.4:1 on cards */
+  --text-bad: #c62f2f;
+  --text-warn: #9a5b00; /* amber 11 darkened a step: 4.5:1 on page and tint */
+  --text-income: #256abf;
+  --text-spending: #b8461b;
+
+  /* Demo mode banner: its own color, so it never reads as a status (violet 3, 6, 11). */
+  --demo-tint: #f4f0fe;
+  --demo-border: #d4cafe;
+  --demo-text: #6550b9; /* 5.5:1 on the tint */
+
+  /* Status fills (meters, dots). Distinct from the chart slots. */
+  --fill-good: #0ca30c;
+  --fill-warn: #fab219;
+  --fill-bad: #d03b3b;
+  --tint-strength: 8%;
+
+  /* Chart slots: fills and strokes only, never text */
+  --chart-income: #2a78d6;
+  --chart-spending: #eb6834;
+  --chart-leftover: #1baf7a;
+  --chart-4: #eda100;
+  --chart-5: #e87ba4;
+  --chart-6: #008300;
+  --chart-7: #6250d6;
+  --chart-8: #e34948;
+
+  /* Chart chrome */
+  --chart-grid: #e9e8e6; /* sand 4 */
+  --chart-axis: #cfceca; /* sand 7 */
+  --chart-muted: #82827c; /* sand 10: sparklines, a step darker than sand 9 */
+  --chart-target: #21201c; /* budget meter target tick */
+  --area-fill-top: 0.22;
+  --mono-strength: 18%;
+
+  /* Elevation */
+  --elev-card: 0 2px 4px rgb(33 32 28 / 0.1);
+  --elev-pop: 0 8px 24px rgb(33 32 28 / 0.16);
+
+  /* Motion (DESIGN.md "Motion"). Same in both themes. Reduced motion makes it instant (app.css). */
+  --dur-fast: 150ms; /* menus, tooltips, press */
+  --dur-base: 220ms; /* panels, tabs, groups, fades */
+  --dur-slow: 300ms; /* drawers, page entry */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Dark values, used by Auto on a dark device and by the Dark choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg-page: #191918; /* sand dark 2 */
+    --bg-card: #222221; /* sand dark 3 */
+    --bg-subtle: #2a2a28; /* sand dark 4 */
+    --bg-hover: #2a2a28;
+    --bg-active: #31312e; /* sand dark 5 */
+    --border: #3b3a37; /* sand dark 6 */
+    --border-strong: #62605b; /* sand dark 8 */
+    --overlay: rgb(0 0 0 / 0.6);
+
+    --text: #eeeeec;
+    --text-secondary: #b5b3ad;
+    --text-faint: #7c7b74;
+
+    --primary: #eeeeec;
+    --primary-hover: #d9d9d6;
+    --text-on-primary: #191918;
+
+    --accent: #12a594;
+    --accent-text: #0bd8b6;
+    --accent-tint: #023b37;
+
+    --demo-tint: #291f43;
+    --demo-border: #473876;
+    --demo-text: #baa7ff; /* 7.3:1 on the tint */
+
+    --text-good: #2fc28a;
+    --text-bad: #ff9592;
+    --text-warn: #ffca16;
+    --text-income: #6da7ec;
+    --text-spending: #f0895f;
+
+    --fill-good: #0ca30c;
+    --fill-warn: #fab219;
+    --fill-bad: #d03b3b;
+    --tint-strength: 24%;
+
+    --chart-income: #3987e5;
+    --chart-spending: #d95926;
+    --chart-leftover: #199e70;
+    --chart-4: #c98500;
+    --chart-5: #d55181;
+    --chart-6: #008300;
+    --chart-7: #9085e9;
+    --chart-8: #e66767;
+
+    --chart-grid: #31312e;
+    --chart-axis: #494844;
+    --chart-muted: #7c7b74;
+    --chart-target: #eeeeec;
+    --area-fill-top: 0.3;
+    --mono-strength: 30%;
+
+    --elev-card: 0 2px 4px rgb(0 0 0 / 0.2);
+    --elev-pop: 0 8px 24px rgb(0 0 0 / 0.4);
+  }
+}
+
+/* The Dark choice. Same values as the block above. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-page: #191918;
+  --bg-card: #222221;
+  --bg-subtle: #2a2a28;
+  --bg-hover: #2a2a28;
+  --bg-active: #31312e;
+  --border: #3b3a37;
+  --border-strong: #62605b;
+  --overlay: rgb(0 0 0 / 0.6);
+
+  --text: #eeeeec;
+  --text-secondary: #b5b3ad;
+  --text-faint: #7c7b74;
+
+  --primary: #eeeeec;
+  --primary-hover: #d9d9d6;
+  --text-on-primary: #191918;
+
+  --accent: #12a594;
+  --accent-text: #0bd8b6;
+  --accent-tint: #023b37;
+
+  --demo-tint: #291f43;
+  --demo-border: #473876;
+  --demo-text: #baa7ff; /* 7.3:1 on the tint */
+
+  --text-good: #2fc28a;
+  --text-bad: #ff9592;
+  --text-warn: #ffca16;
+  --text-income: #6da7ec;
+  --text-spending: #f0895f;
+
+  --fill-good: #0ca30c;
+  --fill-warn: #fab219;
+  --fill-bad: #d03b3b;
+  --tint-strength: 24%;
+
+  --chart-income: #3987e5;
+  --chart-spending: #d95926;
+  --chart-leftover: #199e70;
+  --chart-4: #c98500;
+  --chart-5: #d55181;
+  --chart-6: #008300;
+  --chart-7: #9085e9;
+  --chart-8: #e66767;
+
+  --chart-grid: #31312e;
+  --chart-axis: #494844;
+  --chart-muted: #7c7b74;
+  --chart-target: #eeeeec;
+  --area-fill-top: 0.3;
+  --mono-strength: 30%;
+
+  --elev-card: 0 2px 4px rgb(0 0 0 / 0.2);
+  --elev-pop: 0 8px 24px rgb(0 0 0 / 0.4);
+}
+
+/* Derived tints. Built from the tokens above, so they follow the theme. */
+:root {
+  --tint-good: color-mix(in oklab, var(--fill-good) var(--tint-strength), var(--bg-card));
+  --tint-bad: color-mix(in oklab, var(--fill-bad) var(--tint-strength), var(--bg-card));
+  --tint-warn: color-mix(in oklab, var(--fill-warn) var(--tint-strength), var(--bg-card));
+}

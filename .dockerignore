@@ -1,0 +1,35 @@
+# Allowlist (PLAN 5.4). Ignore everything, then let in only what the image build needs.
+*
+!backend/app
+!backend/pyproject.toml
+!backend/uv.lock
+!backend/.python-version
+!frontend/src
+!frontend/public
+!frontend/index.html
+!frontend/package.json
+!frontend/package-lock.json
+!frontend/.npmrc
+!frontend/.node-version
+!frontend/vite.config.ts
+!frontend/tsconfig.json
+!schema/categories.json
+!schema/redaction.json
+# The fake sample runs for demo mode. Not the rest of samples/ (no private rules file).
+!samples/data
+
+# Never, even inside an allowed folder.
+**/.env*
+**/*.env
+**/*.db*
+**/*.sqlite*
+**/private_rules*
+**/__pycache__
+**/*.pyc
+**/.DS_Store
+**/node_modules
+**/dist
+**/static
+frontend/src/**/*.test.ts
+frontend/src/**/*.test.tsx
+frontend/src/test

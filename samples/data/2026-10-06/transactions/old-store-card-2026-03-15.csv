@@ -1,0 +1,4 @@
+txn_date,post_date,amount,description,merchant,category_key,cardholder,txn_type,is_transfer,counterparty_account_key,is_reimbursable,exclude_from_budget,plan_key,recurring_key,trip_key,hsa_eligible,needs_review,confidence,notes
+2026-02-28,2026-03-01,-49.70,TOWNE OUTFITTERS,Towne Outfitters,clothing,,purchase,false,,,,,,,,false,0.95,
+2026-03-08,2026-03-08,114.92,PAYMENT RECEIVED - THANK YOU,,transfer,,payment,true,harbor-checking,,,,,,,false,1.00,
+2026-03-14,2026-03-15,-54.37,TOWNE OUTFITTERS,Towne Outfitters,clothing,,purchase,false,,,,,,,,false,0.95,

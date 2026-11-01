@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Block a commit when staged content holds account numbers, secrets or private names.
+set -euo pipefail
+# Never re-lock (see scripts/check.sh): use backend/uv.lock as committed.
+export UV_FROZEN=1
+
+ROOT="$(git rev-parse --show-toplevel)"
+
+if ! uv run --project "$ROOT/backend" python "$ROOT/scripts/scan_repo.py" --staged; then
+  echo "pre-commit: commit blocked by scan_repo. Fix the lines above (file:line:rule)." >&2
+  exit 1
+fi

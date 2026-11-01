@@ -1,0 +1,203 @@
+{
+  "created_at": "2026-10-06T18:00:00-05:00",
+  "files": [
+    {
+      "bytes": 65809,
+      "path": "snapshot.json",
+      "sha256": "c8f3394478de2770ee152b35b704d3a4f70ef86d89ae021de97e35b933399e7f"
+    },
+    {
+      "bytes": 904,
+      "path": "transactions/cobalt-card-2026-05-22.csv",
+      "rows": 6,
+      "sha256": "5a901ba427ad1beb6fe83e2cf13761caa0234204c350488fd4557a51037cbdee"
+    },
+    {
+      "bytes": 813,
+      "path": "transactions/cobalt-card-2026-06-22.csv",
+      "rows": 5,
+      "sha256": "f5f6766d3b0efb035e2190faddc0371ee5511316b202e8815b825a29edc2d4c5"
+    },
+    {
+      "bytes": 808,
+      "path": "transactions/cobalt-card-2026-07-22.csv",
+      "rows": 5,
+      "sha256": "a3d5a59fcf6c88957c42a5d7ff370a17a4709099528b78f206d98232bfaa9882"
+    },
+    {
+      "bytes": 1032,
+      "path": "transactions/cobalt-card-2026-08-22.csv",
+      "rows": 7,
+      "sha256": "3d5206983ad0773fa0b409c8bdb98c852061d6ea713f38f9a25367ccf0f70f8f"
+    },
+    {
+      "bytes": 1002,
+      "path": "transactions/harbor-checking-2026-05-31.csv",
+      "rows": 8,
+      "sha256": "2744aa6033bf9ba6c49b8ee3ffda798f63c5597af32e1861e4e898b7038a6687"
+    },
+    {
+      "bytes": 1096,
+      "path": "transactions/harbor-checking-2026-06-30.csv",
+      "rows": 9,
+      "sha256": "326d5f99d6c3e8314d05c87d5ec7d379f70223fa9b0e40f3fdb23b4c558ca56c"
+    },
+    {
+      "bytes": 1097,
+      "path": "transactions/harbor-checking-2026-07-31.csv",
+      "rows": 9,
+      "sha256": "848391a8a383c8aee4aa51173e2d28559badce4c694a1e1d300f737774386180"
+    },
+    {
+      "bytes": 1120,
+      "path": "transactions/harbor-checking-2026-08-31.csv",
+      "rows": 9,
+      "sha256": "0c577e4bec95f7537a992c6e2d8f903f9ec046c2aab906ba7eb7fb0baee875f7"
+    },
+    {
+      "bytes": 419,
+      "path": "transactions/lakeview-brokerage-2026-05-31.csv",
+      "rows": 2,
+      "sha256": "86b9662b0fd5f61e721e886f9e83723865681f90b5eccebbde16d88cda9d045c"
+    },
+    {
+      "bytes": 687,
+      "path": "transactions/lakeview-brokerage-2026-06-30.csv",
+      "rows": 5,
+      "sha256": "a37f18a897426053f23defa3451319b11db8835cd119d276c2db7810cd72e673"
+    },
+    {
+      "bytes": 419,
+      "path": "transactions/lakeview-brokerage-2026-07-31.csv",
+      "rows": 2,
+      "sha256": "8d054a2c64f2f4d413ed93378951d4fdba39b6c8d3e1922212703ce8fc2059a5"
+    },
+    {
+      "bytes": 419,
+      "path": "transactions/lakeview-brokerage-2026-08-31.csv",
+      "rows": 2,
+      "sha256": "1240eb15ffe1955d86a0259b078ac40399014f96c6be7fbf24d130d397434dde"
+    },
+    {
+      "bytes": 1707,
+      "path": "transactions/maple-joint-checking-2026-05-31.csv",
+      "rows": 15,
+      "sha256": "3860d9f17c78494042a2745fafeb58e4a968bb3ca7dae24b67c189cfc70574dd"
+    },
+    {
+      "bytes": 1620,
+      "path": "transactions/maple-joint-checking-2026-06-30.csv",
+      "rows": 14,
+      "sha256": "762a6d941733df03fea64c023c0544a679caf3a9284937cf2087c113c0ae1e5f"
+    },
+    {
+      "bytes": 1533,
+      "path": "transactions/maple-joint-checking-2026-07-31.csv",
+      "rows": 13,
+      "sha256": "23a5af2244ddc27b95588a39a1515cc09f9c97738159e8d793f87b09c7c373ae"
+    },
+    {
+      "bytes": 1533,
+      "path": "transactions/maple-joint-checking-2026-08-31.csv",
+      "rows": 13,
+      "sha256": "c48aa6b8b28bf61a1cfc48d5133d8664332a87706d44b8f6f5a0e8cb98757baa"
+    },
+    {
+      "bytes": 557,
+      "path": "transactions/old-store-card-2026-05-15.csv",
+      "rows": 3,
+      "sha256": "dbf5fde63943eeca94dde283523911b049558237ce94efb58a5c65f3ee0ee17a"
+    },
+    {
+      "bytes": 557,
+      "path": "transactions/old-store-card-2026-06-15.csv",
+      "rows": 3,
+      "sha256": "638e7acf5c48ae21a1c3e455691c2bce9b05e2017069874ec927c3d349ca9812"
+    },
+    {
+      "bytes": 344,
+      "path": "transactions/old-store-card-2026-07-15.csv",
+      "rows": 1,
+      "sha256": "2590d1025dc4f70f64a5dd5608f3a827d472d59d2b43eba639af3da358a5910c"
+    },
+    {
+      "bytes": 1155,
+      "path": "transactions/orchard-card-2026-05-31.csv",
+      "rows": 9,
+      "sha256": "5364d0e73837fc86b89fedf3f776e9a2670561d069e8c12b4c515cae64d7707f"
+    },
+    {
+      "bytes": 1213,
+      "path": "transactions/orchard-card-2026-06-30.csv",
+      "rows": 9,
+      "sha256": "27562cbccac3249f1dbd3ef088d52ae42e8c3e65707e408cd9b299ff5b328f50"
+    },
+    {
+      "bytes": 1220,
+      "path": "transactions/orchard-card-2026-07-31.csv",
+      "rows": 9,
+      "sha256": "68c05ac2e6b2c6719a4ae6afa192be8f2d1374547cc84f5385f86810b2d345b9"
+    },
+    {
+      "bytes": 1201,
+      "path": "transactions/orchard-card-2026-08-31.csv",
+      "rows": 9,
+      "sha256": "7e25bc8758fa0dbcd9972d801b167dc66df9af2b4c92f7336438dbffe41923de"
+    },
+    {
+      "bytes": 422,
+      "path": "transactions/pinecrest-mortgage-2026-05-15.csv",
+      "rows": 2,
+      "sha256": "5b97e7fdb55d4b2f5e62cf6ce3cac35b6b6dc69d7bb581bfbac55ca9d662d34a"
+    },
+    {
+      "bytes": 422,
+      "path": "transactions/pinecrest-mortgage-2026-06-15.csv",
+      "rows": 2,
+      "sha256": "db23c5370640aac5ef34043deee8b8c98b6ce20b7f55634dcce06e3e219d074d"
+    },
+    {
+      "bytes": 422,
+      "path": "transactions/pinecrest-mortgage-2026-07-15.csv",
+      "rows": 2,
+      "sha256": "272beb4dd230d16288a93580cd19a1864b4e991cc5d497fdcb45b366d8c071e3"
+    },
+    {
+      "bytes": 422,
+      "path": "transactions/pinecrest-mortgage-2026-08-15.csv",
+      "rows": 2,
+      "sha256": "0f20ee2e54fa7b0858ffb3c0dae03f721bf8bfae8b33aaa12d665bf3aa06ef51"
+    },
+    {
+      "bytes": 1864,
+      "path": "transactions/summit-card-2026-05-10.csv",
+      "rows": 15,
+      "sha256": "8a94d0064ca5e7db8c0004631b665e6284448e218fc8b0f1ae22d82ed0bd0dfb"
+    },
+    {
+      "bytes": 1922,
+      "path": "transactions/summit-card-2026-06-10.csv",
+      "rows": 16,
+      "sha256": "9825e54012a8c857604f6fd9033282ae9d1b4fa68980d53eac47ed9742b0334f"
+    },
+    {
+      "bytes": 2295,
+      "path": "transactions/summit-card-2026-07-10.csv",
+      "rows": 19,
+      "sha256": "0e7862e820f42ac0bb8d203afd6b5ffd6a74fae86ff04aeceee5660d7bdfd0c1"
+    },
+    {
+      "bytes": 2537,
+      "path": "transactions/summit-card-2026-08-10.csv",
+      "rows": 21,
+      "sha256": "73b2ee5b6ea58990503a5d25c4cae5bf585aedf083afd36a12de43e1860b5c7f"
+    }
+  ],
+  "generator": {
+    "skill": "make_samples",
+    "version": "1"
+  },
+  "mode": "backfill",
+  "run_id": "2026-10-06-2",
+  "schema_version": "1.3"
+}

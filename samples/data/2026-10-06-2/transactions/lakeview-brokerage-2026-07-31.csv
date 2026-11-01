@@ -1,0 +1,3 @@
+txn_date,post_date,amount,description,merchant,category_key,cardholder,txn_type,is_transfer,counterparty_account_key,is_reimbursable,exclude_from_budget,plan_key,recurring_key,trip_key,hsa_eligible,needs_review,confidence,notes
+2026-07-05,,500.00,DEPOSIT FROM CHECKING,,transfer,,contribution,true,maple-joint-checking,,,,,,,false,1.00,
+2026-07-06,,-500.00,BUY BROAD MARKET FUND,,transfer,,buy,false,,,,,,,,false,1.00,

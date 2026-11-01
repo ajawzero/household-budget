@@ -1,0 +1,7 @@
+txn_date,post_date,amount,description,merchant,category_key,cardholder,txn_type,is_transfer,counterparty_account_key,is_reimbursable,exclude_from_budget,plan_key,recurring_key,trip_key,hsa_eligible,needs_review,confidence,notes
+2026-05-03,2026-05-04,-29.77,STARLIGHT CINEMA,Starlight Cinema,entertainment,,purchase,false,,,,,,,,false,0.95,
+2026-05-04,2026-05-04,-15.00,BROOK STREAMING,Brook Streaming,subscriptions,,purchase,false,,,,,,,,false,0.95,
+2026-05-04,2026-05-04,15.00,STREAMING CREDIT,Streaming Credit,subscriptions,,refund,false,,,,,,,,false,0.95,
+2026-05-10,2026-05-11,-1200.00,LAKESIDE MATTRESS,Lakeside Mattress,home-upkeep,,purchase,false,,,,promo-mattress,,,,false,0.95,
+2026-05-13,2026-05-14,-71.26,TOWNE OUTFITTERS,Towne Outfitters,clothing,,purchase,false,,,,,,,,false,0.95,
+2026-05-20,2026-05-21,-84.23,GREEN LEAF MARKET,Green Leaf Market,groceries,,purchase,false,,,,,,,,false,0.95,

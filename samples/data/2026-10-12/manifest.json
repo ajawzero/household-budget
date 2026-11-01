@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-12T18:00:00-05:00",
+  "files": [
+    {
+      "bytes": 61326,
+      "path": "snapshot.json",
+      "sha256": "f3bce79ba6225a3684e7a29b9924b0ae71d01e2888e6939d54dabcc3d05e350f"
+    },
+    {
+      "bytes": 565,
+      "path": "transactions/bramble-store-card-2026-09-15.csv",
+      "rows": 3,
+      "sha256": "c21f6d85f89d30b0d459b4f37e70494179856ea5748977d36b772435887005e1"
+    },
+    {
+      "bytes": 1009,
+      "path": "transactions/cobalt-card-2026-09-22.csv",
+      "rows": 7,
+      "sha256": "59e7313b61da268c0719472de783d9b6dd0edc34c7b07fc93c376620f6fec367"
+    },
+    {
+      "bytes": 1201,
+      "path": "transactions/harbor-checking-2026-09-30.csv",
+      "rows": 10,
+      "sha256": "7c6ca329cab64c98be202d04528416e413ed496f7b2b8cc177096f0eee0c4859"
+    },
+    {
+      "bytes": 604,
+      "path": "transactions/lakeview-brokerage-2026-09-30.csv",
+      "rows": 4,
+      "sha256": "d6b9e8b6cc18b17f1b70076c6ab707e27dc758341f5a3cde0a6c9dd672c96e0a"
+    },
+    {
+      "bytes": 1547,
+      "path": "transactions/maple-joint-checking-2026-09-30.csv",
+      "rows": 13,
+      "sha256": "6b543cc9f7332cd38aadfde88d2d94307d7eb2e2357011b35e6a9cda44cddb4c"
+    },
+    {
+      "bytes": 1213,
+      "path": "transactions/orchard-card-2026-09-30.csv",
+      "rows": 9,
+      "sha256": "95aaa10493aa2dcfa880355156fc02f20a7a7570dfafc74761e8b404522e4b88"
+    },
+    {
+      "bytes": 422,
+      "path": "transactions/pinecrest-mortgage-2026-09-15.csv",
+      "rows": 2,
+      "sha256": "0a069b37369b162639319d9fb406892806146b2e2f6f90d0abeed78b1e262045"
+    },
+    {
+      "bytes": 2131,
+      "path": "transactions/summit-card-2026-09-10.csv",
+      "rows": 17,
+      "sha256": "ae1bb115f749b02dbdc7cdb9532be7cb908cbd601751008d34c73f77b98d5374"
+    }
+  ],
+  "generator": {
+    "skill": "make_samples",
+    "version": "1"
+  },
+  "mode": "monthly",
+  "run_id": "2026-10-12",
+  "schema_version": "1.4"
+}

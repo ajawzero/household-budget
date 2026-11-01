@@ -1,0 +1,498 @@
+{
+  "about": "Category list for import format v1 (PLAN 3.2). Keys are stable and never renamed. Names may change. Seeds the app's category tables.",
+  "categories": [
+    {
+      "emoji": "🛒",
+      "group": "lifestyle",
+      "key": "groceries",
+      "kind": "spending",
+      "name": "Groceries",
+      "sort": 101
+    },
+    {
+      "emoji": "🍽️",
+      "group": "lifestyle",
+      "key": "dining",
+      "kind": "spending",
+      "name": "Dining",
+      "sort": 102
+    },
+    {
+      "emoji": "📦",
+      "group": "lifestyle",
+      "key": "online-shopping",
+      "kind": "spending",
+      "name": "Online shopping",
+      "sort": 105
+    },
+    {
+      "emoji": "👕",
+      "group": "lifestyle",
+      "key": "clothing",
+      "kind": "spending",
+      "name": "Clothing",
+      "sort": 106
+    },
+    {
+      "emoji": "🧴",
+      "group": "lifestyle",
+      "key": "household-and-personal-care",
+      "kind": "spending",
+      "name": "Household and personal care",
+      "sort": 107
+    },
+    {
+      "emoji": "🐾",
+      "group": "lifestyle",
+      "key": "pets",
+      "kind": "spending",
+      "name": "Pets",
+      "sort": 109
+    },
+    {
+      "emoji": "🔁",
+      "group": "lifestyle",
+      "key": "subscriptions",
+      "kind": "spending",
+      "name": "Subscriptions",
+      "sort": 110
+    },
+    {
+      "emoji": "🛍️",
+      "group": "lifestyle",
+      "key": "shopping-misc",
+      "kind": "spending",
+      "name": "Shopping misc",
+      "sort": 111
+    },
+    {
+      "emoji": "🏠",
+      "group": "housing",
+      "key": "mortgage",
+      "kind": "spending",
+      "name": "Mortgage",
+      "sort": 201
+    },
+    {
+      "emoji": "🏡",
+      "group": "housing",
+      "key": "home-equity-loan",
+      "kind": "spending",
+      "name": "Home equity loan",
+      "sort": 202
+    },
+    {
+      "emoji": "💡",
+      "group": "housing",
+      "key": "gas-and-electric",
+      "kind": "spending",
+      "name": "Gas and electric",
+      "sort": 203
+    },
+    {
+      "emoji": "🚰",
+      "group": "housing",
+      "key": "water-and-sewer",
+      "kind": "spending",
+      "name": "Water and sewer",
+      "sort": 204
+    },
+    {
+      "emoji": "🌐",
+      "group": "housing",
+      "key": "internet",
+      "kind": "spending",
+      "name": "Internet",
+      "sort": 205
+    },
+    {
+      "emoji": "🔧",
+      "group": "housing",
+      "key": "home-upkeep",
+      "kind": "spending",
+      "name": "Home upkeep",
+      "sort": 206
+    },
+    {
+      "emoji": "⛽",
+      "group": "transportation",
+      "key": "fuel",
+      "kind": "spending",
+      "name": "Fuel",
+      "sort": 251
+    },
+    {
+      "emoji": "🛠️",
+      "group": "transportation",
+      "key": "vehicle-maintenance",
+      "kind": "spending",
+      "name": "Maintenance and repairs",
+      "sort": 252
+    },
+    {
+      "emoji": "🅿️",
+      "group": "transportation",
+      "key": "parking",
+      "kind": "spending",
+      "name": "Parking",
+      "sort": 253
+    },
+    {
+      "emoji": "🛣️",
+      "group": "transportation",
+      "key": "tolls",
+      "kind": "spending",
+      "name": "Tolls",
+      "sort": 254
+    },
+    {
+      "emoji": "🚕",
+      "group": "transportation",
+      "key": "rideshare-and-transit",
+      "kind": "spending",
+      "name": "Rideshare and transit",
+      "sort": 255
+    },
+    {
+      "emoji": "🪪",
+      "group": "transportation",
+      "key": "vehicle-registration",
+      "kind": "spending",
+      "name": "Vehicle registration",
+      "sort": 256
+    },
+    {
+      "emoji": "🎓",
+      "group": "kids",
+      "key": "tuition",
+      "kind": "spending",
+      "name": "Tuition",
+      "sort": 301
+    },
+    {
+      "emoji": "🏫",
+      "group": "kids",
+      "key": "childcare",
+      "kind": "spending",
+      "name": "Childcare",
+      "sort": 302
+    },
+    {
+      "emoji": "⚽",
+      "group": "kids",
+      "key": "kids-activities",
+      "kind": "spending",
+      "name": "Kids' activities",
+      "sort": 303
+    },
+    {
+      "emoji": "🪙",
+      "group": "kids",
+      "key": "allowances",
+      "kind": "spending",
+      "name": "Allowances",
+      "sort": 304
+    },
+    {
+      "emoji": "📚",
+      "group": "debt",
+      "key": "student-loan",
+      "kind": "spending",
+      "name": "Student loan",
+      "sort": 401
+    },
+    {
+      "emoji": "🚗",
+      "group": "debt",
+      "key": "vehicle-loans",
+      "kind": "spending",
+      "name": "Vehicle loans",
+      "sort": 402
+    },
+    {
+      "emoji": "🧾",
+      "group": "debt",
+      "key": "other-loan",
+      "kind": "spending",
+      "name": "Other loan",
+      "sort": 403
+    },
+    {
+      "emoji": "📱",
+      "group": "services",
+      "key": "phone",
+      "kind": "spending",
+      "name": "Phone",
+      "sort": 501
+    },
+    {
+      "emoji": "🗄️",
+      "group": "services",
+      "key": "storage",
+      "kind": "spending",
+      "name": "Storage",
+      "sort": 502
+    },
+    {
+      "emoji": "🐜",
+      "group": "services",
+      "key": "pest-control",
+      "kind": "spending",
+      "name": "Pest control",
+      "sort": 503
+    },
+    {
+      "emoji": "🧹",
+      "group": "services",
+      "key": "cleaning",
+      "kind": "spending",
+      "name": "Cleaning",
+      "sort": 504
+    },
+    {
+      "emoji": "🩺",
+      "group": "services",
+      "key": "medical",
+      "kind": "spending",
+      "name": "Medical",
+      "sort": 505
+    },
+    {
+      "emoji": "🏋️",
+      "group": "services",
+      "key": "fitness",
+      "kind": "spending",
+      "name": "Fitness",
+      "sort": 507
+    },
+    {
+      "emoji": "🎟️",
+      "group": "services",
+      "key": "memberships",
+      "kind": "spending",
+      "name": "Memberships",
+      "sort": 509
+    },
+    {
+      "emoji": "🛡️",
+      "group": "insurance",
+      "key": "life-insurance",
+      "kind": "spending",
+      "name": "Life insurance",
+      "sort": 601
+    },
+    {
+      "emoji": "🚘",
+      "group": "insurance",
+      "key": "auto-and-home-insurance",
+      "kind": "spending",
+      "name": "Auto and home insurance",
+      "sort": 602
+    },
+    {
+      "emoji": "💳",
+      "group": "fees",
+      "key": "card-interest",
+      "kind": "spending",
+      "name": "Card interest",
+      "sort": 701
+    },
+    {
+      "emoji": "💸",
+      "group": "fees",
+      "key": "card-fees",
+      "kind": "spending",
+      "name": "Card fees",
+      "sort": 702
+    },
+    {
+      "emoji": "🧮",
+      "group": "fees",
+      "key": "plan-fees",
+      "kind": "spending",
+      "name": "Plan fees",
+      "sort": 703
+    },
+    {
+      "emoji": "📅",
+      "group": "fees",
+      "key": "annual-fees",
+      "kind": "spending",
+      "name": "Annual fees",
+      "sort": 704
+    },
+    {
+      "emoji": "🏦",
+      "group": "fees",
+      "key": "bank-fees",
+      "kind": "spending",
+      "name": "Bank fees",
+      "sort": 705
+    },
+    {
+      "emoji": "✈️",
+      "group": "discretionary",
+      "key": "travel",
+      "kind": "spending",
+      "name": "Travel",
+      "sort": 801
+    },
+    {
+      "emoji": "🎁",
+      "group": "discretionary",
+      "key": "gifts",
+      "kind": "spending",
+      "name": "Gifts",
+      "sort": 802
+    },
+    {
+      "emoji": "🎬",
+      "group": "discretionary",
+      "key": "entertainment",
+      "kind": "spending",
+      "name": "Entertainment",
+      "sort": 803
+    },
+    {
+      "emoji": "🏧",
+      "group": "discretionary",
+      "key": "cash-withdrawal",
+      "kind": "spending",
+      "name": "Cash withdrawal",
+      "sort": 804
+    },
+    {
+      "emoji": "🗂️",
+      "group": "discretionary",
+      "key": "misc",
+      "kind": "spending",
+      "name": "Misc",
+      "sort": 805
+    },
+    {
+      "emoji": "💰",
+      "group": "income",
+      "key": "paycheck",
+      "kind": "income",
+      "name": "Paycheck",
+      "sort": 901
+    },
+    {
+      "emoji": "🏛️",
+      "group": "income",
+      "key": "benefits",
+      "kind": "income",
+      "name": "Benefits",
+      "sort": 902
+    },
+    {
+      "emoji": "📈",
+      "group": "income",
+      "key": "interest-income",
+      "kind": "income",
+      "name": "Interest",
+      "sort": 903
+    },
+    {
+      "emoji": "💵",
+      "group": "income",
+      "key": "other-income",
+      "kind": "income",
+      "name": "Other income",
+      "sort": 904
+    },
+    {
+      "emoji": "🔄",
+      "group": "not-spending",
+      "key": "transfer",
+      "kind": "transfer",
+      "name": "Transfer",
+      "sort": 1001
+    },
+    {
+      "emoji": "↩️",
+      "group": "not-spending",
+      "key": "reimbursement",
+      "kind": "reimbursement",
+      "name": "Reimbursement",
+      "sort": 1002
+    },
+    {
+      "emoji": "❓",
+      "group": "not-spending",
+      "key": "uncategorized",
+      "kind": "uncategorized",
+      "name": "Uncategorized",
+      "sort": 1003
+    }
+  ],
+  "groups": [
+    {
+      "counts_in_spending": true,
+      "key": "lifestyle",
+      "name": "Lifestyle",
+      "sort": 10
+    },
+    {
+      "counts_in_spending": true,
+      "key": "housing",
+      "name": "Housing and utilities",
+      "sort": 20
+    },
+    {
+      "counts_in_spending": true,
+      "key": "transportation",
+      "name": "Transportation",
+      "sort": 25
+    },
+    {
+      "counts_in_spending": true,
+      "key": "kids",
+      "name": "Kids and education",
+      "sort": 30
+    },
+    {
+      "counts_in_spending": true,
+      "key": "debt",
+      "name": "Debt payments",
+      "sort": 40
+    },
+    {
+      "counts_in_spending": true,
+      "key": "services",
+      "name": "Services and fitness",
+      "sort": 50
+    },
+    {
+      "counts_in_spending": true,
+      "key": "insurance",
+      "name": "Insurance",
+      "sort": 60
+    },
+    {
+      "counts_in_spending": true,
+      "key": "fees",
+      "name": "Fees and interest",
+      "sort": 70
+    },
+    {
+      "counts_in_spending": true,
+      "key": "discretionary",
+      "name": "Other discretionary",
+      "sort": 80
+    },
+    {
+      "counts_in_spending": false,
+      "key": "income",
+      "name": "Income",
+      "sort": 90
+    },
+    {
+      "counts_in_spending": false,
+      "key": "not-spending",
+      "name": "Not spending",
+      "sort": 100
+    }
+  ],
+  "version": 1
+}

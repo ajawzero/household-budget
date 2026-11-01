@@ -1,0 +1,10 @@
+txn_date,post_date,amount,description,merchant,category_key,cardholder,txn_type,is_transfer,counterparty_account_key,is_reimbursable,exclude_from_budget,plan_key,recurring_key,trip_key,hsa_eligible,needs_review,confidence,notes
+2026-06-01,,-37.41,STARLIGHT CINEMA,Starlight Cinema,entertainment,,purchase,false,,,,,,,,false,0.95,
+2026-06-02,,-45.00,IRONWORKS GYM,Ironworks Gym,fitness,,purchase,false,,,,,gym,,,false,0.95,
+2026-06-05,,-94.56,TOWNE CARD PAYMENT,,transfer,,payment,true,old-store-card,,,,,,,false,1.00,
+2026-06-09,,-250.00,COBALT CARD PAYMENT,,transfer,,payment,true,cobalt-card,,,,,,,false,1.00,
+2026-06-12,,-65.00,WAVE MOBILE,Wave Mobile,phone,,purchase,false,,,,,wave-mobile,,,false,0.95,
+2026-06-15,,2250.00,PAYROLL DEPOSIT,,paycheck,,deposit,false,,,,,sam-pay,,,false,1.00,
+2026-06-24,,-52.30,COBALT CARD PAYMENT,,clothing,,payment,false,bramble-store-card,,,,,,,false,1.00,
+2026-06-28,,-200.00,TRANSFER TO SAVINGS,,transfer,,transfer,true,harbor-savings,,,,savings-transfer,,,false,1.00,
+2026-06-30,,2250.00,PAYROLL DEPOSIT,,paycheck,,deposit,false,,,,,sam-pay,,,false,1.00,

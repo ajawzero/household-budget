@@ -1,0 +1,2567 @@
+{
+  "accounts": [
+    {
+      "active": true,
+      "custodian": "Granite Trust Bank",
+      "display_name": "Alex 401k (Lakeview)",
+      "display_order": 40,
+      "group": "retirement",
+      "include_in_net_worth": true,
+      "institution": "Lakeview Investments",
+      "is_asset": true,
+      "key": "alex-401k",
+      "notes": "New pre-tax and Roth money goes to the target date fund.",
+      "nw_group": "alex-retirement",
+      "nw_group_label": "Alex retirement",
+      "opened_on": "2018-04-02",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "quarterly",
+      "type": "retirement"
+    },
+    {
+      "active": true,
+      "autopay": "minimum",
+      "display_name": "Bramble store card",
+      "display_order": 15,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": false,
+      "institution": "Cobalt Card",
+      "is_asset": false,
+      "key": "bramble-store-card",
+      "last4": "4471",
+      "opened_on": "2023-04-10",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "none",
+      "tracked_by": "payments",
+      "type": "store_card"
+    },
+    {
+      "active": true,
+      "display_name": "Camper van",
+      "display_order": 71,
+      "group": "vehicles",
+      "include_in_net_worth": true,
+      "institution": "Valuation",
+      "is_asset": true,
+      "key": "camper-van",
+      "nw_group": "vehicle-equity",
+      "nw_group_label": "Vehicle equity",
+      "opened_on": "2026-08-01",
+      "owner": "joint",
+      "ownership": "joint",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "vehicle"
+    },
+    {
+      "active": true,
+      "apr": "21.99",
+      "autopay": "minimum",
+      "credit_limit": "5000.00",
+      "cycle_close_day": 22,
+      "display_name": "Cobalt card",
+      "display_order": 11,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Cobalt Card",
+      "is_asset": false,
+      "key": "cobalt-card",
+      "last4": "3318",
+      "notes": "0% promo on the mattress until March 2027",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2026-05-01",
+      "owner": "sam",
+      "ownership": "individual",
+      "priority": 1,
+      "rate_type": "promo",
+      "statement_cadence": "monthly",
+      "type": "credit_card"
+    },
+    {
+      "active": true,
+      "display_name": "Family car",
+      "display_order": 70,
+      "group": "vehicles",
+      "include_in_net_worth": true,
+      "institution": "Valuation",
+      "is_asset": true,
+      "key": "family-car",
+      "nw_group": "vehicle-equity",
+      "nw_group_label": "Vehicle equity",
+      "owner": "joint",
+      "ownership": "joint",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "vehicle"
+    },
+    {
+      "active": true,
+      "display_name": "Family home",
+      "display_order": 60,
+      "group": "real_estate",
+      "include_in_net_worth": true,
+      "institution": "Valuation",
+      "is_asset": true,
+      "key": "family-home",
+      "nw_group": "home-equity",
+      "nw_group_label": "Home equity",
+      "owner": "joint",
+      "ownership": "joint",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "property"
+    },
+    {
+      "active": true,
+      "display_name": "Sam checking (Harbor)",
+      "display_order": 2,
+      "group": "cash",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Harbor Credit Union",
+      "is_asset": true,
+      "key": "harbor-checking",
+      "last4": "7702",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2015-08-14",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "checking"
+    },
+    {
+      "active": true,
+      "apr": "4.1",
+      "display_name": "Sam savings (Harbor)",
+      "display_order": 3,
+      "group": "cash",
+      "in_cashflow": false,
+      "include_in_net_worth": true,
+      "institution": "Harbor Credit Union",
+      "is_asset": true,
+      "key": "harbor-savings",
+      "last4": "7719",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2015-08-14",
+      "owner": "sam",
+      "ownership": "individual",
+      "rate_type": "variable",
+      "statement_cadence": "quarterly",
+      "type": "savings"
+    },
+    {
+      "active": true,
+      "display_name": "Kids 529 (Bluestem)",
+      "display_order": 35,
+      "group": "investments",
+      "include_in_net_worth": true,
+      "institution": "Bluestem College Savings",
+      "is_asset": true,
+      "key": "kids-529",
+      "nw_group": "college-savings",
+      "nw_group_label": "College savings",
+      "opened_on": "2021-05-03",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "quarterly",
+      "type": "529"
+    },
+    {
+      "active": true,
+      "advisor": "Birch Lane Advisors",
+      "custodian": "Lakeview Investments",
+      "display_name": "Alex brokerage (Lakeview)",
+      "display_order": 30,
+      "group": "investments",
+      "include_in_net_worth": true,
+      "institution": "Lakeview Investments",
+      "is_asset": true,
+      "key": "lakeview-brokerage",
+      "notes": "Most of it sits in one fund. A diversification plan is needed.",
+      "nw_group": "alex-brokerage",
+      "nw_group_label": "Alex brokerage",
+      "opened_on": "2019-02-11",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "brokerage"
+    },
+    {
+      "active": true,
+      "display_name": "Joint checking (Maple)",
+      "display_order": 1,
+      "group": "cash",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Maple Bank",
+      "is_asset": true,
+      "key": "maple-joint-checking",
+      "last4": "5521",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2012-06-01",
+      "owner": "joint",
+      "ownership": "joint",
+      "statement_cadence": "monthly",
+      "type": "checking"
+    },
+    {
+      "active": false,
+      "autopay": "none",
+      "closed_on": "2026-07-20",
+      "cycle_close_day": 15,
+      "display_name": "Towne store card",
+      "display_order": 14,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Towne Outfitters",
+      "is_asset": false,
+      "key": "old-store-card",
+      "last4": "9031",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2021-11-20",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "store_card"
+    },
+    {
+      "active": true,
+      "apr": "19.24",
+      "autopay": "statement",
+      "credit_limit": "6000.00",
+      "cycle_close_day": 31,
+      "display_name": "Orchard card",
+      "display_order": 12,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Orchard Card",
+      "is_asset": false,
+      "key": "orchard-card",
+      "last4": "2290",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2020-03-09",
+      "owner": "alex",
+      "ownership": "individual",
+      "rate_type": "variable",
+      "statement_cadence": "monthly",
+      "type": "credit_card"
+    },
+    {
+      "active": true,
+      "apr": "4.5",
+      "autopay": "full",
+      "display_name": "Mortgage (Pinecrest)",
+      "display_order": 50,
+      "group": "loans",
+      "include_in_net_worth": true,
+      "institution": "Pinecrest Mortgage",
+      "is_asset": false,
+      "key": "pinecrest-mortgage",
+      "last4": "0618",
+      "min_payment": "1500.00",
+      "notes": "Fixed rate for the full term. Extra cash goes to savings first.",
+      "nw_group": "mortgage",
+      "nw_group_label": "Mortgage",
+      "opened_on": "2019-06-01",
+      "owner": "joint",
+      "ownership": "joint",
+      "payoff_date": "2049-06-01",
+      "policy_note": "Do not prepay",
+      "rate_type": "fixed",
+      "secured_by": "family-home",
+      "servicer": "Pinecrest Mortgage",
+      "statement_cadence": "monthly",
+      "type": "mortgage"
+    },
+    {
+      "active": true,
+      "annual_fee": "250.00",
+      "apr": "24.99",
+      "autopay": "full",
+      "credit_limit": "15000.00",
+      "cycle_close_day": 10,
+      "display_name": "Summit card",
+      "display_order": 10,
+      "fee_renews_on": "2027-03-01",
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Summit Card Services",
+      "is_asset": false,
+      "key": "summit-card",
+      "last4": "8812",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2017-09-15",
+      "owner": "joint",
+      "ownership": "joint",
+      "rate_type": "variable",
+      "statement_cadence": "monthly",
+      "type": "credit_card"
+    },
+    {
+      "active": true,
+      "apr": "6.49",
+      "autopay": "full",
+      "display_name": "Van loan (Prairie)",
+      "display_order": 52,
+      "group": "loans",
+      "include_in_net_worth": true,
+      "institution": "Prairie Lending",
+      "is_asset": false,
+      "key": "van-loan",
+      "min_payment": "650.00",
+      "nw_group": "vehicle-loans",
+      "nw_group_label": "Vehicle loans",
+      "opened_on": "2026-08-01",
+      "owner": "joint",
+      "ownership": "joint",
+      "rate_type": "fixed",
+      "secured_by": "camper-van",
+      "servicer": "Meadow Loan Servicing",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "loan"
+    }
+  ],
+  "balances": [
+    {
+      "account_key": "alex-401k",
+      "as_of": "2026-06-30",
+      "balance": "86873.07",
+      "source": "statement"
+    },
+    {
+      "account_key": "camper-van",
+      "as_of": "2026-08-01",
+      "balance": "54500.00",
+      "method": "kbb",
+      "source": "valuation",
+      "source_note": "KBB value"
+    },
+    {
+      "account_key": "cobalt-card",
+      "as_of": "2026-05-22",
+      "balance": "-1385.26",
+      "source": "statement"
+    },
+    {
+      "account_key": "cobalt-card",
+      "as_of": "2026-06-22",
+      "balance": "-1254.48",
+      "source": "statement"
+    },
+    {
+      "account_key": "cobalt-card",
+      "as_of": "2026-07-22",
+      "balance": "-1186.45",
+      "source": "statement"
+    },
+    {
+      "account_key": "cobalt-card",
+      "as_of": "2026-08-22",
+      "balance": "-1043.54",
+      "source": "statement"
+    },
+    {
+      "account_key": "family-car",
+      "as_of": "2026-06-30",
+      "balance": "22957.43",
+      "method": "kbb",
+      "source": "valuation",
+      "source_note": "Private party value"
+    },
+    {
+      "account_key": "family-home",
+      "as_of": "2026-06-30",
+      "balance": "522472.51",
+      "method": "comps",
+      "source": "valuation",
+      "source_note": "Three nearby sales"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-05-31",
+      "balance": "23162.31",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-06-30",
+      "balance": "26918.04",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-07-31",
+      "balance": "30695.03",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-08-31",
+      "balance": "34451.38",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-savings",
+      "as_of": "2026-06-30",
+      "balance": "13231.66",
+      "source": "statement"
+    },
+    {
+      "account_key": "kids-529",
+      "as_of": "2026-06-30",
+      "balance": "20348.63",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-05-31",
+      "balance": "54366.24",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-06-30",
+      "balance": "55320.39",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-07-31",
+      "balance": "56028.58",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-08-31",
+      "balance": "55466.38",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-05-31",
+      "balance": "27554.32",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-06-30",
+      "balance": "29909.34",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-07-31",
+      "balance": "32218.24",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-08-31",
+      "balance": "34437.18",
+      "source": "statement"
+    },
+    {
+      "account_key": "old-store-card",
+      "as_of": "2026-05-15",
+      "balance": "-94.56",
+      "source": "statement"
+    },
+    {
+      "account_key": "old-store-card",
+      "as_of": "2026-06-15",
+      "balance": "-109.81",
+      "source": "statement"
+    },
+    {
+      "account_key": "old-store-card",
+      "as_of": "2026-07-15",
+      "balance": "0.00",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-05-31",
+      "balance": "-790.42",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-06-30",
+      "balance": "-756.60",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-07-31",
+      "balance": "-751.86",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-08-31",
+      "balance": "-596.32",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-05-15",
+      "balance": "-247166.31",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-06-15",
+      "balance": "-246593.18",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-07-15",
+      "balance": "-246017.90",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-08-15",
+      "balance": "-245440.46",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-05-10",
+      "balance": "-1200.06",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-06-10",
+      "balance": "-1307.50",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-07-10",
+      "balance": "-1252.16",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-08-10",
+      "balance": "-1160.45",
+      "source": "statement"
+    },
+    {
+      "account_key": "van-loan",
+      "as_of": "2026-08-01",
+      "balance": "-42000.00",
+      "source": "manual",
+      "source_note": "Loan papers"
+    }
+  ],
+  "contributions": [
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-05-01",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-05-15",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-05-29",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-06-12",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-06-26",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-07-10",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-07-24",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-08-07",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-08-21",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-05-01",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-05-15",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-05-29",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-06-12",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-06-26",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-07-10",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-07-24",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-08-07",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-08-21",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "250.00",
+      "date": "2026-07-04",
+      "kind": "529",
+      "person": "alex",
+      "source": "gift"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-05-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-06-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-07-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-08-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    }
+  ],
+  "holdings": [
+    {
+      "account_key": "alex-401k",
+      "asset_class": "target-date",
+      "key": "target-date-trust",
+      "name": "Target Date 2050 Trust",
+      "period_end": "2026-06-30",
+      "value": "86873.07"
+    },
+    {
+      "account_key": "kids-529",
+      "asset_class": "target-date",
+      "cost_basis": "16700.00",
+      "key": "age-based-portfolio",
+      "name": "Age-Based Portfolio",
+      "period_end": "2026-06-30",
+      "value": "20348.63"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "bond",
+      "cost_basis": "20000.00",
+      "cusip": "SMPLBND03",
+      "key": "bond-index",
+      "name": "Bond Index Fund",
+      "period_end": "2026-05-31",
+      "price": "100.609391",
+      "quantity": "200.0",
+      "symbol": "BNDIDX",
+      "value": "20121.87"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "32559.38",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-05-31",
+      "price": "255.638013",
+      "quantity": "130.044728",
+      "symbol": "BRDMKT",
+      "value": "33244.37"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-05-31",
+      "value": "1000.00"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "33108.01",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-06-30",
+      "price": "258.705669",
+      "quantity": "132.190847",
+      "symbol": "BRDMKT",
+      "value": "34198.52"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-06-30",
+      "value": "21121.87"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "33608.01",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-07-31",
+      "price": "260.257903",
+      "quantity": "134.123545",
+      "symbol": "BRDMKT",
+      "value": "34906.71"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-07-31",
+      "value": "21121.87"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "34108.01",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-08-31",
+      "price": "252.450165",
+      "quantity": "136.044716",
+      "symbol": "BRDMKT",
+      "value": "34344.51"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-08-31",
+      "value": "21121.87"
+    }
+  ],
+  "income": {
+    "paychecks": [
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-05-01",
+        "period_end": "2026-04-24",
+        "period_start": "2026-04-11",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "450.00",
+        "ytd_hsa_employer": "225.00",
+        "ytd_k401": "2568.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-05-15",
+        "period_end": "2026-05-08",
+        "period_start": "2026-04-25",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "500.00",
+        "ytd_hsa_employer": "250.00",
+        "ytd_k401": "2820.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-05-29",
+        "period_end": "2026-05-22",
+        "period_start": "2026-05-09",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "550.00",
+        "ytd_hsa_employer": "275.00",
+        "ytd_k401": "3072.00"
+      },
+      {
+        "gross": "50.00",
+        "kind": "regular",
+        "net": "38.25",
+        "pay_date": "2026-06-12",
+        "person": "alex",
+        "seq": 1,
+        "ytd_hsa_employee": "550.00",
+        "ytd_hsa_employer": "275.00",
+        "ytd_k401": "3072.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-06-12",
+        "period_end": "2026-06-05",
+        "period_start": "2026-05-23",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 2,
+        "ytd_hsa_employee": "600.00",
+        "ytd_hsa_employer": "300.00",
+        "ytd_k401": "3324.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-06-26",
+        "period_end": "2026-06-19",
+        "period_start": "2026-06-06",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "650.00",
+        "ytd_hsa_employer": "325.00",
+        "ytd_k401": "3576.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-07-10",
+        "period_end": "2026-07-03",
+        "period_start": "2026-06-20",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "700.00",
+        "ytd_hsa_employer": "350.00",
+        "ytd_k401": "3828.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-07-24",
+        "period_end": "2026-07-17",
+        "period_start": "2026-07-04",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "750.00",
+        "ytd_hsa_employer": "375.00",
+        "ytd_k401": "4080.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-08-07",
+        "period_end": "2026-07-31",
+        "period_start": "2026-07-18",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "800.00",
+        "ytd_hsa_employer": "400.00",
+        "ytd_k401": "4332.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-08-21",
+        "period_end": "2026-08-14",
+        "period_start": "2026-08-01",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "850.00",
+        "ytd_hsa_employer": "425.00",
+        "ytd_k401": "4584.00"
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-05-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-05-31",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-06-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-06-30",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-07-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-07-31",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-08-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-08-31",
+        "person": "sam",
+        "seq": 1
+      }
+    ]
+  },
+  "mode": "backfill",
+  "new_accounts": [
+    {
+      "key": "camper-van",
+      "opened_on": "2026-08-01"
+    },
+    {
+      "key": "cobalt-card",
+      "opened_on": "2026-05-01"
+    },
+    {
+      "key": "van-loan",
+      "opened_on": "2026-08-01"
+    }
+  ],
+  "people": [
+    {
+      "display_name": "Alex",
+      "key": "alex",
+      "role": "adult"
+    },
+    {
+      "aliases": [
+        "James"
+      ],
+      "display_name": "Jamie",
+      "key": "jamie",
+      "role": "child"
+    },
+    {
+      "display_name": "Joint",
+      "key": "joint",
+      "role": "joint"
+    },
+    {
+      "display_name": "Riley",
+      "key": "riley",
+      "role": "child"
+    },
+    {
+      "display_name": "Sam",
+      "key": "sam",
+      "role": "adult"
+    }
+  ],
+  "run_id": "2026-10-06-2",
+  "schema_version": "1.3",
+  "statements": [
+    {
+      "account_key": "alex-401k",
+      "closing": "86873.07",
+      "fees": "-21.71",
+      "has_holdings": true,
+      "market_change": "-1195.93",
+      "net_flows": "2646.00",
+      "opening": "85423.00",
+      "period_end": "2026-06-30",
+      "period_start": "2026-04-01",
+      "reconciled": true,
+      "statement_date": "2026-06-30",
+      "txn_count": 0
+    },
+    {
+      "account_key": "cobalt-card",
+      "closing": "-1385.26",
+      "credit_limit": "5000.00",
+      "credits": "15.00",
+      "debits": "-1400.26",
+      "due_date": "2026-06-16",
+      "min_due": "35.00",
+      "opening": "0.00",
+      "period_end": "2026-05-22",
+      "period_start": "2026-05-01",
+      "reconciled": true,
+      "statement_date": "2026-05-22",
+      "txn_count": 6,
+      "txn_sum": "-1385.26"
+    },
+    {
+      "account_key": "cobalt-card",
+      "closing": "-1254.48",
+      "credit_limit": "5000.00",
+      "credits": "250.00",
+      "debits": "-119.22",
+      "due_date": "2026-07-17",
+      "min_due": "35.00",
+      "opening": "-1385.26",
+      "period_end": "2026-06-22",
+      "period_start": "2026-05-23",
+      "reconciled": true,
+      "statement_date": "2026-06-22",
+      "txn_count": 5,
+      "txn_sum": "130.78"
+    },
+    {
+      "account_key": "cobalt-card",
+      "closing": "-1186.45",
+      "credit_limit": "5000.00",
+      "credits": "250.00",
+      "debits": "-181.97",
+      "due_date": "2026-08-16",
+      "min_due": "35.00",
+      "opening": "-1254.48",
+      "period_end": "2026-07-22",
+      "period_start": "2026-06-23",
+      "reconciled": true,
+      "statement_date": "2026-07-22",
+      "txn_count": 5,
+      "txn_sum": "68.03"
+    },
+    {
+      "account_key": "cobalt-card",
+      "closing": "-1043.54",
+      "credit_limit": "5000.00",
+      "credits": "265.00",
+      "debits": "-122.09",
+      "due_date": "2026-09-16",
+      "min_due": "35.00",
+      "opening": "-1186.45",
+      "period_end": "2026-08-22",
+      "period_start": "2026-07-23",
+      "reconciled": true,
+      "statement_date": "2026-08-22",
+      "txn_count": 7,
+      "txn_sum": "142.91"
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "23162.31",
+      "credits": "4500.00",
+      "debits": "-469.88",
+      "opening": "19132.19",
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "reconciled": true,
+      "statement_date": "2026-05-31",
+      "txn_count": 8,
+      "txn_sum": "4030.12"
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "26918.04",
+      "credits": "4500.00",
+      "debits": "-744.27",
+      "opening": "23162.31",
+      "period_end": "2026-06-30",
+      "period_start": "2026-06-01",
+      "reconciled": true,
+      "source_sha256": "797416e3dd24b7a226acac71a60a29ab542aadc2da0905577c40fa4fe219b236",
+      "statement_date": "2026-06-30",
+      "txn_count": 9,
+      "txn_sum": "3755.73"
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "30695.03",
+      "credits": "4500.00",
+      "debits": "-723.01",
+      "opening": "26918.04",
+      "period_end": "2026-07-31",
+      "period_start": "2026-07-01",
+      "reconciled": true,
+      "statement_date": "2026-07-31",
+      "txn_count": 9,
+      "txn_sum": "3776.99"
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "34451.38",
+      "credits": "4500.00",
+      "debits": "-743.65",
+      "opening": "30695.03",
+      "period_end": "2026-08-31",
+      "period_start": "2026-08-01",
+      "reconciled": true,
+      "statement_date": "2026-08-31",
+      "txn_count": 9,
+      "txn_sum": "3756.35"
+    },
+    {
+      "account_key": "harbor-savings",
+      "closing": "13231.66",
+      "credits": "614.53",
+      "debits": "0.00",
+      "interest": "14.53",
+      "opening": "12617.13",
+      "period_end": "2026-06-30",
+      "period_start": "2026-04-01",
+      "reconciled": true,
+      "source_sha256": "797416e3dd24b7a226acac71a60a29ab542aadc2da0905577c40fa4fe219b236",
+      "statement_date": "2026-06-30",
+      "txn_count": 0
+    },
+    {
+      "account_key": "kids-529",
+      "closing": "20348.63",
+      "has_holdings": true,
+      "market_change": "-239.87",
+      "net_flows": "600.00",
+      "opening": "19988.50",
+      "period_end": "2026-06-30",
+      "period_start": "2026-04-01",
+      "reconciled": true,
+      "statement_date": "2026-06-30",
+      "txn_count": 0
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "54366.24",
+      "has_holdings": true,
+      "market_change": "-15.42",
+      "net_flows": "500.00",
+      "opening": "53881.66",
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "reconciled": true,
+      "statement_date": "2026-05-31",
+      "txn_count": 2
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "55320.39",
+      "has_holdings": true,
+      "market_change": "454.15",
+      "net_flows": "500.00",
+      "opening": "54366.24",
+      "period_end": "2026-06-30",
+      "period_start": "2026-06-01",
+      "reconciled": true,
+      "statement_date": "2026-06-30",
+      "txn_count": 5
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "56028.58",
+      "has_holdings": true,
+      "market_change": "208.19",
+      "net_flows": "500.00",
+      "opening": "55320.39",
+      "period_end": "2026-07-31",
+      "period_start": "2026-07-01",
+      "reconciled": true,
+      "statement_date": "2026-07-31",
+      "txn_count": 2
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "55466.38",
+      "has_holdings": true,
+      "market_change": "-1062.20",
+      "net_flows": "500.00",
+      "opening": "56028.58",
+      "period_end": "2026-08-31",
+      "period_start": "2026-08-01",
+      "reconciled": true,
+      "statement_date": "2026-08-31",
+      "txn_count": 2
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "27554.32",
+      "credits": "8974.18",
+      "debits": "-3369.26",
+      "opening": "21949.40",
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "reconciled": true,
+      "statement_date": "2026-05-31",
+      "txn_count": 15,
+      "txn_sum": "5604.92"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "29909.34",
+      "credits": "5900.86",
+      "debits": "-3545.84",
+      "opening": "27554.32",
+      "period_end": "2026-06-30",
+      "period_start": "2026-06-01",
+      "reconciled": true,
+      "statement_date": "2026-06-30",
+      "txn_count": 14,
+      "txn_sum": "2355.02"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "32218.24",
+      "credits": "5862.93",
+      "debits": "-3554.03",
+      "opening": "29909.34",
+      "period_end": "2026-07-31",
+      "period_start": "2026-07-01",
+      "reconciled": true,
+      "statement_date": "2026-07-31",
+      "txn_count": 13,
+      "txn_sum": "2308.90"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "34437.18",
+      "credits": "5862.66",
+      "debits": "-3643.72",
+      "opening": "32218.24",
+      "period_end": "2026-08-31",
+      "period_start": "2026-08-01",
+      "reconciled": true,
+      "statement_date": "2026-08-31",
+      "txn_count": 13,
+      "txn_sum": "2218.94"
+    },
+    {
+      "account_key": "old-store-card",
+      "closing": "-94.56",
+      "credit_limit": "1500.00",
+      "credits": "81.62",
+      "debits": "-94.56",
+      "due_date": "2026-06-09",
+      "min_due": "35.00",
+      "opening": "-81.62",
+      "period_end": "2026-05-15",
+      "period_start": "2026-04-16",
+      "reconciled": true,
+      "statement_date": "2026-05-15",
+      "txn_count": 3,
+      "txn_sum": "-12.94"
+    },
+    {
+      "account_key": "old-store-card",
+      "closing": "-109.81",
+      "credit_limit": "1500.00",
+      "credits": "94.56",
+      "debits": "-109.81",
+      "due_date": "2026-07-10",
+      "min_due": "35.00",
+      "opening": "-94.56",
+      "period_end": "2026-06-15",
+      "period_start": "2026-05-16",
+      "reconciled": true,
+      "statement_date": "2026-06-15",
+      "txn_count": 3,
+      "txn_sum": "-15.25"
+    },
+    {
+      "account_key": "old-store-card",
+      "closing": "0.00",
+      "credit_limit": "1500.00",
+      "credits": "109.81",
+      "debits": "0.00",
+      "due_date": "2026-08-09",
+      "min_due": "0.00",
+      "opening": "-109.81",
+      "period_end": "2026-07-15",
+      "period_start": "2026-06-16",
+      "reconciled": true,
+      "statement_date": "2026-07-15",
+      "txn_count": 1,
+      "txn_sum": "109.81"
+    },
+    {
+      "account_key": "orchard-card",
+      "balance": "-790.42",
+      "closing": "-190.42",
+      "credit_limit": "6000.00",
+      "credits": "243.10",
+      "debits": "-195.42",
+      "due_date": "2026-06-25",
+      "min_due": "35.00",
+      "opening": "-238.10",
+      "period_end": "2026-05-31",
+      "period_start": "2026-05-01",
+      "reconciled": true,
+      "statement_date": "2026-05-31",
+      "txn_count": 9,
+      "txn_sum": "47.68"
+    },
+    {
+      "account_key": "orchard-card",
+      "balance": "-756.60",
+      "closing": "-231.60",
+      "credit_limit": "6000.00",
+      "credits": "195.42",
+      "debits": "-236.60",
+      "due_date": "2026-07-25",
+      "min_due": "35.00",
+      "opening": "-190.42",
+      "period_end": "2026-06-30",
+      "period_start": "2026-06-01",
+      "reconciled": true,
+      "statement_date": "2026-06-30",
+      "txn_count": 9,
+      "txn_sum": "-41.18"
+    },
+    {
+      "account_key": "orchard-card",
+      "balance": "-751.86",
+      "closing": "-301.86",
+      "credit_limit": "6000.00",
+      "credits": "236.60",
+      "debits": "-306.86",
+      "due_date": "2026-08-25",
+      "min_due": "35.00",
+      "opening": "-231.60",
+      "period_end": "2026-07-31",
+      "period_start": "2026-07-01",
+      "reconciled": true,
+      "statement_date": "2026-07-31",
+      "txn_count": 9,
+      "txn_sum": "-70.26"
+    },
+    {
+      "account_key": "orchard-card",
+      "balance": "-596.32",
+      "closing": "-221.32",
+      "credit_limit": "6000.00",
+      "credits": "306.86",
+      "debits": "-226.32",
+      "due_date": "2026-09-25",
+      "min_due": "35.00",
+      "opening": "-301.86",
+      "period_end": "2026-08-31",
+      "period_start": "2026-08-01",
+      "reconciled": true,
+      "statement_date": "2026-08-31",
+      "txn_count": 9,
+      "txn_sum": "80.54"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-247166.31",
+      "credits": "1500.00",
+      "debits": "-929.01",
+      "due_date": "2026-06-01",
+      "interest": "-929.01",
+      "min_due": "1500.00",
+      "opening": "-247737.30",
+      "period_end": "2026-05-15",
+      "period_start": "2026-04-16",
+      "reconciled": true,
+      "statement_date": "2026-05-15",
+      "txn_count": 2,
+      "txn_sum": "570.99"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-246593.18",
+      "credits": "1500.00",
+      "debits": "-926.87",
+      "due_date": "2026-07-02",
+      "interest": "-926.87",
+      "min_due": "1500.00",
+      "opening": "-247166.31",
+      "period_end": "2026-06-15",
+      "period_start": "2026-05-16",
+      "reconciled": true,
+      "statement_date": "2026-06-15",
+      "txn_count": 2,
+      "txn_sum": "573.13"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-246017.90",
+      "credits": "1500.00",
+      "debits": "-924.72",
+      "due_date": "2026-08-01",
+      "interest": "-924.72",
+      "min_due": "1500.00",
+      "opening": "-246593.18",
+      "period_end": "2026-07-15",
+      "period_start": "2026-06-16",
+      "reconciled": true,
+      "statement_date": "2026-07-15",
+      "txn_count": 2,
+      "txn_sum": "575.28"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-245440.46",
+      "credits": "1500.00",
+      "debits": "-922.56",
+      "due_date": "2026-09-01",
+      "interest": "-922.56",
+      "min_due": "1500.00",
+      "opening": "-246017.90",
+      "period_end": "2026-08-15",
+      "period_start": "2026-07-16",
+      "reconciled": true,
+      "statement_date": "2026-08-15",
+      "txn_count": 2,
+      "txn_sum": "577.44"
+    },
+    {
+      "account_key": "summit-card",
+      "balance": "-1200.06",
+      "closing": "-600.06",
+      "credit_limit": "15000.00",
+      "credits": "1021.07",
+      "debits": "-1210.06",
+      "due_date": "2026-06-04",
+      "min_due": "35.00",
+      "opening": "-411.07",
+      "period_end": "2026-05-10",
+      "period_start": "2026-04-11",
+      "reconciled": true,
+      "statement_date": "2026-05-10",
+      "txn_count": 15,
+      "txn_sum": "-188.99"
+    },
+    {
+      "account_key": "summit-card",
+      "balance": "-1307.50",
+      "closing": "-807.50",
+      "credit_limit": "15000.00",
+      "credits": "610.06",
+      "debits": "-817.50",
+      "due_date": "2026-07-05",
+      "min_due": "35.00",
+      "opening": "-600.06",
+      "period_end": "2026-06-10",
+      "period_start": "2026-05-11",
+      "reconciled": true,
+      "statement_date": "2026-06-10",
+      "txn_count": 16,
+      "txn_sum": "-207.44"
+    },
+    {
+      "account_key": "summit-card",
+      "balance": "-1252.16",
+      "closing": "-852.16",
+      "credit_limit": "15000.00",
+      "credits": "862.50",
+      "debits": "-907.16",
+      "due_date": "2026-08-04",
+      "min_due": "35.00",
+      "opening": "-807.50",
+      "period_end": "2026-07-10",
+      "period_start": "2026-06-11",
+      "reconciled": true,
+      "statement_date": "2026-07-10",
+      "txn_count": 19,
+      "txn_sum": "-44.66"
+    },
+    {
+      "account_key": "summit-card",
+      "balance": "-1160.45",
+      "closing": "-860.45",
+      "credit_limit": "15000.00",
+      "credits": "862.16",
+      "debits": "-870.45",
+      "due_date": "2026-09-04",
+      "min_due": "35.00",
+      "opening": "-852.16",
+      "period_end": "2026-08-10",
+      "period_start": "2026-07-11",
+      "reconciled": true,
+      "statement_date": "2026-08-10",
+      "txn_count": 21,
+      "txn_sum": "-8.29"
+    }
+  ],
+  "trips": [
+    {
+      "estimate_high": "900.00",
+      "estimate_low": "600.00",
+      "items": [],
+      "key": "city-break",
+      "month": "2026-11",
+      "name": "City break",
+      "status": "planning"
+    },
+    {
+      "end_date": "2026-07-06",
+      "estimate_high": "600.00",
+      "estimate_low": "450.00",
+      "guests": 2,
+      "ious": [
+        {
+          "amount": "25.00",
+          "counterparty": "relative",
+          "direction": "owed_to_us",
+          "item_key": "gas",
+          "key": "gas-share",
+          "note": "Called it a wash",
+          "status": "waived"
+        }
+      ],
+      "items": [
+        {
+          "amount": "120.00",
+          "key": "boat",
+          "kind": "activities",
+          "label": "Boat rental",
+          "note": "The relatives paid",
+          "status": "posted",
+          "tender": "covered"
+        },
+        {
+          "account_key": "summit-card",
+          "amount": "53.47",
+          "key": "gas",
+          "kind": "gas",
+          "label": "Gas on the way home",
+          "person": "alex",
+          "status": "posted",
+          "tender": "cash"
+        },
+        {
+          "account_key": "summit-card",
+          "amount": "210.00",
+          "key": "lodging",
+          "kind": "lodging",
+          "label": "Lakeside Lodge",
+          "person": "alex",
+          "status": "posted",
+          "tender": "cash"
+        },
+        {
+          "amount": "35.00",
+          "key": "souvenirs",
+          "kind": "shopping",
+          "label": "Souvenirs for a friend",
+          "status": "excluded",
+          "tender": "cash"
+        }
+      ],
+      "key": "lake-weekend",
+      "name": "Lake weekend",
+      "note": "All costs are on the card statements",
+      "people": [
+        "alex",
+        "jamie",
+        "riley",
+        "sam"
+      ],
+      "start_date": "2026-07-03",
+      "status": "final",
+      "vehicle": "Family car"
+    }
+  ],
+  "utility_bills": [
+    {
+      "bill_date": "2024-09-05",
+      "credits": [
+        {
+          "amount": "-2.19",
+          "label": "Smart thermostat credit"
+        }
+      ],
+      "days": 31,
+      "due_date": "2024-09-25",
+      "heating_degree_days": 0,
+      "lines": [
+        {
+          "charges": "119.36",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "612"
+        },
+        {
+          "charges": "26.20",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "15"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2024-09-02",
+      "period_start": "2024-08-02",
+      "provider": "City Power & Gas",
+      "total": "143.37",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2024-10-08",
+      "days": 33,
+      "due_date": "2024-10-28",
+      "heating_degree_days": 49,
+      "lines": [
+        {
+          "charges": "112.42",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "570"
+        },
+        {
+          "charges": "28.10",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "17"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2024-10-05",
+      "period_start": "2024-09-02",
+      "provider": "City Power & Gas",
+      "total": "140.52",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2024-11-07",
+      "days": 30,
+      "due_date": "2024-11-27",
+      "heating_degree_days": 346,
+      "lines": [
+        {
+          "charges": "95.58",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "467"
+        },
+        {
+          "charges": "40.95",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "30"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2024-11-04",
+      "period_start": "2024-10-05",
+      "provider": "City Power & Gas",
+      "total": "136.53",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2024-12-08",
+      "days": 31,
+      "due_date": "2024-12-28",
+      "heating_degree_days": 835,
+      "lines": [
+        {
+          "charges": "69.59",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "308"
+        },
+        {
+          "charges": "56.93",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "47"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2024-12-05",
+      "period_start": "2024-11-04",
+      "provider": "City Power & Gas",
+      "total": "126.52",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-01-07",
+      "days": 30,
+      "due_date": "2025-01-27",
+      "heating_degree_days": 1197,
+      "lines": [
+        {
+          "charges": "67.26",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "282"
+        },
+        {
+          "charges": "92.86",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "79"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-01-04",
+      "period_start": "2024-12-05",
+      "provider": "City Power & Gas",
+      "total": "160.12",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-02-06",
+      "days": 30,
+      "due_date": "2025-02-26",
+      "estimated_read": true,
+      "heating_degree_days": 1276,
+      "lines": [
+        {
+          "charges": "64.91",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "268"
+        },
+        {
+          "charges": "105.90",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "92"
+        }
+      ],
+      "note": "Estimated read. Snow covered the meter.",
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-02-03",
+      "period_start": "2025-01-04",
+      "provider": "City Power & Gas",
+      "total": "170.81",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-03-08",
+      "days": 30,
+      "due_date": "2025-03-28",
+      "heating_degree_days": 1098,
+      "lines": [
+        {
+          "charges": "73.61",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "319"
+        },
+        {
+          "charges": "110.41",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "96"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-03-05",
+      "period_start": "2025-02-03",
+      "provider": "City Power & Gas",
+      "total": "184.02",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-04-08",
+      "days": 31,
+      "due_date": "2025-04-28",
+      "heating_degree_days": 901,
+      "lines": [
+        {
+          "charges": "74.46",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "324"
+        },
+        {
+          "charges": "74.46",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "61"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-04-05",
+      "period_start": "2025-03-05",
+      "provider": "City Power & Gas",
+      "total": "148.92",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-05-08",
+      "days": 30,
+      "due_date": "2025-05-28",
+      "heating_degree_days": 499,
+      "lines": [
+        {
+          "charges": "94.25",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "440"
+        },
+        {
+          "charges": "50.74",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "38"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-05-05",
+      "period_start": "2025-04-05",
+      "provider": "City Power & Gas",
+      "total": "144.99",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-06-07",
+      "days": 30,
+      "due_date": "2025-06-27",
+      "heating_degree_days": 223,
+      "lines": [
+        {
+          "charges": "104.43",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "500"
+        },
+        {
+          "charges": "29.45",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "17"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-06-04",
+      "period_start": "2025-05-05",
+      "provider": "City Power & Gas",
+      "total": "133.88",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-07-08",
+      "credits": [
+        {
+          "amount": "-2.19",
+          "label": "Smart thermostat credit"
+        }
+      ],
+      "days": 31,
+      "due_date": "2025-07-28",
+      "heating_degree_days": 29,
+      "lines": [
+        {
+          "charges": "102.23",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "487"
+        },
+        {
+          "charges": "22.44",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "10"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-07-05",
+      "period_start": "2025-06-04",
+      "provider": "City Power & Gas",
+      "total": "122.49",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-08-07",
+      "credits": [
+        {
+          "amount": "-2.19",
+          "label": "Smart thermostat credit"
+        }
+      ],
+      "days": 30,
+      "due_date": "2025-08-27",
+      "heating_degree_days": 0,
+      "lines": [
+        {
+          "charges": "132.40",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "663"
+        },
+        {
+          "charges": "29.06",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "17"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-08-04",
+      "period_start": "2025-07-05",
+      "provider": "City Power & Gas",
+      "total": "159.27",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-09-06",
+      "credits": [
+        {
+          "amount": "-2.19",
+          "label": "Smart thermostat credit"
+        }
+      ],
+      "days": 30,
+      "due_date": "2025-09-26",
+      "heating_degree_days": 6,
+      "lines": [
+        {
+          "charges": "118.13",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "580"
+        },
+        {
+          "charges": "25.92",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "14"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-09-03",
+      "period_start": "2025-08-04",
+      "provider": "City Power & Gas",
+      "total": "141.86",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-10-08",
+      "days": 32,
+      "due_date": "2025-10-28",
+      "heating_degree_days": 125,
+      "lines": [
+        {
+          "charges": "106.61",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "512"
+        },
+        {
+          "charges": "26.65",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "14"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-10-05",
+      "period_start": "2025-09-03",
+      "provider": "City Power & Gas",
+      "total": "133.26",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-11-06",
+      "days": 29,
+      "due_date": "2025-11-26",
+      "heating_degree_days": 372,
+      "lines": [
+        {
+          "charges": "84.24",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "382"
+        },
+        {
+          "charges": "36.10",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "24"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-11-03",
+      "period_start": "2025-10-05",
+      "provider": "City Power & Gas",
+      "total": "120.34",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-12-07",
+      "days": 31,
+      "due_date": "2025-12-27",
+      "heating_degree_days": 758,
+      "lines": [
+        {
+          "charges": "74.62",
+          "fixed_charges": "19.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "325"
+        },
+        {
+          "charges": "61.04",
+          "fixed_charges": "12.00",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "48"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-12-04",
+      "period_start": "2025-11-03",
+      "provider": "City Power & Gas",
+      "total": "135.66",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-01-06",
+      "days": 30,
+      "due_date": "2026-01-26",
+      "heating_degree_days": 1159,
+      "lines": [
+        {
+          "charges": "46.31",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "147"
+        },
+        {
+          "charges": "63.94",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "48"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-01-03",
+      "period_start": "2025-12-04",
+      "provider": "City Power & Gas",
+      "total": "110.25",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-02-04",
+      "days": 29,
+      "due_date": "2026-02-24",
+      "heating_degree_days": 1217,
+      "lines": [
+        {
+          "charges": "53.21",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "186"
+        },
+        {
+          "charges": "86.80",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "69"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-02-01",
+      "period_start": "2026-01-03",
+      "provider": "City Power & Gas",
+      "total": "140.01",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-03-06",
+      "days": 30,
+      "due_date": "2026-03-26",
+      "heating_degree_days": 1085,
+      "lines": [
+        {
+          "charges": "56.50",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "204"
+        },
+        {
+          "charges": "84.73",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "67"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-03-03",
+      "period_start": "2026-02-01",
+      "provider": "City Power & Gas",
+      "total": "141.23",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-04-08",
+      "days": 33,
+      "due_date": "2026-04-28",
+      "heating_degree_days": 901,
+      "lines": [
+        {
+          "charges": "77.91",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "324"
+        },
+        {
+          "charges": "77.90",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "61"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-04-05",
+      "period_start": "2026-03-03",
+      "provider": "City Power & Gas",
+      "total": "155.81",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-05-08",
+      "days": 30,
+      "due_date": "2026-05-28",
+      "heating_degree_days": 551,
+      "lines": [
+        {
+          "charges": "122.33",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "572"
+        },
+        {
+          "charges": "65.87",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "49"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-05-05",
+      "period_start": "2026-04-05",
+      "provider": "City Power & Gas",
+      "total": "188.20",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-06-07",
+      "days": 30,
+      "due_date": "2026-06-27",
+      "heating_degree_days": 165,
+      "lines": [
+        {
+          "charges": "86.22",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "370"
+        },
+        {
+          "charges": "24.31",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "11"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-06-04",
+      "period_start": "2026-05-05",
+      "provider": "City Power & Gas",
+      "total": "110.53",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-07-08",
+      "credits": [
+        {
+          "amount": "-2.19",
+          "label": "Smart thermostat credit"
+        }
+      ],
+      "days": 31,
+      "due_date": "2026-07-28",
+      "heating_degree_days": 0,
+      "lines": [
+        {
+          "charges": "95.20",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "420"
+        },
+        {
+          "charges": "20.89",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "8"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-07-05",
+      "period_start": "2026-06-04",
+      "provider": "City Power & Gas",
+      "total": "113.90",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2026-08-07",
+      "credits": [
+        {
+          "amount": "-2.19",
+          "label": "Smart thermostat credit"
+        }
+      ],
+      "days": 30,
+      "due_date": "2026-08-27",
+      "heating_degree_days": 0,
+      "lines": [
+        {
+          "charges": "104.99",
+          "fixed_charges": "20.00",
+          "service": "electric",
+          "unit": "kwh",
+          "usage": "475"
+        },
+        {
+          "charges": "23.04",
+          "fixed_charges": "12.50",
+          "service": "gas",
+          "unit": "therms",
+          "usage": "10"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-08-04",
+      "period_start": "2026-07-05",
+      "provider": "City Power & Gas",
+      "total": "125.84",
+      "utility_key": "city-power"
+    },
+    {
+      "bill_date": "2025-12-06",
+      "days": 91,
+      "due_date": "2025-12-31",
+      "lines": [
+        {
+          "charges": "26.51",
+          "fixed_charges": "7.00",
+          "service": "sewer",
+          "unit": "gallons",
+          "usage": "5420"
+        },
+        {
+          "charges": "6.00",
+          "fixed_charges": "6.00",
+          "service": "stormwater",
+          "unit": "none",
+          "usage": "0"
+        },
+        {
+          "charges": "32.39",
+          "fixed_charges": "8.00",
+          "service": "water",
+          "unit": "gallons",
+          "usage": "5420"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2025-12-01",
+      "period_start": "2025-09-01",
+      "provider": "Town Water",
+      "total": "64.90",
+      "utility_key": "town-water"
+    },
+    {
+      "bill_date": "2026-03-06",
+      "days": 90,
+      "due_date": "2026-03-31",
+      "lines": [
+        {
+          "charges": "26.60",
+          "fixed_charges": "7.00",
+          "service": "sewer",
+          "unit": "gallons",
+          "usage": "5447"
+        },
+        {
+          "charges": "6.00",
+          "fixed_charges": "6.00",
+          "service": "stormwater",
+          "unit": "none",
+          "usage": "0"
+        },
+        {
+          "charges": "32.51",
+          "fixed_charges": "8.00",
+          "service": "water",
+          "unit": "gallons",
+          "usage": "5447"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-03-01",
+      "period_start": "2025-12-01",
+      "provider": "Town Water",
+      "total": "65.11",
+      "utility_key": "town-water"
+    },
+    {
+      "bill_date": "2026-06-06",
+      "days": 92,
+      "due_date": "2026-07-01",
+      "lines": [
+        {
+          "charges": "25.35",
+          "fixed_charges": "7.00",
+          "service": "sewer",
+          "unit": "gallons",
+          "usage": "5107"
+        },
+        {
+          "charges": "6.00",
+          "fixed_charges": "6.00",
+          "service": "stormwater",
+          "unit": "none",
+          "usage": "0"
+        },
+        {
+          "charges": "30.98",
+          "fixed_charges": "8.00",
+          "service": "water",
+          "unit": "gallons",
+          "usage": "5107"
+        }
+      ],
+      "paid_from": "maple-joint-checking",
+      "period_end": "2026-06-01",
+      "period_start": "2026-03-01",
+      "provider": "Town Water",
+      "total": "62.33",
+      "utility_key": "town-water"
+    }
+  ]
+}

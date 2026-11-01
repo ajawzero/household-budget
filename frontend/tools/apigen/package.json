@@ -1,0 +1,9 @@
+{
+  "name": "budget-app-apigen",
+  "private": true,
+  "description": "openapi-typescript needs the TypeScript 5 JS API. The app uses TypeScript 7, so the generator lives in its own small package.",
+  "devDependencies": {
+    "openapi-typescript": "7.13.0",
+    "typescript": "5.9.3"
+  }
+}

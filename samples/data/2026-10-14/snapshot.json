@@ -1,0 +1,28 @@
+{
+  "balances": [
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-09-30",
+      "balance": "37398.00",
+      "source": "statement"
+    }
+  ],
+  "mode": "correction",
+  "run_id": "2026-10-14",
+  "schema_version": "1.0",
+  "statements": [
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "37398.00",
+      "credits": "5862.69",
+      "debits": "-2901.87",
+      "opening": "34437.18",
+      "period_end": "2026-09-30",
+      "period_start": "2026-09-01",
+      "reconciled": true,
+      "statement_date": "2026-09-30",
+      "txn_count": 13,
+      "txn_sum": "2960.82"
+    }
+  ]
+}

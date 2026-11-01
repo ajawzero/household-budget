@@ -1,0 +1,346 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/* Breakpoints: phone under 768, rail 768 to 1199, full sidebar from 1200. */
+@theme {
+  --breakpoint-lg: 75rem;
+  --font-sans: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius-card: 12px;
+
+  /* Motion (DESIGN.md "Motion"). Exits keep their last frame until Radix unmounts. */
+  --animate-fade-in: fade-in var(--dur-base) var(--ease-out);
+  --animate-fade-out: fade-out var(--dur-fast) var(--ease-in) forwards;
+  --animate-pop-in: pop-in var(--dur-fast) var(--ease-out);
+  --animate-rise-in: rise-in var(--dur-slow) var(--ease-out) backwards;
+  --animate-sheet-in-right: sheet-in-right var(--dur-slow) var(--ease-out);
+  --animate-sheet-out-right: sheet-out-right var(--dur-base) var(--ease-in) forwards;
+  --animate-sheet-in-left: sheet-in-left var(--dur-slow) var(--ease-out);
+  --animate-sheet-out-left: sheet-out-left var(--dur-base) var(--ease-in) forwards;
+  --animate-sheet-in-up: sheet-in-up var(--dur-slow) var(--ease-out);
+  --animate-sheet-out-down: sheet-out-down var(--dur-base) var(--ease-in) forwards;
+  --animate-group-open: group-open var(--dur-base) var(--ease-out);
+  --animate-group-close: group-close var(--dur-base) var(--ease-in) forwards;
+  --animate-bar-in: bar-in var(--dur-base) var(--ease-out);
+  --animate-shimmer: shimmer 1.6s linear infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+  }
+  @keyframes fade-out {
+    to { opacity: 0; }
+  }
+  @keyframes pop-in {
+    from { opacity: 0; transform: scale(0.98); }
+  }
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(4px); }
+  }
+  @keyframes sheet-in-right {
+    from { transform: translateX(100%); }
+  }
+  @keyframes sheet-out-right {
+    to { transform: translateX(100%); }
+  }
+  @keyframes sheet-in-left {
+    from { transform: translateX(-100%); }
+  }
+  @keyframes sheet-out-left {
+    to { transform: translateX(-100%); }
+  }
+  @keyframes sheet-in-up {
+    from { transform: translateY(100%); }
+  }
+  @keyframes sheet-out-down {
+    to { transform: translateY(100%); }
+  }
+  @keyframes group-open {
+    from { height: 0; }
+    to { height: var(--radix-collapsible-content-height); }
+  }
+  @keyframes group-close {
+    from { height: var(--radix-collapsible-content-height); }
+    to { height: 0; }
+  }
+  @keyframes bar-in {
+    from { opacity: 0; transform: translateY(16px); }
+  }
+  @keyframes shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: 0 0; }
+  }
+}
+
+/* Tailwind names for the tokens. Components use these classes, never hex. */
+@theme inline {
+  --color-page: var(--bg-page);
+  --color-card: var(--bg-card);
+  --color-subtle: var(--bg-subtle);
+  --color-hover: var(--bg-hover);
+  --color-active: var(--bg-active);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-overlay: var(--overlay);
+
+  --color-fg: var(--text);
+  --color-fg-secondary: var(--text-secondary);
+  --color-fg-faint: var(--text-faint);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--text-on-primary);
+
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-accent-tint: var(--accent-tint);
+
+  --color-demo: var(--demo-tint);
+  --color-demo-line: var(--demo-border);
+  --color-demo-fg: var(--demo-text);
+
+  --color-good: var(--text-good);
+  --color-bad: var(--text-bad);
+  --color-warn: var(--text-warn);
+  --color-income: var(--text-income);
+  --color-spending: var(--text-spending);
+  --color-tint-good: var(--tint-good);
+  --color-tint-bad: var(--tint-bad);
+  --color-tint-warn: var(--tint-warn);
+  --color-fill-good: var(--fill-good);
+  --color-fill-warn: var(--fill-warn);
+  --color-fill-bad: var(--fill-bad);
+
+  --color-chart-income: var(--chart-income);
+  --color-chart-spending: var(--chart-spending);
+  --color-chart-leftover: var(--chart-leftover);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+  --color-chart-grid: var(--chart-grid);
+  --color-chart-muted: var(--chart-muted);
+  --color-chart-target: var(--chart-target);
+
+  --shadow-card: var(--elev-card);
+  --shadow-pop: var(--elev-pop);
+}
+
+/* Phones: a control drawn smaller than 44px gets an invisible 44px hit area
+   centered on it, so nothing moves. Keep neighbors 44px apart, center to center. */
+@utility tap-target {
+  position: relative;
+  @media (width < 48rem) {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: max(100%, 44px);
+      height: max(100%, 44px);
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg-page);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    /* A long unbroken word (a URL, a code) breaks instead of widening a phone page. */
+    overflow-wrap: break-word;
+  }
+
+  /* Bold is 600 at most (weights 400, 500, 600). */
+  b,
+  strong,
+  th {
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--accent-text);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* Inputs at 16px so iOS does not zoom. */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* Reduced motion: everything is instant. Delays go too, so staggered content
+     never waits hidden, and loops (pulse, shimmer) run once and stop. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0s !important;
+      scroll-behavior: auto !important;
+    }
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+      animation: none !important;
+    }
+  }
+
+  /* List changes (step 2, `listChange` in lib/motion.ts). Only the list items
+     and the bar move; the rest of the page swaps at once, never a crossfade. */
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+  /* The phone bars (PhoneBars.tsx) are their own groups, so they stay on top
+     of a moving item and swap at once. */
+  ::view-transition-group(phone-top),
+  ::view-transition-group(phone-tabs),
+  ::view-transition-new(phone-top),
+  ::view-transition-new(phone-tabs) {
+    animation: none;
+  }
+  ::view-transition-old(phone-top),
+  ::view-transition-old(phone-tabs) {
+    display: none;
+  }
+  /* The header's snapshot has no backdrop blur, so give it the page behind it. */
+  ::view-transition-new(phone-top) {
+    background: var(--bg-page);
+  }
+  ::view-transition-new(.vt-item-in) {
+    animation: vt-pop-in var(--dur-fast) var(--ease-out);
+  }
+  ::view-transition-old(.vt-item-out) {
+    animation: vt-pop-out var(--dur-fast) var(--ease-in) forwards;
+  }
+  ::view-transition-group(.vt-item-move) {
+    animation-duration: var(--dur-base);
+    animation-timing-function: var(--ease-out);
+  }
+  ::view-transition-old(.vt-bar-out) {
+    animation: vt-bar-out var(--dur-base) var(--ease-in) forwards;
+  }
+}
+
+/* Plain keyframes, since Tailwind only emits @theme keyframes that a utility uses. */
+@keyframes vt-pop-in {
+  from { opacity: 0; transform: scale(0.98); }
+}
+@keyframes vt-pop-out {
+  to { opacity: 0; transform: scale(0.98); }
+}
+@keyframes vt-bar-out {
+  to { opacity: 0; transform: translateY(16px); }
+}
+
+@layer components {
+  /* Money and number columns line up. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Plain data tables (Imports, Transactions, "Show the numbers"). */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .data-table caption {
+    text-align: left;
+    padding: 0 0 8px;
+    color: var(--text-secondary);
+  }
+  .data-table th,
+  .data-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  .data-table thead th {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .data-table tbody tr:hover {
+    background: var(--bg-hover);
+  }
+  .data-table .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  /* A wide table scrolls inside its card, never the page. */
+  .table-scroll {
+    position: relative; /* clips absolute children, like sr-only text, so phones never scroll sideways */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Scroll shadows: a soft edge shows only on a side that has more to scroll.
+       The card-colored covers move with the content and hide the shadows at the ends. */
+    background:
+      linear-gradient(to right, var(--bg-card) 40%, transparent) left / 24px 100% no-repeat local,
+      linear-gradient(to left, var(--bg-card) 40%, transparent) right / 24px 100% no-repeat local,
+      linear-gradient(to right, color-mix(in srgb, var(--text) 14%, transparent), transparent) left / 12px 100% no-repeat scroll,
+      linear-gradient(to left, color-mix(in srgb, var(--text) 14%, transparent), transparent) right / 12px 100% no-repeat scroll;
+  }
+  /* Keep columns readable on phones; the card scrolls sideways instead. */
+  .table-scroll > .data-table:not(.compact) {
+    min-width: 640px;
+  }
+
+  /* Dashboard, first load of the session: each child rises in 50ms after the one before. */
+  .stagger-in > * {
+    animation: var(--animate-rise-in);
+  }
+  .stagger-in > :nth-child(2) { animation-delay: 50ms; }
+  .stagger-in > :nth-child(3) { animation-delay: 100ms; }
+  .stagger-in > :nth-child(4) { animation-delay: 150ms; }
+  .stagger-in > :nth-child(5) { animation-delay: 200ms; }
+  .stagger-in > :nth-child(n + 6) { animation-delay: 250ms; }
+
+  /* Ask's "thinking" line: a soft light passes over the text, left to right.
+     Plain secondary text under reduced motion. */
+  .text-shimmer {
+    color: transparent;
+    background: linear-gradient(90deg, var(--text-secondary) 35%, var(--text) 50%, var(--text-secondary) 65%) 0 0 / 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: var(--animate-shimmer);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .text-shimmer {
+      color: var(--text-secondary);
+      background: none;
+      animation: none;
+    }
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+}

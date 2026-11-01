@@ -1,0 +1,6 @@
+txn_date,post_date,amount,description,merchant,category_key,cardholder,txn_type,is_transfer,counterparty_account_key,is_reimbursable,exclude_from_budget,plan_key,recurring_key,trip_key,hsa_eligible,needs_review,confidence,notes
+2026-06-03,2026-06-03,-14.99,Personal subscription,Personal subscription,subscriptions,,purchase,false,,,,,personal-subscription,,,false,0.95,
+2026-06-09,2026-06-09,250.00,PAYMENT RECEIVED - THANK YOU,,transfer,,payment,true,harbor-checking,,,,,,,false,1.00,
+2026-06-16,2026-06-17,-49.64,TOWNE OUTFITTERS,Towne Outfitters,clothing,,purchase,false,,,,,,,,false,0.95,
+2026-06-16,2026-06-17,-40.07,TOWNE OUTFITTERS,Towne Outfitters,clothing,,purchase,false,,,,,,,,false,0.95,
+2026-06-20,2026-06-21,-14.52,STARLIGHT CINEMA,Starlight Cinema,entertainment,,purchase,false,,,,,,,,false,0.95,

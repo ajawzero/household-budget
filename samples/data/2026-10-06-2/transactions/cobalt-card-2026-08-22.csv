@@ -1,0 +1,8 @@
+txn_date,post_date,amount,description,merchant,category_key,cardholder,txn_type,is_transfer,counterparty_account_key,is_reimbursable,exclude_from_budget,plan_key,recurring_key,trip_key,hsa_eligible,needs_review,confidence,notes
+2026-08-03,2026-08-03,-15.00,BROOK STREAMING,Brook Streaming,subscriptions,,purchase,false,,,,,,,,false,0.95,
+2026-08-03,2026-08-03,-14.99,Personal subscription,Personal subscription,subscriptions,,purchase,false,,,,,personal-subscription,,,false,0.95,
+2026-08-03,2026-08-03,15.00,STREAMING CREDIT,Streaming Credit,subscriptions,,refund,false,,,,,,,,false,0.95,
+2026-08-06,2026-08-07,-29.31,TOWNE OUTFITTERS,Towne Outfitters,clothing,,purchase,false,,,,,,,,false,0.95,
+2026-08-09,2026-08-09,250.00,PAYMENT RECEIVED - THANK YOU,,transfer,,payment,true,harbor-checking,,,,,,,false,1.00,
+2026-08-16,2026-08-17,-15.23,STARLIGHT CINEMA,Starlight Cinema,entertainment,,purchase,false,,,,,,,,false,0.95,
+2026-08-22,2026-08-22,-47.56,TOWNE OUTFITTERS,Towne Outfitters,clothing,,purchase,false,,,,,,,,false,0.95,

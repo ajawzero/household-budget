@@ -1,0 +1,1606 @@
+{
+  "accounts": [
+    {
+      "active": true,
+      "custodian": "Granite Trust Bank",
+      "display_name": "Alex 401k (Lakeview)",
+      "display_order": 40,
+      "group": "retirement",
+      "include_in_net_worth": true,
+      "institution": "Lakeview Investments",
+      "is_asset": true,
+      "key": "alex-401k",
+      "notes": "New pre-tax and Roth money goes to the target date fund.",
+      "nw_group": "alex-retirement",
+      "nw_group_label": "Alex retirement",
+      "opened_on": "2018-04-02",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "quarterly",
+      "type": "retirement"
+    },
+    {
+      "active": true,
+      "autopay": "minimum",
+      "display_name": "Bramble store card",
+      "display_order": 15,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": false,
+      "institution": "Cobalt Card",
+      "is_asset": false,
+      "key": "bramble-store-card",
+      "last4": "4471",
+      "opened_on": "2023-04-10",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "none",
+      "tracked_by": "payments",
+      "type": "store_card"
+    },
+    {
+      "active": true,
+      "display_name": "Family car",
+      "display_order": 70,
+      "group": "vehicles",
+      "include_in_net_worth": true,
+      "institution": "Valuation",
+      "is_asset": true,
+      "key": "family-car",
+      "nw_group": "vehicle-equity",
+      "nw_group_label": "Vehicle equity",
+      "owner": "joint",
+      "ownership": "joint",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "vehicle"
+    },
+    {
+      "active": true,
+      "display_name": "Family home",
+      "display_order": 60,
+      "group": "real_estate",
+      "include_in_net_worth": true,
+      "institution": "Valuation",
+      "is_asset": true,
+      "key": "family-home",
+      "nw_group": "home-equity",
+      "nw_group_label": "Home equity",
+      "owner": "joint",
+      "ownership": "joint",
+      "stale_after_days": 120,
+      "statement_cadence": "none",
+      "type": "property"
+    },
+    {
+      "active": true,
+      "display_name": "Sam checking (Harbor)",
+      "display_order": 2,
+      "group": "cash",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Harbor Credit Union",
+      "is_asset": true,
+      "key": "harbor-checking",
+      "last4": "7702",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2015-08-14",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "checking"
+    },
+    {
+      "active": true,
+      "apr": "4.1",
+      "display_name": "Sam savings (Harbor)",
+      "display_order": 3,
+      "group": "cash",
+      "in_cashflow": false,
+      "include_in_net_worth": true,
+      "institution": "Harbor Credit Union",
+      "is_asset": true,
+      "key": "harbor-savings",
+      "last4": "7719",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2015-08-14",
+      "owner": "sam",
+      "ownership": "individual",
+      "rate_type": "variable",
+      "statement_cadence": "quarterly",
+      "type": "savings"
+    },
+    {
+      "active": true,
+      "display_name": "Kids 529 (Bluestem)",
+      "display_order": 35,
+      "group": "investments",
+      "include_in_net_worth": true,
+      "institution": "Bluestem College Savings",
+      "is_asset": true,
+      "key": "kids-529",
+      "nw_group": "college-savings",
+      "nw_group_label": "College savings",
+      "opened_on": "2021-05-03",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "quarterly",
+      "type": "529"
+    },
+    {
+      "active": true,
+      "advisor": "Birch Lane Advisors",
+      "custodian": "Lakeview Investments",
+      "display_name": "Alex brokerage (Lakeview)",
+      "display_order": 30,
+      "group": "investments",
+      "include_in_net_worth": true,
+      "institution": "Lakeview Investments",
+      "is_asset": true,
+      "key": "lakeview-brokerage",
+      "notes": "Most of it sits in one fund. A diversification plan is needed.",
+      "nw_group": "alex-brokerage",
+      "nw_group_label": "Alex brokerage",
+      "opened_on": "2019-02-11",
+      "owner": "alex",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "brokerage"
+    },
+    {
+      "active": true,
+      "display_name": "Joint checking (Maple)",
+      "display_order": 1,
+      "group": "cash",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Maple Bank",
+      "is_asset": true,
+      "key": "maple-joint-checking",
+      "last4": "5521",
+      "nw_group": "cash-and-misc",
+      "nw_group_label": "Cash and misc",
+      "opened_on": "2012-06-01",
+      "owner": "joint",
+      "ownership": "joint",
+      "statement_cadence": "monthly",
+      "type": "checking"
+    },
+    {
+      "active": true,
+      "autopay": "none",
+      "cycle_close_day": 15,
+      "display_name": "Towne store card",
+      "display_order": 14,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Towne Outfitters",
+      "is_asset": false,
+      "key": "old-store-card",
+      "last4": "9031",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2021-11-20",
+      "owner": "sam",
+      "ownership": "individual",
+      "statement_cadence": "monthly",
+      "type": "store_card"
+    },
+    {
+      "active": true,
+      "apr": "19.24",
+      "autopay": "statement",
+      "credit_limit": "6000.00",
+      "cycle_close_day": 31,
+      "display_name": "Orchard card",
+      "display_order": 12,
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Orchard Card",
+      "is_asset": false,
+      "key": "orchard-card",
+      "last4": "2290",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2020-03-09",
+      "owner": "alex",
+      "ownership": "individual",
+      "rate_type": "variable",
+      "statement_cadence": "monthly",
+      "type": "credit_card"
+    },
+    {
+      "active": true,
+      "apr": "4.5",
+      "autopay": "full",
+      "display_name": "Mortgage (Pinecrest)",
+      "display_order": 50,
+      "group": "loans",
+      "include_in_net_worth": true,
+      "institution": "Pinecrest Mortgage",
+      "is_asset": false,
+      "key": "pinecrest-mortgage",
+      "last4": "0618",
+      "min_payment": "1500.00",
+      "notes": "Fixed rate for the full term. Extra cash goes to savings first.",
+      "nw_group": "mortgage",
+      "nw_group_label": "Mortgage",
+      "opened_on": "2019-06-01",
+      "owner": "joint",
+      "ownership": "joint",
+      "payoff_date": "2049-06-01",
+      "policy_note": "Do not prepay",
+      "rate_type": "fixed",
+      "secured_by": "family-home",
+      "servicer": "Pinecrest Mortgage",
+      "statement_cadence": "monthly",
+      "type": "mortgage"
+    },
+    {
+      "active": true,
+      "annual_fee": "250.00",
+      "apr": "24.99",
+      "autopay": "full",
+      "credit_limit": "15000.00",
+      "cycle_close_day": 10,
+      "display_name": "Summit card",
+      "display_order": 10,
+      "fee_renews_on": "2027-03-01",
+      "group": "credit_cards",
+      "in_cashflow": true,
+      "include_in_net_worth": true,
+      "institution": "Summit Card Services",
+      "is_asset": false,
+      "key": "summit-card",
+      "last4": "8812",
+      "nw_group": "credit-cards",
+      "nw_group_label": "Credit cards",
+      "opened_on": "2017-09-15",
+      "owner": "joint",
+      "ownership": "joint",
+      "rate_type": "variable",
+      "statement_cadence": "monthly",
+      "type": "credit_card"
+    }
+  ],
+  "balances": [
+    {
+      "account_key": "alex-401k",
+      "as_of": "2026-03-31",
+      "balance": "85423.00",
+      "source": "statement"
+    },
+    {
+      "account_key": "family-car",
+      "as_of": "2026-01-01",
+      "balance": "24000.00",
+      "method": "kbb",
+      "source": "valuation",
+      "source_note": "Private party value"
+    },
+    {
+      "account_key": "family-car",
+      "as_of": "2026-03-31",
+      "balance": "23630.72",
+      "method": "kbb",
+      "source": "valuation",
+      "source_note": "Private party value"
+    },
+    {
+      "account_key": "family-home",
+      "as_of": "2026-01-01",
+      "balance": "520000.00",
+      "method": "comps",
+      "source": "valuation",
+      "source_note": "Three nearby sales"
+    },
+    {
+      "account_key": "family-home",
+      "as_of": "2026-03-31",
+      "balance": "522851.89",
+      "method": "comps",
+      "source": "valuation",
+      "source_note": "Three nearby sales"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-01-31",
+      "balance": "7242.08",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-02-28",
+      "balance": "11235.17",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-03-31",
+      "balance": "15136.17",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-checking",
+      "as_of": "2026-04-30",
+      "balance": "19132.19",
+      "source": "statement"
+    },
+    {
+      "account_key": "harbor-savings",
+      "as_of": "2026-03-31",
+      "balance": "12617.13",
+      "source": "statement"
+    },
+    {
+      "account_key": "kids-529",
+      "as_of": "2026-03-31",
+      "balance": "19988.50",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-01-31",
+      "balance": "50949.50",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-02-28",
+      "balance": "52648.79",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-03-31",
+      "balance": "53662.48",
+      "source": "statement"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "as_of": "2026-04-30",
+      "balance": "53881.66",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-01-31",
+      "balance": "11136.81",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-02-28",
+      "balance": "13869.29",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-03-31",
+      "balance": "19349.89",
+      "source": "statement"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "as_of": "2026-04-30",
+      "balance": "21949.40",
+      "source": "statement"
+    },
+    {
+      "account_key": "old-store-card",
+      "as_of": "2026-01-15",
+      "balance": "-127.61",
+      "source": "statement"
+    },
+    {
+      "account_key": "old-store-card",
+      "as_of": "2026-02-15",
+      "balance": "-114.92",
+      "source": "statement"
+    },
+    {
+      "account_key": "old-store-card",
+      "as_of": "2026-03-15",
+      "balance": "-104.07",
+      "source": "statement"
+    },
+    {
+      "account_key": "old-store-card",
+      "as_of": "2026-04-15",
+      "balance": "-81.62",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-01-31",
+      "balance": "-131.18",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-02-28",
+      "balance": "-1095.10",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-03-31",
+      "balance": "-894.77",
+      "source": "statement"
+    },
+    {
+      "account_key": "orchard-card",
+      "as_of": "2026-04-30",
+      "balance": "-913.10",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-01-15",
+      "balance": "-249437.50",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-02-15",
+      "balance": "-248872.89",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-03-15",
+      "balance": "-248306.16",
+      "source": "statement"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "as_of": "2026-04-15",
+      "balance": "-247737.30",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-01-10",
+      "balance": "-356.74",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-02-10",
+      "balance": "-470.47",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-03-10",
+      "balance": "-726.23",
+      "source": "statement"
+    },
+    {
+      "account_key": "summit-card",
+      "as_of": "2026-04-10",
+      "balance": "-411.07",
+      "source": "statement"
+    }
+  ],
+  "contributions": [
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-01-09",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-01-23",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-02-06",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-02-20",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-03-06",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "300.00",
+      "date": "2026-03-13",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-03-20",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-04-03",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "252.00",
+      "date": "2026-04-17",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "1200.00",
+      "date": "2026-01-05",
+      "kind": "401k_employee",
+      "person": "alex",
+      "source": "prior_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-01-09",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-01-23",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-02-06",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-02-20",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-03-06",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "150.00",
+      "date": "2026-03-13",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-03-20",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-04-03",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "alex-401k",
+      "amount": "126.00",
+      "date": "2026-04-17",
+      "kind": "401k_employer",
+      "person": "alex",
+      "source": "current_employer"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "500.00",
+      "date": "2026-03-14",
+      "kind": "529",
+      "person": "alex",
+      "source": "gift"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-01-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-02-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-03-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    },
+    {
+      "account_key": "kids-529",
+      "amount": "200.00",
+      "date": "2026-04-05",
+      "kind": "529",
+      "person": "alex",
+      "source": "personal"
+    }
+  ],
+  "holdings": [
+    {
+      "account_key": "alex-401k",
+      "asset_class": "target-date",
+      "key": "target-date-trust",
+      "name": "Target Date 2050 Trust",
+      "period_end": "2026-03-31",
+      "value": "85423.00"
+    },
+    {
+      "account_key": "kids-529",
+      "asset_class": "target-date",
+      "cost_basis": "16100.00",
+      "key": "age-based-portfolio",
+      "name": "Age-Based Portfolio",
+      "period_end": "2026-03-31",
+      "value": "19988.50"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "bond",
+      "cost_basis": "20000.00",
+      "cusip": "SMPLBND03",
+      "key": "bond-index",
+      "name": "Bond Index Fund",
+      "period_end": "2026-01-31",
+      "price": "97.4",
+      "quantity": "200.0",
+      "symbol": "BNDIDX",
+      "value": "19480.00"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "30500.00",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-01-31",
+      "price": "249.75",
+      "quantity": "122.0",
+      "symbol": "BRDMKT",
+      "value": "30469.50"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-01-31",
+      "value": "1000.00"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "bond",
+      "cost_basis": "20000.00",
+      "cusip": "SMPLBND03",
+      "key": "bond-index",
+      "name": "Bond Index Fund",
+      "period_end": "2026-02-28",
+      "price": "99.835",
+      "quantity": "200.0",
+      "symbol": "BNDIDX",
+      "value": "19967.00"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "31000.00",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-02-28",
+      "price": "255.49425",
+      "quantity": "124.002002",
+      "symbol": "BRDMKT",
+      "value": "31681.79"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-02-28",
+      "value": "1000.00"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "bond",
+      "cost_basis": "20000.00",
+      "cusip": "SMPLBND03",
+      "key": "bond-index",
+      "name": "Bond Index Fund",
+      "period_end": "2026-03-31",
+      "price": "98.23764",
+      "quantity": "200.0",
+      "symbol": "BNDIDX",
+      "value": "19647.52"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "31559.38",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-03-31",
+      "price": "261.626112",
+      "quantity": "126.191405",
+      "symbol": "BRDMKT",
+      "value": "33014.96"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-03-31",
+      "value": "1000.00"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "bond",
+      "cost_basis": "20000.00",
+      "cusip": "SMPLBND03",
+      "key": "bond-index",
+      "name": "Bond Index Fund",
+      "period_end": "2026-04-30",
+      "price": "99.514729",
+      "quantity": "200.0",
+      "symbol": "BNDIDX",
+      "value": "19902.94"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "us-stock",
+      "cost_basis": "32059.38",
+      "key": "broad-market",
+      "name": "Broad Market Index Fund",
+      "period_end": "2026-04-30",
+      "price": "257.440094",
+      "quantity": "128.102529",
+      "symbol": "BRDMKT",
+      "value": "32978.72"
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "asset_class": "cash",
+      "key": "cash",
+      "name": "Cash",
+      "period_end": "2026-04-30",
+      "value": "1000.00"
+    }
+  ],
+  "income": {
+    "paychecks": [
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-01-09",
+        "period_end": "2026-01-02",
+        "period_start": "2025-12-20",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "50.00",
+        "ytd_hsa_employer": "25.00",
+        "ytd_k401": "252.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-01-23",
+        "period_end": "2026-01-16",
+        "period_start": "2026-01-03",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "100.00",
+        "ytd_hsa_employer": "50.00",
+        "ytd_k401": "504.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-02-06",
+        "period_end": "2026-01-30",
+        "period_start": "2026-01-17",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "150.00",
+        "ytd_hsa_employer": "75.00",
+        "ytd_k401": "756.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-02-20",
+        "period_end": "2026-02-13",
+        "period_start": "2026-01-31",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "200.00",
+        "ytd_hsa_employer": "100.00",
+        "ytd_k401": "1008.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-03-06",
+        "period_end": "2026-02-27",
+        "period_start": "2026-02-14",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "250.00",
+        "ytd_hsa_employer": "125.00",
+        "ytd_k401": "1260.00"
+      },
+      {
+        "gross": "5000.00",
+        "k401": "300.00",
+        "k401_pct": "6",
+        "kind": "bonus",
+        "net": "3120.00",
+        "pay_date": "2026-03-13",
+        "person": "alex",
+        "seq": 1,
+        "ytd_hsa_employee": "250.00",
+        "ytd_hsa_employer": "125.00",
+        "ytd_k401": "1560.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-03-20",
+        "period_end": "2026-03-13",
+        "period_start": "2026-02-28",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "300.00",
+        "ytd_hsa_employer": "150.00",
+        "ytd_k401": "1812.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-04-03",
+        "period_end": "2026-03-27",
+        "period_start": "2026-03-14",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "350.00",
+        "ytd_hsa_employer": "175.00",
+        "ytd_k401": "2064.00"
+      },
+      {
+        "gross": "4200.00",
+        "hsa_employee": "50.00",
+        "hsa_employer": "25.00",
+        "k401": "252.00",
+        "k401_pct": "6",
+        "kind": "regular",
+        "net": "2931.20",
+        "pay_date": "2026-04-17",
+        "period_end": "2026-04-10",
+        "period_start": "2026-03-28",
+        "person": "alex",
+        "pretax_health": "120.00",
+        "seq": 1,
+        "ytd_hsa_employee": "400.00",
+        "ytd_hsa_employer": "200.00",
+        "ytd_k401": "2316.00"
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-01-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-01-31",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-02-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-02-28",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-03-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-03-31",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-04-15",
+        "person": "sam",
+        "seq": 1
+      },
+      {
+        "gross": "3000.00",
+        "kind": "regular",
+        "net": "2250.00",
+        "pay_date": "2026-04-30",
+        "person": "sam",
+        "seq": 1
+      }
+    ]
+  },
+  "mode": "backfill",
+  "new_accounts": [
+    {
+      "key": "alex-401k",
+      "opened_on": "2018-04-02"
+    },
+    {
+      "key": "bramble-store-card",
+      "opened_on": "2023-04-10"
+    },
+    {
+      "key": "family-car"
+    },
+    {
+      "key": "family-home"
+    },
+    {
+      "key": "harbor-checking",
+      "opened_on": "2015-08-14"
+    },
+    {
+      "key": "harbor-savings",
+      "opened_on": "2015-08-14"
+    },
+    {
+      "key": "kids-529",
+      "opened_on": "2021-05-03"
+    },
+    {
+      "key": "lakeview-brokerage",
+      "opened_on": "2019-02-11"
+    },
+    {
+      "key": "maple-joint-checking",
+      "opened_on": "2012-06-01"
+    },
+    {
+      "key": "old-store-card",
+      "opened_on": "2021-11-20"
+    },
+    {
+      "key": "orchard-card",
+      "opened_on": "2020-03-09"
+    },
+    {
+      "key": "pinecrest-mortgage",
+      "opened_on": "2019-06-01"
+    },
+    {
+      "key": "summit-card",
+      "opened_on": "2017-09-15"
+    }
+  ],
+  "people": [
+    {
+      "display_name": "Alex",
+      "key": "alex",
+      "role": "adult"
+    },
+    {
+      "aliases": [
+        "James"
+      ],
+      "display_name": "Jamie",
+      "key": "jamie",
+      "role": "child"
+    },
+    {
+      "display_name": "Joint",
+      "key": "joint",
+      "role": "joint"
+    },
+    {
+      "display_name": "Riley",
+      "key": "riley",
+      "role": "child"
+    },
+    {
+      "display_name": "Sam",
+      "key": "sam",
+      "role": "adult"
+    }
+  ],
+  "run_id": "2026-10-06",
+  "schema_version": "1.0",
+  "statements": [
+    {
+      "account_key": "alex-401k",
+      "closing": "85423.00",
+      "fees": "-21.35",
+      "has_holdings": true,
+      "market_change": "-2295.00",
+      "net_flows": "2718.00",
+      "opening": "85000.00",
+      "period_end": "2026-03-31",
+      "period_start": "2026-01-01",
+      "reconciled": true,
+      "statement_date": "2026-03-31",
+      "txn_count": 0
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "7242.08",
+      "credits": "4500.00",
+      "debits": "-457.92",
+      "opening": "3200.00",
+      "period_end": "2026-01-31",
+      "period_start": "2026-01-01",
+      "reconciled": true,
+      "statement_date": "2026-01-31",
+      "txn_count": 8,
+      "txn_sum": "4042.08"
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "11235.17",
+      "credits": "4500.00",
+      "debits": "-506.91",
+      "opening": "7242.08",
+      "period_end": "2026-02-28",
+      "period_start": "2026-02-01",
+      "reconciled": true,
+      "statement_date": "2026-02-28",
+      "txn_count": 8,
+      "txn_sum": "3993.09"
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "15136.17",
+      "credits": "4500.00",
+      "debits": "-599.00",
+      "opening": "11235.17",
+      "period_end": "2026-03-31",
+      "period_start": "2026-03-01",
+      "reconciled": true,
+      "source_sha256": "493bde4fd95adfb7da1450f7640ed658b7679fb9a28695f1e6d77ca0831fcb0a",
+      "statement_date": "2026-03-31",
+      "txn_count": 9,
+      "txn_sum": "3901.00"
+    },
+    {
+      "account_key": "harbor-checking",
+      "closing": "19132.19",
+      "credits": "4500.00",
+      "debits": "-503.98",
+      "opening": "15136.17",
+      "period_end": "2026-04-30",
+      "period_start": "2026-04-01",
+      "reconciled": true,
+      "statement_date": "2026-04-30",
+      "txn_count": 8,
+      "txn_sum": "3996.02"
+    },
+    {
+      "account_key": "harbor-savings",
+      "closing": "12617.13",
+      "credits": "617.13",
+      "debits": "0.00",
+      "interest": "17.13",
+      "opening": "12000.00",
+      "period_end": "2026-03-31",
+      "period_start": "2026-01-01",
+      "reconciled": true,
+      "source_sha256": "493bde4fd95adfb7da1450f7640ed658b7679fb9a28695f1e6d77ca0831fcb0a",
+      "statement_date": "2026-03-31",
+      "txn_count": 0
+    },
+    {
+      "account_key": "kids-529",
+      "closing": "19988.50",
+      "has_holdings": true,
+      "market_change": "388.50",
+      "net_flows": "1100.00",
+      "opening": "18500.00",
+      "period_end": "2026-03-31",
+      "period_start": "2026-01-01",
+      "reconciled": true,
+      "statement_date": "2026-03-31",
+      "txn_count": 0
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "50949.50",
+      "has_holdings": true,
+      "market_change": "-550.50",
+      "net_flows": "500.00",
+      "opening": "51000.00",
+      "period_end": "2026-01-31",
+      "period_start": "2026-01-01",
+      "reconciled": true,
+      "statement_date": "2026-01-31",
+      "txn_count": 2
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "52648.79",
+      "has_holdings": true,
+      "market_change": "1199.29",
+      "net_flows": "500.00",
+      "opening": "50949.50",
+      "period_end": "2026-02-28",
+      "period_start": "2026-02-01",
+      "reconciled": true,
+      "statement_date": "2026-02-28",
+      "txn_count": 2
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "53662.48",
+      "has_holdings": true,
+      "market_change": "513.69",
+      "net_flows": "500.00",
+      "opening": "52648.79",
+      "period_end": "2026-03-31",
+      "period_start": "2026-03-01",
+      "reconciled": true,
+      "statement_date": "2026-03-31",
+      "txn_count": 4
+    },
+    {
+      "account_key": "lakeview-brokerage",
+      "closing": "53881.66",
+      "has_holdings": true,
+      "market_change": "-280.82",
+      "net_flows": "500.00",
+      "opening": "53662.48",
+      "period_end": "2026-04-30",
+      "period_start": "2026-04-01",
+      "reconciled": true,
+      "statement_date": "2026-04-30",
+      "txn_count": 2
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "11136.81",
+      "credits": "5862.73",
+      "debits": "-3225.92",
+      "opening": "8500.00",
+      "period_end": "2026-01-31",
+      "period_start": "2026-01-01",
+      "reconciled": true,
+      "statement_date": "2026-01-31",
+      "txn_count": 13,
+      "txn_sum": "2636.81"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "13869.29",
+      "credits": "5862.69",
+      "debits": "-3130.21",
+      "opening": "11136.81",
+      "period_end": "2026-02-28",
+      "period_start": "2026-02-01",
+      "reconciled": true,
+      "statement_date": "2026-02-28",
+      "txn_count": 13,
+      "txn_sum": "2732.48"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "19349.89",
+      "credits": "8982.88",
+      "debits": "-3502.28",
+      "opening": "13869.29",
+      "period_end": "2026-03-31",
+      "period_start": "2026-03-01",
+      "reconciled": true,
+      "statement_date": "2026-03-31",
+      "txn_count": 14,
+      "txn_sum": "5480.60"
+    },
+    {
+      "account_key": "maple-joint-checking",
+      "closing": "21949.40",
+      "credits": "5862.95",
+      "debits": "-3263.44",
+      "opening": "19349.89",
+      "period_end": "2026-04-30",
+      "period_start": "2026-04-01",
+      "reconciled": true,
+      "statement_date": "2026-04-30",
+      "txn_count": 14,
+      "txn_sum": "2599.51"
+    },
+    {
+      "account_key": "old-store-card",
+      "closing": "-127.61",
+      "credit_limit": "1500.00",
+      "credits": "85.40",
+      "debits": "-127.61",
+      "due_date": "2026-02-09",
+      "min_due": "35.00",
+      "opening": "-85.40",
+      "period_end": "2026-01-15",
+      "period_start": "2025-12-16",
+      "reconciled": true,
+      "statement_date": "2026-01-15",
+      "txn_count": 3,
+      "txn_sum": "-42.21"
+    },
+    {
+      "account_key": "old-store-card",
+      "closing": "-114.92",
+      "credit_limit": "1500.00",
+      "credits": "127.61",
+      "debits": "-114.92",
+      "due_date": "2026-03-12",
+      "min_due": "35.00",
+      "opening": "-127.61",
+      "period_end": "2026-02-15",
+      "period_start": "2026-01-16",
+      "reconciled": true,
+      "statement_date": "2026-02-15",
+      "txn_count": 3,
+      "txn_sum": "12.69"
+    },
+    {
+      "account_key": "old-store-card",
+      "closing": "-104.07",
+      "credit_limit": "1500.00",
+      "credits": "114.92",
+      "debits": "-104.07",
+      "due_date": "2026-04-09",
+      "flags_text": "Scanned statement, totals checked by hand",
+      "min_due": "35.00",
+      "ocr": true,
+      "opening": "-114.92",
+      "period_end": "2026-03-15",
+      "period_start": "2026-02-16",
+      "reconciled": true,
+      "statement_date": "2026-03-15",
+      "txn_count": 3,
+      "txn_sum": "10.85"
+    },
+    {
+      "account_key": "old-store-card",
+      "closing": "-81.62",
+      "credit_limit": "1500.00",
+      "credits": "104.07",
+      "debits": "-81.62",
+      "due_date": "2026-05-10",
+      "min_due": "35.00",
+      "opening": "-104.07",
+      "period_end": "2026-04-15",
+      "period_start": "2026-03-16",
+      "reconciled": true,
+      "statement_date": "2026-04-15",
+      "txn_count": 3,
+      "txn_sum": "22.45"
+    },
+    {
+      "account_key": "orchard-card",
+      "closing": "-131.18",
+      "credit_limit": "6000.00",
+      "credits": "315.25",
+      "debits": "-136.18",
+      "due_date": "2026-02-25",
+      "min_due": "35.00",
+      "opening": "-310.25",
+      "period_end": "2026-01-31",
+      "period_start": "2026-01-01",
+      "reconciled": true,
+      "statement_date": "2026-01-31",
+      "txn_count": 8,
+      "txn_sum": "179.07"
+    },
+    {
+      "account_key": "orchard-card",
+      "balance": "-1095.10",
+      "closing": "-270.10",
+      "credit_limit": "6000.00",
+      "credits": "1036.18",
+      "debits": "-1175.10",
+      "due_date": "2026-03-25",
+      "min_due": "35.00",
+      "opening": "-131.18",
+      "period_end": "2026-02-28",
+      "period_start": "2026-02-01",
+      "reconciled": true,
+      "statement_date": "2026-02-28",
+      "txn_count": 11,
+      "txn_sum": "-138.92"
+    },
+    {
+      "account_key": "orchard-card",
+      "balance": "-894.77",
+      "closing": "-144.77",
+      "credit_limit": "6000.00",
+      "credits": "275.10",
+      "debits": "-149.77",
+      "due_date": "2026-04-25",
+      "min_due": "35.00",
+      "opening": "-270.10",
+      "period_end": "2026-03-31",
+      "period_start": "2026-03-01",
+      "reconciled": true,
+      "statement_date": "2026-03-31",
+      "txn_count": 9,
+      "txn_sum": "125.33"
+    },
+    {
+      "account_key": "orchard-card",
+      "balance": "-913.10",
+      "closing": "-238.10",
+      "credit_limit": "6000.00",
+      "credits": "149.77",
+      "debits": "-243.10",
+      "due_date": "2026-05-25",
+      "min_due": "35.00",
+      "opening": "-144.77",
+      "period_end": "2026-04-30",
+      "period_start": "2026-04-01",
+      "reconciled": true,
+      "statement_date": "2026-04-30",
+      "txn_count": 9,
+      "txn_sum": "-93.33"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-249437.50",
+      "credits": "1500.00",
+      "debits": "-937.50",
+      "due_date": "2026-02-01",
+      "interest": "-937.50",
+      "min_due": "1500.00",
+      "opening": "-250000.00",
+      "period_end": "2026-01-15",
+      "period_start": "2025-12-16",
+      "reconciled": true,
+      "statement_date": "2026-01-15",
+      "txn_count": 2,
+      "txn_sum": "562.50"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-248872.89",
+      "credits": "1500.00",
+      "debits": "-935.39",
+      "due_date": "2026-03-04",
+      "interest": "-935.39",
+      "min_due": "1500.00",
+      "opening": "-249437.50",
+      "period_end": "2026-02-15",
+      "period_start": "2026-01-16",
+      "reconciled": true,
+      "statement_date": "2026-02-15",
+      "txn_count": 2,
+      "txn_sum": "564.61"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-248306.16",
+      "credits": "1500.00",
+      "debits": "-933.27",
+      "due_date": "2026-04-01",
+      "interest": "-933.27",
+      "min_due": "1500.00",
+      "opening": "-248872.89",
+      "period_end": "2026-03-15",
+      "period_start": "2026-02-16",
+      "reconciled": true,
+      "statement_date": "2026-03-15",
+      "txn_count": 2,
+      "txn_sum": "566.73"
+    },
+    {
+      "account_key": "pinecrest-mortgage",
+      "closing": "-247737.30",
+      "credits": "1500.00",
+      "debits": "-931.14",
+      "due_date": "2026-05-02",
+      "interest": "-931.14",
+      "min_due": "1500.00",
+      "opening": "-248306.16",
+      "period_end": "2026-04-15",
+      "period_start": "2026-03-16",
+      "reconciled": true,
+      "statement_date": "2026-04-15",
+      "txn_count": 2,
+      "txn_sum": "568.86"
+    },
+    {
+      "account_key": "summit-card",
+      "closing": "-356.74",
+      "credit_limit": "15000.00",
+      "credits": "1234.56",
+      "debits": "-356.74",
+      "due_date": "2026-02-04",
+      "min_due": "35.00",
+      "opening": "-1234.56",
+      "period_end": "2026-01-10",
+      "period_start": "2025-12-11",
+      "reconciled": true,
+      "statement_date": "2026-01-10",
+      "txn_count": 11,
+      "txn_sum": "877.82"
+    },
+    {
+      "account_key": "summit-card",
+      "closing": "-470.47",
+      "credit_limit": "15000.00",
+      "credits": "366.74",
+      "debits": "-480.47",
+      "due_date": "2026-03-07",
+      "min_due": "35.00",
+      "opening": "-356.74",
+      "period_end": "2026-02-10",
+      "period_start": "2026-01-11",
+      "reconciled": true,
+      "statement_date": "2026-02-10",
+      "txn_count": 13,
+      "txn_sum": "-113.73"
+    },
+    {
+      "account_key": "summit-card",
+      "closing": "-726.23",
+      "credit_limit": "15000.00",
+      "credits": "480.47",
+      "debits": "-736.23",
+      "due_date": "2026-04-04",
+      "min_due": "35.00",
+      "opening": "-470.47",
+      "period_end": "2026-03-10",
+      "period_start": "2026-02-11",
+      "reconciled": true,
+      "statement_date": "2026-03-10",
+      "txn_count": 14,
+      "txn_sum": "-255.76"
+    },
+    {
+      "account_key": "summit-card",
+      "closing": "-411.07",
+      "credit_limit": "15000.00",
+      "credits": "736.23",
+      "debits": "-421.07",
+      "due_date": "2026-05-05",
+      "min_due": "35.00",
+      "opening": "-726.23",
+      "period_end": "2026-04-10",
+      "period_start": "2026-03-11",
+      "reconciled": true,
+      "statement_date": "2026-04-10",
+      "txn_count": 13,
+      "txn_sum": "315.16"
+    }
+  ]
+}

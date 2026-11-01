@@ -1,0 +1,6744 @@
+{
+  "$defs": {
+    "Account": {
+      "additionalProperties": false,
+      "properties": {
+        "active": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Active"
+        },
+        "advisor": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Advisor"
+        },
+        "annual_fee": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Annual Fee"
+        },
+        "apr": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,3}(?:\\.[0-9]{1,3})?$",
+              "type": "string",
+              "x-rule": "rate-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Apr"
+        },
+        "autopay": {
+          "anyOf": [
+            {
+              "enum": [
+                "minimum",
+                "statement",
+                "full",
+                "none"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Autopay"
+        },
+        "closed_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Closed On"
+        },
+        "credit_limit": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credit Limit"
+        },
+        "custodian": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Custodian"
+        },
+        "cycle_close_day": {
+          "anyOf": [
+            {
+              "maximum": 31,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cycle Close Day"
+        },
+        "display_name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Display Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "display_order": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Display Order"
+        },
+        "dormant": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dormant"
+        },
+        "fee_renews_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fee Renews On"
+        },
+        "group": {
+          "enum": [
+            "cash",
+            "credit_cards",
+            "investments",
+            "retirement",
+            "real_estate",
+            "vehicles",
+            "loans",
+            "other"
+          ],
+          "title": "Group",
+          "type": "string"
+        },
+        "in_cashflow": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "In Cashflow"
+        },
+        "include_in_net_worth": {
+          "title": "Include In Net Worth",
+          "type": "boolean"
+        },
+        "institution": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Institution",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "is_asset": {
+          "title": "Is Asset",
+          "type": "boolean"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "last4": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{3,4}$",
+              "type": "string",
+              "x-rule": "last4-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last4"
+        },
+        "min_payment": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Payment"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "nw_group": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nw Group"
+        },
+        "nw_group_label": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nw Group Label"
+        },
+        "opened_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Opened On"
+        },
+        "original": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Original"
+        },
+        "owner": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Owner",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "ownership": {
+          "enum": [
+            "individual",
+            "joint",
+            "trust",
+            "custodial"
+          ],
+          "title": "Ownership",
+          "type": "string"
+        },
+        "payoff_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payoff Date"
+        },
+        "policy_note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Policy Note"
+        },
+        "priority": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Priority"
+        },
+        "rate_changes": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/RateChange"
+              },
+              "maxItems": 4,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rate Changes"
+        },
+        "rate_type": {
+          "anyOf": [
+            {
+              "enum": [
+                "fixed",
+                "variable",
+                "promo"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rate Type"
+        },
+        "secured_by": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Secured By"
+        },
+        "servicer": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Servicer"
+        },
+        "stale_after_days": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stale After Days"
+        },
+        "statement_cadence": {
+          "enum": [
+            "monthly",
+            "quarterly",
+            "report",
+            "none"
+          ],
+          "title": "Statement Cadence",
+          "type": "string"
+        },
+        "subtype": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subtype"
+        },
+        "tracked_by": {
+          "anyOf": [
+            {
+              "enum": [
+                "statements",
+                "payments"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tracked By"
+        },
+        "type": {
+          "enum": [
+            "checking",
+            "savings",
+            "credit_card",
+            "store_card",
+            "loan",
+            "mortgage",
+            "heloc",
+            "brokerage",
+            "retirement",
+            "529",
+            "hsa",
+            "custodial",
+            "nqdc",
+            "property",
+            "vehicle",
+            "other"
+          ],
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "display_name",
+        "institution",
+        "type",
+        "owner",
+        "ownership",
+        "group",
+        "is_asset",
+        "include_in_net_worth",
+        "statement_cadence"
+      ],
+      "title": "Account",
+      "type": "object"
+    },
+    "Balance": {
+      "additionalProperties": false,
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "as_of": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "As Of",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "balance": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Balance",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "method": {
+          "anyOf": [
+            {
+              "enum": [
+                "comps",
+                "kbb",
+                "report",
+                "manual"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "source": {
+          "enum": [
+            "statement",
+            "valuation",
+            "manual",
+            "estimate"
+          ],
+          "title": "Source",
+          "type": "string"
+        },
+        "source_note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Note"
+        }
+      },
+      "required": [
+        "account_key",
+        "as_of",
+        "source",
+        "balance"
+      ],
+      "title": "Balance",
+      "type": "object"
+    },
+    "BalanceTombstone": {
+      "additionalProperties": false,
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "as_of": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "As Of",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "deleted": {
+          "const": true,
+          "title": "Deleted",
+          "type": "boolean"
+        },
+        "source": {
+          "enum": [
+            "statement",
+            "valuation",
+            "manual",
+            "estimate"
+          ],
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "account_key",
+        "as_of",
+        "source",
+        "deleted"
+      ],
+      "title": "BalanceTombstone",
+      "type": "object"
+    },
+    "BenefitCycle": {
+      "additionalProperties": false,
+      "description": "One cycle of a credit. `amount` only when it differs from the benefit's.",
+      "properties": {
+        "amount": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Amount"
+        },
+        "end": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "End",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "start": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Start",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "used": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Used"
+        },
+        "used_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Used On"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ],
+      "title": "BenefitCycle",
+      "type": "object"
+    },
+    "Budget": {
+      "additionalProperties": false,
+      "properties": {
+        "actual_source": {
+          "anyOf": [
+            {
+              "enum": [
+                "statement",
+                "baseline"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Actual Source"
+        },
+        "category_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category Key"
+        },
+        "cycle_note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cycle Note"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "label": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Label",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "month": {
+          "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+          "title": "Month",
+          "type": "string",
+          "x-rule": "month-format",
+          "x-scan": false
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "period_basis": {
+          "default": "calendar",
+          "enum": [
+            "calendar",
+            "card_cycle"
+          ],
+          "title": "Period Basis",
+          "type": "string"
+        },
+        "plan": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan"
+        },
+        "reported_actual": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reported Actual"
+        },
+        "scope": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BudgetScope"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "statements_needed": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 40,
+                "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+                "type": "string",
+                "x-rule": "key-format"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Statements Needed"
+        },
+        "target": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Target",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "key",
+        "month",
+        "label",
+        "target"
+      ],
+      "title": "Budget",
+      "type": "object"
+    },
+    "BudgetScope": {
+      "additionalProperties": false,
+      "properties": {
+        "cards": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 40,
+                "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+                "type": "string",
+                "x-rule": "key-format"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cards"
+        },
+        "exclusions": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 500,
+                "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+                "type": "string",
+                "x-rule": "text-format"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Exclusions"
+        },
+        "merchant": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Merchant"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Owner"
+        }
+      },
+      "title": "BudgetScope",
+      "type": "object"
+    },
+    "CashflowActual": {
+      "additionalProperties": false,
+      "properties": {
+        "by_group": {
+          "items": {
+            "$ref": "#/$defs/GroupAmount"
+          },
+          "title": "By Group",
+          "type": "array"
+        },
+        "income": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Income",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "month": {
+          "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+          "title": "Month",
+          "type": "string",
+          "x-rule": "month-format",
+          "x-scan": false
+        },
+        "saved_invested": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Saved Invested"
+        },
+        "spending": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Spending",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "month",
+        "income",
+        "spending",
+        "by_group"
+      ],
+      "title": "CashflowActual",
+      "type": "object"
+    },
+    "CashflowEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "delta": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Delta",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "effective_month": {
+          "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+          "title": "Effective Month",
+          "type": "string",
+          "x-rule": "month-format",
+          "x-scan": false
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "label": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Label",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "linked_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Linked Key"
+        },
+        "linked_kind": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Linked Kind"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "status": {
+          "anyOf": [
+            {
+              "enum": [
+                "confirmed",
+                "expected",
+                "target",
+                "suggested"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status"
+        }
+      },
+      "required": [
+        "key",
+        "effective_month",
+        "delta",
+        "label"
+      ],
+      "title": "CashflowEvent",
+      "type": "object"
+    },
+    "CashflowPhase": {
+      "additionalProperties": false,
+      "properties": {
+        "end_month": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+              "type": "string",
+              "x-rule": "month-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End Month"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "label": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Label",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "start_month": {
+          "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+          "title": "Start Month",
+          "type": "string",
+          "x-rule": "month-format",
+          "x-scan": false
+        },
+        "surplus": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Surplus",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "start_month",
+        "surplus"
+      ],
+      "title": "CashflowPhase",
+      "type": "object"
+    },
+    "CashflowPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "by_group": {
+          "items": {
+            "$ref": "#/$defs/GroupAmount"
+          },
+          "title": "By Group",
+          "type": "array"
+        },
+        "month": {
+          "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+          "title": "Month",
+          "type": "string",
+          "x-rule": "month-format",
+          "x-scan": false
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "planned_income": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Planned Income",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "planned_spending": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Planned Spending",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "month",
+        "planned_income",
+        "planned_spending",
+        "by_group"
+      ],
+      "title": "CashflowPlan",
+      "type": "object"
+    },
+    "Contribution": {
+      "additionalProperties": false,
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "amount": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Amount",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "date": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Date",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "kind": {
+          "enum": [
+            "401k_employee",
+            "401k_employer",
+            "hsa_employee",
+            "hsa_employer",
+            "ira",
+            "529"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "person": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Person",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "source": {
+          "enum": [
+            "current_employer",
+            "prior_employer",
+            "personal",
+            "gift"
+          ],
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "person",
+        "account_key",
+        "kind",
+        "source",
+        "date",
+        "amount"
+      ],
+      "title": "Contribution",
+      "type": "object"
+    },
+    "ContributionTombstone": {
+      "additionalProperties": false,
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "date": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Date",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "deleted": {
+          "const": true,
+          "title": "Deleted",
+          "type": "boolean"
+        },
+        "kind": {
+          "enum": [
+            "401k_employee",
+            "401k_employer",
+            "hsa_employee",
+            "hsa_employer",
+            "ira",
+            "529"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "person": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Person",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "source": {
+          "enum": [
+            "current_employer",
+            "prior_employer",
+            "personal",
+            "gift"
+          ],
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "person",
+        "account_key",
+        "kind",
+        "source",
+        "date",
+        "deleted"
+      ],
+      "title": "ContributionTombstone",
+      "type": "object"
+    },
+    "CsvRow": {
+      "additionalProperties": false,
+      "description": "One CSV row. Every cell is a string. Blank means unknown or none.",
+      "properties": {
+        "amount": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Amount",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "cardholder": {
+          "maxLength": 40,
+          "pattern": "^(?:|[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*)$",
+          "title": "Cardholder",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "category_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Category Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "confidence": {
+          "pattern": "^(?:|0(?:\\.[0-9]{1,2})?|1(?:\\.0{1,2})?)$",
+          "title": "Confidence",
+          "type": "string",
+          "x-rule": "confidence-format",
+          "x-scan": false
+        },
+        "counterparty_account_key": {
+          "maxLength": 40,
+          "pattern": "^(?:|[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*)$",
+          "title": "Counterparty Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "description": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Description",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "exclude_from_budget": {
+          "pattern": "^(?:true|false|)$",
+          "title": "Exclude From Budget",
+          "type": "string",
+          "x-rule": "bool-format",
+          "x-scan": false
+        },
+        "hsa_eligible": {
+          "pattern": "^(?:true|false|)$",
+          "title": "Hsa Eligible",
+          "type": "string",
+          "x-rule": "bool-format",
+          "x-scan": false
+        },
+        "is_reimbursable": {
+          "pattern": "^(?:true|false|)$",
+          "title": "Is Reimbursable",
+          "type": "string",
+          "x-rule": "bool-format",
+          "x-scan": false
+        },
+        "is_transfer": {
+          "pattern": "^(?:true|false|)$",
+          "title": "Is Transfer",
+          "type": "string",
+          "x-rule": "bool-format",
+          "x-scan": false
+        },
+        "merchant": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]*$",
+          "title": "Merchant",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "needs_review": {
+          "pattern": "^(?:true|false|)$",
+          "title": "Needs Review",
+          "type": "string",
+          "x-rule": "bool-format",
+          "x-scan": false
+        },
+        "notes": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]*$",
+          "title": "Notes",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "plan_key": {
+          "maxLength": 40,
+          "pattern": "^(?:|[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*)$",
+          "title": "Plan Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "post_date": {
+          "format": "date",
+          "pattern": "^(?:|[0-9]{4}-[0-9]{2}-[0-9]{2})$",
+          "title": "Post Date",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "recurring_key": {
+          "maxLength": 40,
+          "pattern": "^(?:|[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*)$",
+          "title": "Recurring Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "trip_key": {
+          "maxLength": 40,
+          "pattern": "^(?:|[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*)$",
+          "title": "Trip Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "txn_date": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Txn Date",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "txn_type": {
+          "enum": [
+            "purchase",
+            "refund",
+            "payment",
+            "fee",
+            "interest",
+            "transfer",
+            "deposit",
+            "withdrawal",
+            "dividend",
+            "reinvest",
+            "buy",
+            "sell",
+            "contribution",
+            "plan_fee",
+            "adjustment"
+          ],
+          "title": "Txn Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "txn_date",
+        "post_date",
+        "amount",
+        "description",
+        "merchant",
+        "category_key",
+        "cardholder",
+        "txn_type",
+        "is_transfer",
+        "counterparty_account_key",
+        "is_reimbursable",
+        "exclude_from_budget",
+        "plan_key",
+        "recurring_key",
+        "trip_key",
+        "hsa_eligible",
+        "needs_review",
+        "confidence",
+        "notes"
+      ],
+      "title": "CsvRow",
+      "type": "object"
+    },
+    "Flag": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "anyOf": [
+            {
+              "enum": [
+                "act",
+                "ask",
+                "reimburse",
+                "info"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Action"
+        },
+        "archived": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Archived"
+        },
+        "body": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Body"
+        },
+        "created_on": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Created On",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "due_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Due Date"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "kind": {
+          "enum": [
+            "debt",
+            "tax",
+            "budget",
+            "subscription",
+            "fraud",
+            "travel",
+            "rewards",
+            "cost_cutting",
+            "milestone",
+            "retirement",
+            "investment",
+            "insurance",
+            "medical",
+            "payroll",
+            "home",
+            "other"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "related_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Related Key"
+        },
+        "related_kind": {
+          "anyOf": [
+            {
+              "enum": [
+                "account",
+                "recurring",
+                "plan",
+                "budget",
+                "todo",
+                "pending",
+                "trip",
+                "category",
+                "person"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Related Kind"
+        },
+        "resolved_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Resolved On"
+        },
+        "severity": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "open",
+            "watching",
+            "resolved"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Title",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "updates": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/FlagUpdate"
+              },
+              "maxItems": 20,
+              "minItems": 1,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updates"
+        }
+      },
+      "required": [
+        "key",
+        "severity",
+        "status",
+        "kind",
+        "title",
+        "created_on"
+      ],
+      "title": "Flag",
+      "type": "object"
+    },
+    "FlagUpdate": {
+      "additionalProperties": false,
+      "description": "One dated note on a flag (1.4). The identity is on, then text.",
+      "properties": {
+        "on": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "On",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "text": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Text",
+          "type": "string",
+          "x-rule": "text-format"
+        }
+      },
+      "required": [
+        "on",
+        "text"
+      ],
+      "title": "FlagUpdate",
+      "type": "object"
+    },
+    "Generator": {
+      "additionalProperties": false,
+      "properties": {
+        "skill": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Skill",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "version": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Version",
+          "type": "string",
+          "x-rule": "text-format"
+        }
+      },
+      "required": [
+        "skill",
+        "version"
+      ],
+      "title": "Generator",
+      "type": "object"
+    },
+    "Goal": {
+      "additionalProperties": false,
+      "description": "A household goal (state, monthly runs only). `target` is the round target, or the\ntotal college cost in today's dollars. Progress is the balances of its accounts.",
+      "properties": {
+        "accounts": {
+          "items": {
+            "maxLength": 40,
+            "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+            "type": "string",
+            "x-rule": "key-format"
+          },
+          "maxItems": 10,
+          "minItems": 1,
+          "title": "Accounts",
+          "type": "array"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "kind": {
+          "enum": [
+            "college",
+            "save_up"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "person": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Person"
+        },
+        "start_year": {
+          "anyOf": [
+            {
+              "maximum": 2100,
+              "minimum": 2000,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start Year"
+        },
+        "target": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Target",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "target_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Date"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "kind",
+        "accounts",
+        "target"
+      ],
+      "title": "Goal",
+      "type": "object"
+    },
+    "GroupAmount": {
+      "additionalProperties": false,
+      "description": "One amount per group key. Lists of these are sorted by key.",
+      "properties": {
+        "amount": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Amount",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        }
+      },
+      "required": [
+        "key",
+        "amount"
+      ],
+      "title": "GroupAmount",
+      "type": "object"
+    },
+    "Holding": {
+      "additionalProperties": false,
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "asset_class": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Asset Class"
+        },
+        "cost_basis": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cost Basis"
+        },
+        "cusip": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9A-Z]{8}[0-9]$",
+              "type": "string",
+              "x-rule": "cusip-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cusip"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "period_end": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Period End",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "price": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+              "type": "string",
+              "x-rule": "quantity-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Price"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+              "type": "string",
+              "x-rule": "quantity-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity"
+        },
+        "symbol": {
+          "anyOf": [
+            {
+              "pattern": "^[A-Z][A-Z0-9.-]{0,11}$",
+              "type": "string",
+              "x-rule": "symbol-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Symbol"
+        },
+        "value": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Value",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "account_key",
+        "period_end",
+        "key",
+        "name",
+        "value"
+      ],
+      "title": "Holding",
+      "type": "object"
+    },
+    "Income": {
+      "additionalProperties": false,
+      "properties": {
+        "income_streams": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/IncomeStream"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Income Streams"
+        },
+        "paychecks": {
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/Paycheck"
+              },
+              {
+                "$ref": "#/$defs/PaycheckTombstone"
+              }
+            ]
+          },
+          "title": "Paychecks",
+          "type": "array"
+        }
+      },
+      "required": [
+        "paychecks"
+      ],
+      "title": "Income",
+      "type": "object"
+    },
+    "IncomeStream": {
+      "additionalProperties": false,
+      "properties": {
+        "end_month": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+              "type": "string",
+              "x-rule": "month-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End Month"
+        },
+        "expected_net": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Expected Net",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "kind": {
+          "enum": [
+            "paycheck",
+            "benefit",
+            "draw",
+            "bonus"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Label",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "person": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Person",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "schedule": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Schedule",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "start_month": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+              "type": "string",
+              "x-rule": "month-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start Month"
+        }
+      },
+      "required": [
+        "key",
+        "person",
+        "label",
+        "kind",
+        "schedule",
+        "expected_net"
+      ],
+      "title": "IncomeStream",
+      "type": "object"
+    },
+    "InstallmentPlan": {
+      "additionalProperties": false,
+      "description": "A card installment plan. `remaining` is information only, never net worth.",
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "components": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/PlanComponent"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Components"
+        },
+        "created_on": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Created On",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "end_month": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+              "type": "string",
+              "x-rule": "month-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End Month"
+        },
+        "included_in_spending_plan": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Included In Spending Plan"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "kind": {
+          "enum": [
+            "plan_it",
+            "pay_over_time",
+            "promo_0pct",
+            "deferred_interest",
+            "apple_installment"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "monthly_fee": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Monthly Fee"
+        },
+        "monthly_payment": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Monthly Payment"
+        },
+        "name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "original": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Original",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "paid_off_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Paid Off On"
+        },
+        "pay_before": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pay Before"
+        },
+        "payments_left": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payments Left"
+        },
+        "payments_total": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payments Total"
+        },
+        "promo_expiry": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Promo Expiry"
+        },
+        "remaining": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Remaining"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "paid_off",
+            "closed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "total_fees": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Total Fees"
+        }
+      },
+      "required": [
+        "key",
+        "account_key",
+        "kind",
+        "name",
+        "created_on",
+        "original",
+        "status"
+      ],
+      "title": "InstallmentPlan",
+      "type": "object"
+    },
+    "KeyNumber": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Label",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "value": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Value",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "label",
+        "value"
+      ],
+      "title": "KeyNumber",
+      "type": "object"
+    },
+    "Manifest": {
+      "additionalProperties": false,
+      "properties": {
+        "created_at": {
+          "format": "date-time",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:Z|[+-][0-9]{2}:[0-9]{2})$",
+          "title": "Created At",
+          "type": "string",
+          "x-rule": "timestamp-format",
+          "x-scan": false
+        },
+        "files": {
+          "items": {
+            "$ref": "#/$defs/ManifestFile"
+          },
+          "title": "Files",
+          "type": "array"
+        },
+        "generator": {
+          "$ref": "#/$defs/Generator"
+        },
+        "mode": {
+          "enum": [
+            "monthly",
+            "backfill",
+            "correction"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "run_id": {
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(?:-(?:[2-9]|[1-9][0-9]+))?$",
+          "title": "Run Id",
+          "type": "string",
+          "x-rule": "run-id",
+          "x-scan": false
+        },
+        "schema_version": {
+          "enum": [
+            "1.0",
+            "1.1",
+            "1.2",
+            "1.3",
+            "1.4"
+          ],
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "run_id",
+        "mode",
+        "created_at",
+        "generator",
+        "files"
+      ],
+      "title": "Manifest",
+      "type": "object"
+    },
+    "ManifestFile": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "minimum": 0,
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "path": {
+          "pattern": "^(?:snapshot\\.json|transactions/[a-z0-9-]+\\.csv)$",
+          "title": "Path",
+          "type": "string",
+          "x-rule": "path-not-allowed",
+          "x-scan": false
+        },
+        "rows": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rows"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string",
+          "x-rule": "hash-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "bytes"
+      ],
+      "title": "ManifestFile",
+      "type": "object"
+    },
+    "Meta": {
+      "additionalProperties": false,
+      "properties": {
+        "complete_as_of": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Complete As Of"
+        },
+        "location_label": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Location Label"
+        },
+        "this_month": {
+          "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+          "title": "This Month",
+          "type": "string",
+          "x-rule": "month-format",
+          "x-scan": false
+        },
+        "updated": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Updated",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "updated",
+        "this_month"
+      ],
+      "title": "Meta",
+      "type": "object"
+    },
+    "NetWorth": {
+      "additionalProperties": false,
+      "properties": {
+        "as_of": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "As Of",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "assets": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Assets",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "liabilities": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Liabilities",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "parts": {
+          "items": {
+            "$ref": "#/$defs/GroupAmount"
+          },
+          "title": "Parts",
+          "type": "array"
+        },
+        "value": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Value",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "as_of",
+        "value",
+        "assets",
+        "liabilities",
+        "parts"
+      ],
+      "title": "NetWorth",
+      "type": "object"
+    },
+    "NewAccount": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "opened_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Opened On"
+        }
+      },
+      "required": [
+        "key"
+      ],
+      "title": "NewAccount",
+      "type": "object"
+    },
+    "Paycheck": {
+      "additionalProperties": false,
+      "properties": {
+        "gross": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Gross",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "hsa_employee": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hsa Employee"
+        },
+        "hsa_employer": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hsa Employer"
+        },
+        "k401": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "K401"
+        },
+        "k401_pct": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{1,3}(?:\\.[0-9]{1,3})?$",
+              "type": "string",
+              "x-rule": "rate-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "K401 Pct"
+        },
+        "kind": {
+          "enum": [
+            "regular",
+            "bonus",
+            "draw"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "net": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Net",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "pay_date": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Pay Date",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "period_end": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Period End"
+        },
+        "period_start": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Period Start"
+        },
+        "person": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Person",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "pretax_health": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pretax Health"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        },
+        "ytd_hsa_employee": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ytd Hsa Employee"
+        },
+        "ytd_hsa_employer": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ytd Hsa Employer"
+        },
+        "ytd_k401": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ytd K401"
+        }
+      },
+      "required": [
+        "person",
+        "pay_date",
+        "kind",
+        "seq",
+        "gross",
+        "net"
+      ],
+      "title": "Paycheck",
+      "type": "object"
+    },
+    "PaycheckTombstone": {
+      "additionalProperties": false,
+      "properties": {
+        "deleted": {
+          "const": true,
+          "title": "Deleted",
+          "type": "boolean"
+        },
+        "kind": {
+          "enum": [
+            "regular",
+            "bonus",
+            "draw"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "pay_date": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Pay Date",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "person": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Person",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "seq": {
+          "minimum": 1,
+          "title": "Seq",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "person",
+        "pay_date",
+        "kind",
+        "seq",
+        "deleted"
+      ],
+      "title": "PaycheckTombstone",
+      "type": "object"
+    },
+    "PayoffStep": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Action",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "month": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+              "type": "string",
+              "x-rule": "month-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Month"
+        },
+        "when_label": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "When Label",
+          "type": "string",
+          "x-rule": "text-format"
+        }
+      },
+      "required": [
+        "key",
+        "when_label",
+        "action"
+      ],
+      "title": "PayoffStep",
+      "type": "object"
+    },
+    "PendingItem": {
+      "additionalProperties": false,
+      "properties": {
+        "added_on": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Added On",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "detail": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Detail"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "kind": {
+          "enum": [
+            "apply",
+            "confirm"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "open",
+            "waiting",
+            "done"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "subject": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Subject",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "updated_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Updated On"
+        }
+      },
+      "required": [
+        "key",
+        "kind",
+        "subject",
+        "status",
+        "added_on"
+      ],
+      "title": "PendingItem",
+      "type": "object"
+    },
+    "Person": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 500,
+                "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+                "type": "string",
+                "x-rule": "text-format"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Aliases"
+        },
+        "display_name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Display Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "role": {
+          "enum": [
+            "adult",
+            "child",
+            "trust",
+            "joint"
+          ],
+          "title": "Role",
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "display_name",
+        "role"
+      ],
+      "title": "Person",
+      "type": "object"
+    },
+    "PlanComponent": {
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Amount",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "merchant": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Merchant",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "trip_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trip Key"
+        }
+      },
+      "required": [
+        "merchant",
+        "amount"
+      ],
+      "title": "PlanComponent",
+      "type": "object"
+    },
+    "RateChange": {
+      "additionalProperties": false,
+      "description": "A scheduled APR on a variable-rate account (1.4). The identity is effective_on.",
+      "properties": {
+        "apr": {
+          "pattern": "^[0-9]{1,3}(?:\\.[0-9]{1,3})?$",
+          "title": "Apr",
+          "type": "string",
+          "x-rule": "rate-format",
+          "x-scan": false
+        },
+        "effective_on": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Effective On",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        }
+      },
+      "required": [
+        "effective_on",
+        "apr"
+      ],
+      "title": "RateChange",
+      "type": "object"
+    },
+    "Recurring": {
+      "additionalProperties": false,
+      "description": "A recurring bill or subscription. `amount` is per occurrence.",
+      "properties": {
+        "account_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Account Key"
+        },
+        "active_months": {
+          "anyOf": [
+            {
+              "items": {
+                "maximum": 12,
+                "minimum": 1,
+                "type": "integer"
+              },
+              "maxItems": 12,
+              "minItems": 1,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Active Months"
+        },
+        "active_through": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Active Through"
+        },
+        "amount": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Amount",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "cadence": {
+          "enum": [
+            "weekly",
+            "biweekly",
+            "every_n_weeks",
+            "semi_monthly",
+            "monthly",
+            "quarterly",
+            "semester",
+            "semi_annual",
+            "annual"
+          ],
+          "title": "Cadence",
+          "type": "string"
+        },
+        "category_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Category Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "credit_note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credit Note"
+        },
+        "credit_offset": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credit Offset"
+        },
+        "end_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End Date"
+        },
+        "interval_n": {
+          "anyOf": [
+            {
+              "maximum": 52,
+              "minimum": 2,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interval N"
+        },
+        "keep": {
+          "anyOf": [
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Keep"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "next_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Next Date"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Owner"
+        },
+        "payment_rail": {
+          "anyOf": [
+            {
+              "enum": [
+                "card",
+                "ach",
+                "bill_pay",
+                "check",
+                "cash",
+                "payroll"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payment Rail"
+        },
+        "preferred_account_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Preferred Account Key"
+        },
+        "renewal_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Renewal Date"
+        },
+        "review_by": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Review By"
+        },
+        "start_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start Date"
+        },
+        "status": {
+          "enum": [
+            "active",
+            "paused",
+            "ending",
+            "ended"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "tag": {
+          "anyOf": [
+            {
+              "enum": [
+                "streaming",
+                "hobbies",
+                "software"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tag"
+        },
+        "variable": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Variable"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "category_key",
+        "amount",
+        "cadence",
+        "status"
+      ],
+      "title": "Recurring",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "anomalies": {
+          "items": {
+            "maxLength": 500,
+            "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+            "type": "string",
+            "x-rule": "text-format"
+          },
+          "title": "Anomalies",
+          "type": "array"
+        },
+        "changes": {
+          "items": {
+            "maxLength": 500,
+            "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+            "type": "string",
+            "x-rule": "text-format"
+          },
+          "title": "Changes",
+          "type": "array"
+        },
+        "key_numbers": {
+          "items": {
+            "$ref": "#/$defs/KeyNumber"
+          },
+          "title": "Key Numbers",
+          "type": "array"
+        },
+        "summary": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Summary",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "top_three": {
+          "items": {
+            "maxLength": 500,
+            "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+            "type": "string",
+            "x-rule": "text-format"
+          },
+          "maxItems": 3,
+          "title": "Top Three",
+          "type": "array"
+        }
+      },
+      "required": [
+        "summary"
+      ],
+      "title": "Review",
+      "type": "object"
+    },
+    "RewardAllocation": {
+      "additionalProperties": false,
+      "description": "One year of a timeshare's points.",
+      "properties": {
+        "allocated": {
+          "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+          "title": "Allocated",
+          "type": "string",
+          "x-rule": "quantity-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "book_by": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Book By"
+        },
+        "expires_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expires On"
+        },
+        "pulled_forward": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+              "type": "string",
+              "x-rule": "quantity-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pulled Forward"
+        },
+        "used": {
+          "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+          "title": "Used",
+          "type": "string",
+          "x-rule": "quantity-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "year": {
+          "maximum": 2100,
+          "minimum": 2000,
+          "title": "Year",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "year",
+        "allocated",
+        "used"
+      ],
+      "title": "RewardAllocation",
+      "type": "object"
+    },
+    "RewardBenefit": {
+      "additionalProperties": false,
+      "description": "A card benefit: a credit, an earning cap, a status perk, a free night.",
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "amount": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Amount"
+        },
+        "as_of": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of"
+        },
+        "auto": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Auto"
+        },
+        "cadence": {
+          "anyOf": [
+            {
+              "enum": [
+                "monthly",
+                "quarterly",
+                "semi_annual",
+                "annual",
+                "multi_year",
+                "one_time"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cadence"
+        },
+        "cap": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cap"
+        },
+        "category_keys": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 40,
+                "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+                "type": "string",
+                "x-rule": "key-format"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Category Keys"
+        },
+        "counted_value": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Counted Value"
+        },
+        "cycles": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/BenefitCycle"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cycles"
+        },
+        "earn_after": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Earn After"
+        },
+        "earn_before": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Earn Before"
+        },
+        "ends_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ends On"
+        },
+        "enroll_by": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Enroll By"
+        },
+        "enrolled": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Enrolled"
+        },
+        "how_to_use": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "How To Use"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "kind": {
+          "enum": [
+            "credit",
+            "earning_cap",
+            "status_perk",
+            "free_night",
+            "other"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "program_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Program Key"
+        },
+        "reported_spent": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reported Spent"
+        },
+        "rolls_over": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rolls Over"
+        },
+        "status_tier": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status Tier"
+        }
+      },
+      "required": [
+        "key",
+        "account_key",
+        "name",
+        "kind"
+      ],
+      "title": "RewardBenefit",
+      "type": "object"
+    },
+    "RewardMilestone": {
+      "additionalProperties": false,
+      "description": "A card spend milestone. Two thresholds on one card are two items.",
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "as_of": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "met_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Met On"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "plan": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Plan"
+        },
+        "reported_spent": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reported Spent"
+        },
+        "reward": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Reward",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "status": {
+          "enum": [
+            "open",
+            "met",
+            "missed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "threshold": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Threshold",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "year": {
+          "maximum": 2100,
+          "minimum": 2000,
+          "title": "Year",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "key",
+        "account_key",
+        "year",
+        "threshold",
+        "reward",
+        "status"
+      ],
+      "title": "RewardMilestone",
+      "type": "object"
+    },
+    "RewardProgram": {
+      "additionalProperties": false,
+      "description": "A points, miles, cash back or timeshare program. The balance is the chat's\nnewest: from a statement (as_of = period end) or given by the owner (manual).",
+      "properties": {
+        "allocations": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/RewardAllocation"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Allocations"
+        },
+        "as_of": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "As Of"
+        },
+        "avoid": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 500,
+                "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+                "type": "string",
+                "x-rule": "text-format"
+              },
+              "maxItems": 5,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Avoid"
+        },
+        "balance": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+              "type": "string",
+              "x-rule": "quantity-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Balance"
+        },
+        "best_uses": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 500,
+                "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+                "type": "string",
+                "x-rule": "text-format"
+              },
+              "maxItems": 5,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Best Uses"
+        },
+        "cpp_high": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+              "type": "string",
+              "x-rule": "quantity-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cpp High"
+        },
+        "cpp_low": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+              "type": "string",
+              "x-rule": "quantity-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cpp Low"
+        },
+        "earned_on": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 40,
+                "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+                "type": "string",
+                "x-rule": "key-format"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Earned On"
+        },
+        "expires_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Expires On"
+        },
+        "group": {
+          "enum": [
+            "primary",
+            "secondary"
+          ],
+          "title": "Group",
+          "type": "string"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "kind": {
+          "enum": [
+            "points",
+            "miles",
+            "cash_back",
+            "timeshare"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Owner"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "enum": [
+                "statement",
+                "manual"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source"
+        },
+        "status_tier": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status Tier"
+        },
+        "status_via": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status Via"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "kind",
+        "group"
+      ],
+      "title": "RewardProgram",
+      "type": "object"
+    },
+    "RewardRedemption": {
+      "additionalProperties": false,
+      "properties": {
+        "done_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Done On"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "points_needed": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+              "type": "string",
+              "x-rule": "quantity-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Points Needed"
+        },
+        "program_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Program Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "status": {
+          "enum": [
+            "ready",
+            "consider",
+            "done"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Title",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "trip_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trip Key"
+        }
+      },
+      "required": [
+        "key",
+        "program_key",
+        "title",
+        "status"
+      ],
+      "title": "RewardRedemption",
+      "type": "object"
+    },
+    "RewardRoute": {
+      "additionalProperties": false,
+      "description": "Which card to use for which spending.",
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "display_order": {
+          "minimum": 0,
+          "title": "Display Order",
+          "type": "integer"
+        },
+        "earn": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Earn"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "spend": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Spend",
+          "type": "string",
+          "x-rule": "text-format"
+        }
+      },
+      "required": [
+        "key",
+        "spend",
+        "account_key",
+        "display_order"
+      ],
+      "title": "RewardRoute",
+      "type": "object"
+    },
+    "Rewards": {
+      "additionalProperties": false,
+      "description": "The chat's current view of rewards (state, monthly runs only). Every list\nis sorted by key. The newest monthly run wins whole: items left out ended.",
+      "properties": {
+        "benefits": {
+          "items": {
+            "$ref": "#/$defs/RewardBenefit"
+          },
+          "title": "Benefits",
+          "type": "array"
+        },
+        "highlights": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 500,
+                "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+                "type": "string",
+                "x-rule": "text-format"
+              },
+              "maxItems": 5,
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Highlights"
+        },
+        "milestones": {
+          "items": {
+            "$ref": "#/$defs/RewardMilestone"
+          },
+          "title": "Milestones",
+          "type": "array"
+        },
+        "programs": {
+          "items": {
+            "$ref": "#/$defs/RewardProgram"
+          },
+          "title": "Programs",
+          "type": "array"
+        },
+        "redemptions": {
+          "items": {
+            "$ref": "#/$defs/RewardRedemption"
+          },
+          "title": "Redemptions",
+          "type": "array"
+        },
+        "routing": {
+          "items": {
+            "$ref": "#/$defs/RewardRoute"
+          },
+          "title": "Routing",
+          "type": "array"
+        }
+      },
+      "required": [
+        "programs",
+        "benefits",
+        "milestones",
+        "routing",
+        "redemptions"
+      ],
+      "title": "Rewards",
+      "type": "object"
+    },
+    "Snapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "accounts": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Account"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Accounts"
+        },
+        "balances": {
+          "anyOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/Balance"
+                  },
+                  {
+                    "$ref": "#/$defs/BalanceTombstone"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Balances"
+        },
+        "budgets": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Budget"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Budgets"
+        },
+        "cashflow_actual": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/CashflowActual"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cashflow Actual"
+        },
+        "cashflow_events": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/CashflowEvent"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cashflow Events"
+        },
+        "cashflow_phases": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/CashflowPhase"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cashflow Phases"
+        },
+        "cashflow_plan": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/CashflowPlan"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cashflow Plan"
+        },
+        "contributions": {
+          "anyOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/Contribution"
+                  },
+                  {
+                    "$ref": "#/$defs/ContributionTombstone"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contributions"
+        },
+        "flags": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Flag"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Flags"
+        },
+        "goals": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Goal"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Goals"
+        },
+        "holdings": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Holding"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Holdings"
+        },
+        "income": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Income"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "installment_plans": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/InstallmentPlan"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Installment Plans"
+        },
+        "meta": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Meta"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "mode": {
+          "enum": [
+            "monthly",
+            "backfill",
+            "correction"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "net_worth": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NetWorth"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "new_accounts": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/NewAccount"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "New Accounts"
+        },
+        "payoff_sequence": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/PayoffStep"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Payoff Sequence"
+        },
+        "pending": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/PendingItem"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pending"
+        },
+        "people": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Person"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "People"
+        },
+        "recurring": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Recurring"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recurring"
+        },
+        "review": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Review"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "rewards": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Rewards"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "run_id": {
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(?:-(?:[2-9]|[1-9][0-9]+))?$",
+          "title": "Run Id",
+          "type": "string",
+          "x-rule": "run-id",
+          "x-scan": false
+        },
+        "schema_version": {
+          "enum": [
+            "1.0",
+            "1.1",
+            "1.2",
+            "1.3",
+            "1.4"
+          ],
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "statements": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Statement"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Statements"
+        },
+        "todos": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/Todo"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Todos"
+        },
+        "trips": {
+          "anyOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/Trip"
+                  },
+                  {
+                    "$ref": "#/$defs/TripTombstone"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Trips"
+        },
+        "utility_bills": {
+          "anyOf": [
+            {
+              "items": {
+                "oneOf": [
+                  {
+                    "$ref": "#/$defs/UtilityBill"
+                  },
+                  {
+                    "$ref": "#/$defs/UtilityBillTombstone"
+                  }
+                ]
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Utility Bills"
+        }
+      },
+      "required": [
+        "schema_version",
+        "run_id",
+        "mode"
+      ],
+      "title": "Snapshot",
+      "type": "object"
+    },
+    "Statement": {
+      "additionalProperties": false,
+      "properties": {
+        "account_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Account Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "balance": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Balance"
+        },
+        "closing": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Closing",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "credit_limit": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credit Limit"
+        },
+        "credits": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credits"
+        },
+        "debits": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Debits"
+        },
+        "due_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Due Date"
+        },
+        "fees": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fees"
+        },
+        "flags_text": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Flags Text"
+        },
+        "has_holdings": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Has Holdings"
+        },
+        "interest": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interest"
+        },
+        "market_change": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Market Change"
+        },
+        "min_due": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Due"
+        },
+        "net_flows": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Net Flows"
+        },
+        "ocr": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ocr"
+        },
+        "opening": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Opening"
+        },
+        "period_end": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Period End",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "period_start": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Period Start",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "reconcile_note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reconcile Note"
+        },
+        "reconciled": {
+          "title": "Reconciled",
+          "type": "boolean"
+        },
+        "source_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string",
+              "x-rule": "hash-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Sha256"
+        },
+        "statement_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Statement Date"
+        },
+        "txn_count": {
+          "minimum": 0,
+          "title": "Txn Count",
+          "type": "integer"
+        },
+        "txn_sum": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Txn Sum"
+        }
+      },
+      "required": [
+        "account_key",
+        "period_start",
+        "period_end",
+        "txn_count",
+        "closing",
+        "reconciled"
+      ],
+      "title": "Statement",
+      "type": "object"
+    },
+    "Todo": {
+      "additionalProperties": false,
+      "properties": {
+        "due_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Due Date"
+        },
+        "flag_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Flag Key"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "status": {
+          "enum": [
+            "open",
+            "done"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "subtitle": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subtitle"
+        },
+        "title": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Title",
+          "type": "string",
+          "x-rule": "text-format"
+        }
+      },
+      "required": [
+        "key",
+        "title",
+        "status"
+      ],
+      "title": "Todo",
+      "type": "object"
+    },
+    "Trip": {
+      "additionalProperties": false,
+      "description": "A trip (history): sent while it changes, kept by the app once final.",
+      "properties": {
+        "end_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "End Date"
+        },
+        "estimate_high": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimate High"
+        },
+        "estimate_low": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimate Low"
+        },
+        "guests": {
+          "anyOf": [
+            {
+              "maximum": 20,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Guests"
+        },
+        "ious": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/TripIou"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ious"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/TripItem"
+          },
+          "title": "Items",
+          "type": "array"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "month": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9]{4}-(?:0[1-9]|1[0-2])$",
+              "type": "string",
+              "x-rule": "month-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Month"
+        },
+        "name": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Name",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "people": {
+          "anyOf": [
+            {
+              "items": {
+                "maxLength": 40,
+                "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+                "type": "string",
+                "x-rule": "key-format"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "People"
+        },
+        "start_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start Date"
+        },
+        "status": {
+          "enum": [
+            "planning",
+            "booked",
+            "in_progress",
+            "complete",
+            "final"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "vehicle": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Vehicle"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "status",
+        "items"
+      ],
+      "title": "Trip",
+      "type": "object"
+    },
+    "TripIou": {
+      "additionalProperties": false,
+      "description": "Money owed between the household and someone else on a trip. The\ncounterparty is a role, like relative or friend couple, never a name.",
+      "properties": {
+        "amount": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Amount",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "counterparty": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Counterparty",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "direction": {
+          "enum": [
+            "owed_to_us",
+            "we_owe"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "item_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Item Key"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "settled_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Settled On"
+        },
+        "status": {
+          "enum": [
+            "open",
+            "settled",
+            "waived"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "direction",
+        "counterparty",
+        "amount",
+        "status"
+      ],
+      "title": "TripIou",
+      "type": "object"
+    },
+    "TripItem": {
+      "additionalProperties": false,
+      "description": "One cost of a trip. `amount` is cash for the whole household: for points and\nfree nights the taxes and fees, for points_credit the size of the credit.",
+      "properties": {
+        "account_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Account Key"
+        },
+        "amount": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Amount"
+        },
+        "due_on": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Due On"
+        },
+        "estimate_high": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimate High"
+        },
+        "estimate_low": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimate Low"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        },
+        "kind": {
+          "enum": [
+            "flight",
+            "lodging",
+            "rental_car",
+            "gas",
+            "food",
+            "activities",
+            "tickets",
+            "shopping",
+            "insurance",
+            "parking",
+            "transit",
+            "cash",
+            "supplies",
+            "fees",
+            "other"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Label",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "maybe": {
+          "anyOf": [
+            {
+              "const": true,
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Maybe"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "person": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Person"
+        },
+        "points": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+              "type": "string",
+              "x-rule": "quantity-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Points"
+        },
+        "program_key": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Program Key"
+        },
+        "status": {
+          "enum": [
+            "posted",
+            "booked",
+            "estimate",
+            "tbd",
+            "excluded"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "tender": {
+          "enum": [
+            "cash",
+            "points",
+            "free_night",
+            "points_credit",
+            "covered"
+          ],
+          "title": "Tender",
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "kind",
+        "label",
+        "status",
+        "tender"
+      ],
+      "title": "TripItem",
+      "type": "object"
+    },
+    "TripTombstone": {
+      "additionalProperties": false,
+      "properties": {
+        "deleted": {
+          "const": true,
+          "title": "Deleted",
+          "type": "boolean"
+        },
+        "key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Key",
+          "type": "string",
+          "x-rule": "key-format"
+        }
+      },
+      "required": [
+        "key",
+        "deleted"
+      ],
+      "title": "TripTombstone",
+      "type": "object"
+    },
+    "UtilityBill": {
+      "additionalProperties": false,
+      "description": "One utility bill (City Power gas and electric, a water bill). Never a statement.\n\nNo account number, meter number, service address or customer name.",
+      "properties": {
+        "bill_date": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Bill Date",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "credits": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/UtilityCredit"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Credits"
+        },
+        "days": {
+          "minimum": 1,
+          "title": "Days",
+          "type": "integer"
+        },
+        "due_date": {
+          "anyOf": [
+            {
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string",
+              "x-rule": "date-format",
+              "x-scan": false
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Due Date"
+        },
+        "estimated_read": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimated Read"
+        },
+        "heating_degree_days": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Heating Degree Days"
+        },
+        "lines": {
+          "items": {
+            "$ref": "#/$defs/UtilityLine"
+          },
+          "minItems": 1,
+          "title": "Lines",
+          "type": "array"
+        },
+        "note": {
+          "anyOf": [
+            {
+              "maxLength": 500,
+              "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+              "type": "string",
+              "x-rule": "text-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Note"
+        },
+        "paid_from": {
+          "anyOf": [
+            {
+              "maxLength": 40,
+              "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+              "type": "string",
+              "x-rule": "key-format"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Paid From"
+        },
+        "period_end": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Period End",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "period_start": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Period Start",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "provider": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Provider",
+          "type": "string",
+          "x-rule": "text-format"
+        },
+        "total": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Total",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "utility_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Utility Key",
+          "type": "string",
+          "x-rule": "key-format"
+        }
+      },
+      "required": [
+        "utility_key",
+        "provider",
+        "bill_date",
+        "period_start",
+        "period_end",
+        "days",
+        "total",
+        "lines"
+      ],
+      "title": "UtilityBill",
+      "type": "object"
+    },
+    "UtilityBillTombstone": {
+      "additionalProperties": false,
+      "properties": {
+        "deleted": {
+          "const": true,
+          "title": "Deleted",
+          "type": "boolean"
+        },
+        "period_end": {
+          "format": "date",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "title": "Period End",
+          "type": "string",
+          "x-rule": "date-format",
+          "x-scan": false
+        },
+        "utility_key": {
+          "maxLength": 40,
+          "pattern": "^[a-z](?:[a-z]|[0-9](?![0-9]{2}))*(?:-(?:401k|403b|529|(?:[a-z]|[0-9](?![0-9]{2}))+))*$",
+          "title": "Utility Key",
+          "type": "string",
+          "x-rule": "key-format"
+        }
+      },
+      "required": [
+        "utility_key",
+        "period_end",
+        "deleted"
+      ],
+      "title": "UtilityBillTombstone",
+      "type": "object"
+    },
+    "UtilityCredit": {
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Amount",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false
+        },
+        "label": {
+          "maxLength": 500,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$",
+          "title": "Label",
+          "type": "string",
+          "x-rule": "text-format"
+        }
+      },
+      "required": [
+        "label",
+        "amount"
+      ],
+      "title": "UtilityCredit",
+      "type": "object"
+    },
+    "UtilityLine": {
+      "additionalProperties": false,
+      "description": "One service on a bill. `charges` is everything billed for it.",
+      "properties": {
+        "charges": {
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+          "title": "Charges",
+          "type": "string",
+          "x-rule": "money-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        },
+        "fixed_charges": {
+          "anyOf": [
+            {
+              "pattern": "^-?[0-9]+\\.[0-9]{2}$",
+              "type": "string",
+              "x-rule": "money-format",
+              "x-scan": false,
+              "x-sign": "nonnegative"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Fixed Charges"
+        },
+        "service": {
+          "enum": [
+            "electric",
+            "gas",
+            "water",
+            "sewer",
+            "stormwater",
+            "other"
+          ],
+          "title": "Service",
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "kwh",
+            "therms",
+            "gallons",
+            "ccf",
+            "none"
+          ],
+          "title": "Unit",
+          "type": "string"
+        },
+        "usage": {
+          "pattern": "^-?[0-9]+(?:\\.[0-9]{1,6})?$",
+          "title": "Usage",
+          "type": "string",
+          "x-rule": "quantity-format",
+          "x-scan": false,
+          "x-sign": "nonnegative"
+        }
+      },
+      "required": [
+        "service",
+        "usage",
+        "unit",
+        "charges"
+      ],
+      "title": "UtilityLine",
+      "type": "object"
+    }
+  },
+  "$id": "import-v1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Generated from backend/app/importer/models.py by scripts/gen_schema.py. Do not edit. See schema/README.md.",
+  "title": "Budget app import format v1",
+  "x-csv-header": [
+    "txn_date",
+    "post_date",
+    "amount",
+    "description",
+    "merchant",
+    "category_key",
+    "cardholder",
+    "txn_type",
+    "is_transfer",
+    "counterparty_account_key",
+    "is_reimbursable",
+    "exclude_from_budget",
+    "plan_key",
+    "recurring_key",
+    "trip_key",
+    "hsa_eligible",
+    "needs_review",
+    "confidence",
+    "notes"
+  ],
+  "x-documents": {
+    "manifest.json": {
+      "$ref": "#/$defs/Manifest"
+    },
+    "snapshot.json": {
+      "$ref": "#/$defs/Snapshot"
+    },
+    "transactions/*.csv row": {
+      "$ref": "#/$defs/CsvRow"
+    }
+  },
+  "x-field-since": {
+    "accounts.original": "1.4",
+    "accounts.rate_changes": "1.4",
+    "cashflow_events.status": "1.4",
+    "flags.action": "1.4",
+    "flags.updates": "1.4",
+    "installment_plans.note": "1.4",
+    "installment_plans.paid_off_on": "1.4",
+    "recurring.keep": "1.4",
+    "recurring.tag": "1.4",
+    "rewards.redemptions.done_on": "1.4",
+    "trips.items.due_on": "1.4",
+    "trips.items.maybe": "1.4"
+  },
+  "x-required-sections": {
+    "1.0": {
+      "backfill": [
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income"
+      ],
+      "correction": [
+        "statements"
+      ],
+      "monthly": [
+        "meta",
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income",
+        "net_worth",
+        "cashflow_actual",
+        "cashflow_plan",
+        "cashflow_events",
+        "budgets",
+        "todos",
+        "review"
+      ]
+    },
+    "1.1": {
+      "backfill": [
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income"
+      ],
+      "correction": [
+        "statements"
+      ],
+      "monthly": [
+        "meta",
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income",
+        "net_worth",
+        "cashflow_actual",
+        "cashflow_plan",
+        "cashflow_events",
+        "budgets",
+        "todos",
+        "review",
+        "recurring",
+        "installment_plans",
+        "flags",
+        "pending"
+      ]
+    },
+    "1.2": {
+      "backfill": [
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income"
+      ],
+      "correction": [
+        "statements"
+      ],
+      "monthly": [
+        "meta",
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income",
+        "net_worth",
+        "cashflow_actual",
+        "cashflow_plan",
+        "cashflow_events",
+        "budgets",
+        "todos",
+        "review",
+        "recurring",
+        "installment_plans",
+        "flags",
+        "pending"
+      ]
+    },
+    "1.3": {
+      "backfill": [
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income"
+      ],
+      "correction": [
+        "statements"
+      ],
+      "monthly": [
+        "meta",
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income",
+        "net_worth",
+        "cashflow_actual",
+        "cashflow_plan",
+        "cashflow_events",
+        "budgets",
+        "todos",
+        "review",
+        "recurring",
+        "installment_plans",
+        "flags",
+        "pending",
+        "rewards"
+      ]
+    },
+    "1.4": {
+      "backfill": [
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income"
+      ],
+      "correction": [
+        "statements"
+      ],
+      "monthly": [
+        "meta",
+        "people",
+        "accounts",
+        "statements",
+        "balances",
+        "holdings",
+        "income",
+        "net_worth",
+        "cashflow_actual",
+        "cashflow_plan",
+        "cashflow_events",
+        "budgets",
+        "todos",
+        "review",
+        "recurring",
+        "installment_plans",
+        "flags",
+        "pending",
+        "rewards"
+      ]
+    }
+  },
+  "x-schema-version": "1.4",
+  "x-section-since": {
+    "flags": "1.1",
+    "goals": "1.4",
+    "installment_plans": "1.1",
+    "pending": "1.1",
+    "recurring": "1.1",
+    "rewards": "1.3",
+    "trips": "1.3",
+    "utility_bills": "1.2"
+  },
+  "x-value-since": {
+    "flags.kind": {
+      "home": "1.4",
+      "insurance": "1.4",
+      "investment": "1.4",
+      "medical": "1.4",
+      "other": "1.4",
+      "payroll": "1.4",
+      "retirement": "1.4"
+    }
+  }
+}

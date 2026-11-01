@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-10-14T18:00:00-05:00",
+  "files": [
+    {
+      "bytes": 622,
+      "path": "snapshot.json",
+      "sha256": "404531b2f7016ce367f8d0dfa96b838379aca26653c2f7eed20a94feabe10b54"
+    },
+    {
+      "bytes": 1551,
+      "path": "transactions/maple-joint-checking-2026-09-30.csv",
+      "rows": 13,
+      "sha256": "9708f9419a748fc681a901a011eb9bd673ccc33d2b04bf852a4d2d2870dd9b0f"
+    }
+  ],
+  "generator": {
+    "skill": "make_samples",
+    "version": "1"
+  },
+  "mode": "correction",
+  "run_id": "2026-10-14",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,41 @@
+[project]
+name = "budget-app"
+version = "0.1.0"
+description = "Private household finance app for one household"
+requires-python = ">=3.14,<3.15"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "pydantic-settings",
+    "argon2-cffi",
+    "tzdata",
+    "anthropic>=1.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "httpx",
+    "ruff",
+]
+
+[tool.uv]
+# Only install releases at least two weeks old.
+exclude-newer = "2026-10-06T00:00:00Z"
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = [
+    # fastapi.testclient on httpx 0.28: works, warns that httpx2 is preferred.
+    "ignore:Using `httpx` with `starlette.testclient`",
+]

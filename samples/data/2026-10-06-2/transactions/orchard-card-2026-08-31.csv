@@ -1,0 +1,10 @@
+txn_date,post_date,amount,description,merchant,category_key,cardholder,txn_type,is_transfer,counterparty_account_key,is_reimbursable,exclude_from_budget,plan_key,recurring_key,trip_key,hsa_eligible,needs_review,confidence,notes
+2026-08-05,2026-08-05,-5.00,PINE WIRELESS,Pine Wireless,phone,,purchase,false,,,,,,,,false,0.95,
+2026-08-05,2026-08-05,5.00,WIRELESS CREDIT,Wireless Credit,phone,,refund,false,,,,,,,,false,0.95,
+2026-08-07,2026-08-08,-48.75,RIVER MKTP*ZX9Y8W7,River Marketplace,online-shopping,,purchase,false,,,,,,,,false,0.95,
+2026-08-07,2026-08-08,-10.99,CLOUDTUNES MUSIC,Cloudtunes,subscriptions,,purchase,false,,,,,cloudtunes,,,false,0.95,
+2026-08-20,2026-08-21,-49.43,GREEN LEAF MARKET,Green Leaf Market,groceries,,purchase,false,,,,,,,,false,0.95,
+2026-08-20,2026-08-20,301.86,PAYMENT RECEIVED - THANK YOU,,transfer,,payment,true,maple-joint-checking,,,,,,,false,1.00,
+2026-08-29,2026-08-30,-25.12,RIVER MKTP*ZX9Y8W7,River Marketplace,online-shopping,,purchase,false,,,,,,,,false,0.95,
+2026-08-30,2026-08-31,-12.03,TACO CART,Taco Cart,dining,,purchase,false,,,,,,,,false,0.95,
+2026-08-31,2026-08-31,-75.00,MONTHLY INSTALLMENT,,transfer,,adjustment,true,,,,device-plan,,,,false,1.00,
