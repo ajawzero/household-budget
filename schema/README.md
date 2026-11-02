@@ -336,7 +336,7 @@ Do not write `"deleted": false`. Statements are never retracted. Send a correcti
 |---|---|---|
 | `month` | yes | Month. |
 | `planned_income` | yes | Money, positive. |
-| `planned_spending` | yes | Money, positive. It **includes** the planned moves into savings, brokerage, 529, UTMA and the kids' debit cards (the `saved-invested` group), like the "Savings transfers" group on the old dashboard. |
+| `planned_spending` | yes | Money, positive. It **includes** the planned moves into savings, brokerage, 529, UTMA and the kids' debit cards (the `saved-invested` group). |
 | `by_group` | yes | List of `{key, amount}`, sorted by key. Keys are spending group keys from `categories.json`, plus `saved-invested` and `plan-installments`. The amounts add up to `planned_spending` exactly. |
 | `note` | | Text. |
 
@@ -388,7 +388,7 @@ Monthly runs only, and required in monthly runs from 1.1. Each is a list sorted 
 | `credit_note` | | Text. Which credit. |
 | `notes` | | Text. |
 | `keep` (1.4) | | Only `true`. the owner chose to keep it after a review. The why goes in `notes`. With `review_by` it means kept for now, review by that date. Only on an `active` or `paused` item (`recurring-keep`). |
-| `tag` (1.4) | | `streaming`, `hobbies` or `software`. Splits subscriptions into the sections of the old dashboard, with no new categories. Never on the personal subscription (`recurring-tag-private`): a tag would hint at what it is. |
+| `tag` (1.4) | | `streaming`, `hobbies` or `software`. Splits subscriptions into sections, with no new categories. Never on the personal subscription (`recurring-tag-private`): a tag would hint at what it is. |
 
 The app's monthly equivalent is `amount` times occurrences per year, divided by 12. Occurrences per year: weekly 52, biweekly 26, every_n_weeks 52 / `interval_n`, semi_monthly 24, monthly 12, quarterly 4, semester 2, semi_annual 2, annual 1. With `active_months`, only those months count. A weekly to monthly bill counts its active months (a monthly bill with 7 active months is 7 a year). A semester bill counts one charge per listed month. A quarterly, semi_annual or annual bill steps from its date (`next_date`, else `start_date`, else `renewal_date`) and counts only the steps that land in a listed month (a quarterly bill on Apr 15 with months 4 to 10 is Apr, Jul and Oct, so 3 a year).
 

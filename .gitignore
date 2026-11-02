@@ -33,8 +33,6 @@ __pycache__/
 .ruff_cache/
 .DS_Store
 
-# Handoffs from the Finances chat can hold real amounts
-/docs/handoffs/
 *.tsbuildinfo
 
 # Claude Code agent worktrees

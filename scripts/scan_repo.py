@@ -145,7 +145,6 @@ ALLOW: dict[str, dict[str, int | None]] = {
     # IRS limits in cents (seed rows).
     "backend/app/db/migrations/0006_contributions_valuations.sql": {"digits-run": CENTS},
     "backend/app/valuations/hpi.py": {"digits-run": 5},  # FHFA place id (CBSA) for Austin
-    "scripts/public_repo/rewrites.json": {"digits-run": 5},  # FHFA place ids (CBSA)
     # Design tokens: all-digit hex colors.
     "frontend/src/styles/tokens.css": {"digits-run": CENTS},
     "docs/DESIGN.md": {"digits-run": CENTS},

@@ -35,7 +35,7 @@ The chat owns the list (`recurring`, format 1.1). The app works out:
   info). Open beats watching, then the newest.
 - Section (gap audit C1, C3): the plan group of the item's category (its
   category group), except that transfers and allowances form "Savings and
-  transfers", like the old dashboard's Recurring tab. A bill with a tag
+  transfers". A bill with a tag
   (format 1.4) has its own section right after its plan group,
   `<group>.<tag>` (Streaming, Hobbies, Apps and software). Totals, plan lines
   and the Dashboard still use the plan group. The personal subscription never
